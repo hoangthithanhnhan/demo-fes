@@ -1,0 +1,66 @@
+:root {
+  --body: #0F1143;
+  --orange: #FFCCB8;
+  --red: #E35851;
+  --brown: #6F0000;
+}
+
+/* Fonts */
+
+/* Mulish */
+@font-face {
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 400;
+    src: url(../fonts/Mulish/Mulish-Regular.ttf) format('truetype');
+  }
+@font-face {
+  font-family: 'Mulish';
+  font-style: normal;
+  font-weight: 500;
+  src: url(../fonts/Mulish/Mulish-Medium.ttf) format('ttf');
+}
+@font-face {
+  font-family: 'Mulish';
+  font-style: normal;
+  font-weight: 600;
+  src: url(../fonts/Mulish/Mulish-SemiBold.ttf) format('ttf');
+}
+@font-face {
+  font-family: 'Mulish';
+  font-style: normal;
+  font-weight: 700;
+  src: url(../fonts/Mulish/Mulish-Bold.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Mulish';
+  font-style: normal;
+  font-weight: 900;
+  src: url(../fonts/Mulish/Mulish-Black.ttf) format('truetype');
+}
+
+/* Playfair Display */
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 700;
+  src: url(../fonts/Playfair_Display/PlayfairDisplay-Bold.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 900;
+  src: url(../fonts/Playfair_Display/PlayfairDisplay-Black.ttf) format('truetype');
+}
+
+/* SVN-Allea Script */
+@font-face {
+  font-family: 'SVN-Allea Script';
+  src: url(../fonts/SVN-Allea_Script/SVN-Allea_Script.ttf) format('truetype');
+} 
+
+/* UTM Alberta Heavy */
+@font-face {
+  font-family: 'UTM Alberta Heavy';
+  src: url(../fonts/UTM_Alberta_Heavy/UTM-Alberta-Heavy.ttf) format('truetype');
+} 
