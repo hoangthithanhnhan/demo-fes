@@ -923,14 +923,16 @@ main .doan-nghe-si .news .news-item .hover-content{
     position: absolute;
     z-index: 6;
     background: rgba(0, 0, 0, 0.8);
-    margin: 4px;
     border-radius: 10px;
     padding: 16px 26px;
     display: none;
-    height: 392px;
+    height: 100%;
+    width: 100%;
+    border: solid 4px #ffffff;
 }
 main .doan-nghe-si .news .center .news-item .card:hover .hover-content{
     display: block;
+    text-align: left;
 }
 main .doan-nghe-si .news .news-item .hover-content .hover-title{
     font-size: 20px;
@@ -959,6 +961,7 @@ main .doan-nghe-si .news .news-item .hover-content .hover-btn{
     position: relative;
     padding-left: 46px;
     text-decoration: none;
+    text-align: left;
 }
 main .doan-nghe-si .news .news-item .hover-content .hover-btn::before{
     content:url('../images/doan-nghe-si/xem-chi-tiet.png');
@@ -1140,6 +1143,7 @@ main .chuong-trinh-chinh .chuong-trinh-chinh-list .chuong-trinh-chinh-main{
     flex-wrap: wrap;
     row-gap: 20px;
     column-gap: 40px;
+    transition: all 0.3s ease-in-out;
 }
 main .chuong-trinh-chinh .chuong-trinh-chinh-list .chuong-trinh-chinh-main .list-item{
     padding-left: 38px;
@@ -1222,65 +1226,76 @@ main .tin-le-hoi-chinh .tin-le-hoi-chinh-title::after{
 main .tin-le-hoi-chinh .tin-le-hoi-chinh-content{
     margin-top: 42px;
 }
-main .tin-le-hoi-chinh .tin-le-hoi-chinh-content .block-content-top .card{
-    border-width: 1px 1px 1px 0px;
-    border-style: solid;
-    border-radius: 10px;
-}
 
-main .tin-le-hoi-chinh .tin-le-hoi-chinh-content .block-content-bottom .card{
-    border-width: 1px 0px 1px 1px;
-    border-style: solid;
+main .tin-le-hoi-chinh .tin-le-hoi-chinh-content .tin-le-hoi-chinh-content-block{
+    column-gap: 20px;
+    row-gap: 20px;
+}
+main .tin-le-hoi-chinh .tin-le-hoi-chinh-content .tin-le-hoi-chinh-content-item{
+    width: calc(100%/2 - 20px/2);
     border-radius: 10px;
 }
-main .tin-le-hoi-chinh .tin-le-hoi-chinh-content .block-content .card-1{
-    background-color: #FFF9E6;
-    border-color: #EBDDB0;
-}
-main .tin-le-hoi-chinh .tin-le-hoi-chinh-content .block-content .card-2{
-    background-color: #FFF2EE;
-    border-color: #EFCFC5;
-}
-main .tin-le-hoi-chinh .tin-le-hoi-chinh-content .block-content .card-3{
-    background-color: #EAF7FF;
-    border-color: #BDDFF4;
-}
-main .tin-le-hoi-chinh .tin-le-hoi-chinh-content .block-content .card-4{
-    background-color: #EFFFF1;
-    border-color: #C1EDC7;
-}
-main .tin-le-hoi-chinh .tin-le-hoi-chinh-content .block-content img{
-    width: 100%;
-    height: 350px;
+main .tin-le-hoi-chinh .tin-le-hoi-chinh-content .tin-le-hoi-chinh-content-item .tin-le-hoi-img{
+    width: 50%;
     object-fit: cover;
 }
-main .tin-le-hoi-chinh .tin-le-hoi-chinh-content .block-content{
-    padding-right: 10px;
-    padding-left: 10px;
-}
-main .tin-le-hoi-chinh .tin-le-hoi-chinh-content .block-content .img-top img{
+main .tin-le-hoi-chinh .tin-le-hoi-chinh-content .tin-le-hoi-chinh-content-item .img-item-top{
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
 }
-main .tin-le-hoi-chinh .tin-le-hoi-chinh-content .block-content .img-bottom img{
+main .tin-le-hoi-chinh .tin-le-hoi-chinh-content .tin-le-hoi-chinh-content-item .img-item-bottom{
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
 }
-main .tin-le-hoi-chinh .tin-le-hoi-chinh-content .block-content .card-body{
-    padding:25px;
+main .tin-le-hoi-chinh .tin-le-hoi-chinh-content .tin-le-hoi-chinh-content-item .tin-le-hoi-main-content{
+    padding: 25px;
 }
-main .tin-le-hoi-chinh .tin-le-hoi-chinh-content .block-content .card-body .card-title{
-    font-size: 18px;    font-weight: 700;
+main .tin-le-hoi-chinh .tin-le-hoi-chinh-content .tin-le-hoi-chinh-content-item .tin-le-hoi-main-content .tin-le-hoi-title{
+    font-size: 18px;
+    font-weight: 700;
     line-height: 26px;
     color: #6F0000;
-    text-decoration: none;
 }
-main .tin-le-hoi-chinh .tin-le-hoi-chinh-content .block-content .card-body .card-text{
+main .tin-le-hoi-chinh .tin-le-hoi-chinh-content .tin-le-hoi-chinh-content-item .tin-le-hoi-main-content .tin-le-hoi-detail{
     font-size: 16px;
     line-height: 24px;
-    color: var(--body);
-    text-decoration: none;
-    font-weight: 400;
+    text-align: justified;
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+main .tin-le-hoi-chinh .tin-le-hoi-chinh-content .tin-le-hoi-chinh-content-item  .content-detail-1{
+    background-color: #FFF9E6;
+    border-top-right-radius:10px ;
+    border-bottom-right-radius:10px ;
+    border-width: 1px 1px 1px 0px;
+    border-style: solid;
+    border-color: #EBDDB0;
+}
+main .tin-le-hoi-chinh .tin-le-hoi-chinh-content .tin-le-hoi-chinh-content-item  .content-detail-2{
+    background-color: #FFF2EE;
+    border-top-right-radius:10px ;
+    border-bottom-right-radius:10px ;
+    border-width: 1px 1px 1px 0px;
+    border-style: solid;
+    border-color: #EFCFC5;
+}
+main .tin-le-hoi-chinh .tin-le-hoi-chinh-content .tin-le-hoi-chinh-content-item  .content-detail-3{
+    background-color: #EAF7FF;
+    border-top-left-radius:10px ;
+    border-bottom-left-radius:10px ;
+    border-width: 1px 0px 1px 1px;
+    border-style: solid;
+    border-color: #BDDFF4;
+}
+main .tin-le-hoi-chinh .tin-le-hoi-chinh-content .tin-le-hoi-chinh-content-item  .content-detail-4{
+    background-color: #EFFFF1;
+    border-top-left-radius:10px ;
+    border-bottom-left-radius:10px ;
+    border-width: 1px 0px 1px 1px;
+    border-style: solid;
+    border-color: #C1EDC7;
 }
 /* hoạt động hưởng ứng */
 main .hoat-dong-huong-ung {
@@ -1432,6 +1447,7 @@ main .tin-vh-dl .tin-vh-dl-content .card{
     border: solid 1px #E2E2E2;
     height: 100%;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
 }
 main .tin-vh-dl .tin-vh-dl-content .card img{
     /* height: 250px; */
@@ -1443,7 +1459,7 @@ main .tin-vh-dl .tin-vh-dl-content .card:hover{
 }
 /* lễ hội văn hóa */
 main .le-hoi-vh .le-hoi-vh-content .content-item .card {
-    /* height: 450px; */
+    height: 100%;
     border: none;
     border-radius: 10px;
 }
@@ -1505,8 +1521,13 @@ main .le-hoi-vh .le-hoi-vh-content .item-hover .btn{
 main .le-hoi-vh .le-hoi-vh-content .item-hover{
     display: none;
 }
-main .le-hoi-vh .le-hoi-vh-content .content-item :hover .item-hover{
+main .le-hoi-vh .le-hoi-vh-content .content-item {
+    transition: all 0.5s ease, visibility 0.5s;
+}
+main .le-hoi-vh .le-hoi-vh-content .content-item :hover .item-hover {
     display: block;
+    visibility: visible;
+
 }
 main .le-hoi-vh{
     margin-top: 50px;
@@ -1762,6 +1783,27 @@ footer .block-footer .copyright-right .cre img{
     main .fes .fes-menu .fes-item img {
         padding-right: 10px;
     }
+    main .doan-nghe-si .news .news-item .hover-content .hover-title {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+    main .le-hoi-vh .le-hoi-vh-content .content-item .card .card-img-overlay .card-text {
+        font-size: 13px;
+    }
+    main .le-hoi-vh .le-hoi-vh-content .item-hover .card-title {
+        font-size: 17px;
+    }
+    main .le-hoi-vh .le-hoi-vh-content .item-hover .card-text{
+        display: -webkit-box;
+        font-size: 15px;
+        -webkit-line-clamp: 10;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+    main .le-hoi-vh .le-hoi-vh-content .item-hover .btn {
+        margin-top: 10px;
+        font-size: 13px;
+    }
 }
 @media (max-width: 1367px){
     .navbar-light .navbar-nav .nav-link {
@@ -1777,6 +1819,20 @@ footer .block-footer .copyright-right .cre img{
     main .fes .fes-menu .fes-menu-info .detail {
         font-size: 13px;
     }
+    main .doan-nghe-si .news .news-item .hover-content .hover-title{
+        font-size: 16px;
+    }
+    main .doan-nghe-si .news .news-item .hover-content .hover-text {
+        font-size: 15px;
+    }
+    main .doan-nghe-si .news .news-item .hover-content .hover-btn {
+        font-size: 15px;
+    }
+    main .doan-nghe-si .news .news-item .hover-content .hover-title {
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+    
 }
 @media (max-width: 1280px){
     main .fes .fes-menu .fes-menu-block{
@@ -2004,6 +2060,9 @@ footer .block-footer .copyright-right .cre img{
         margin-top: 10px;
         justify-content: center;
     }
+    main .tin-tuc .tin-tuc-right {
+        margin-bottom: 20px;
+    }
 }
 @media (max-width: 992px){
     main .tin-tuc .tin-tuc-left .content-left {
@@ -2015,6 +2074,9 @@ footer .block-footer .copyright-right .cre img{
     }
     main .tin-vh-dl .tin-vh-dl-content .tin-vh-dl-item{
         margin-bottom: 20px;
+    }
+    .fes {
+        margin-bottom: 0px;
     }
 }
 
@@ -2044,6 +2106,13 @@ footer .block-footer .copyright-right .cre img{
     }
     main .tin-tuc .tin-tuc-left .title-left {
         font-size: 15px;
+    }
+    main .tin-le-hoi-chinh .tin-le-hoi-chinh-content .tin-le-hoi-chinh-content-item{
+        width: 100%;
+        border-radius: 10px;
+    }
+    main .chuong-trinh-chinh .chuong-trinh-chinh-list .chuong-trinh-chinh-main .list-item{
+        width: calc(100%/2 - 80px/2) ;
     }
 }
 @media (max-width: 600px){
@@ -2095,10 +2164,159 @@ footer .block-footer .copyright-right .cre img{
         margin-bottom: 20px;
     }
 }
-@media (max-width: 375px){
+@media (max-width: 376px){
+    main .su-kien-lon .su-kien-lon-left .su-kien-lon-time .time-item {
+        font-size: 20px;
+        padding: 13px 15px;
+    }
+    main .su-kien-lon .su-kien-lon-left .su-kien-lon-time .time-item::before {
+        width: 55px;
+        height: 25px;
+    }
+    main .su-kien-lon .su-kien-lon-left .su-kien-lon-time .time-item::after {
+        border-bottom: solid 1px rgba(232, 197, 176, 0.77);
+        width: 55px;
+        height: 25px;
+    }
+    main .banner .center .banner-logo {
+        margin-top: 25px;
+    }   
+    main .banner .center .banner-logo {
+        width: 100px;
+        height: 100px;
+    }
+    main .banner .center h1 {
+        font-size: 30px;
+        line-height: 50px;
+    }
+    main .banner .center .banner-sologan {
+        font-size: 25px;
+    }
+    main .center button span {
+        font-size: 13px;
+    }
+    main .center button {
+        padding: 7px 10px;
+    }
+    main .center button img {
+        width: 17px;
+    }
+    main .center button{
+        gap:5px;
+    }
+    main .banner .right .temperature {
+        font-size: 10px;
+    }
+    main .banner .right .location {
+        font-size: 9px;
+    }
+    main .banner .right .datetime {
+        font-size: 9px;
+    }
+    main .banner .right .temperature {
+        margin-right: 7px;
+        padding-right: 8px;
+    }
+    main .banner .right .temperature::before {
+        height: 30px;
+    }
+    main .right .info {
+        padding: 5px 7px;
+    }
+    main .right .info {
+        margin-right: 10px;
+    }
+    main .banner .right .location {
+        line-height: 15px;
+    }
+    main .banner .right .datetime {
+        line-height: 15px;
+    }
+    main .right {
+        margin-top: 30px;
+    }
+    .block-banner {
+        padding: 0px 15px;
+    }
+    main .fes .fes-title p {
+        font-size: 25px;
+    }
+    main .fes .fes-menu .fes-menu-info .detail {
+        font-size: 11px;
+    }
+    main .fes .fes-menu .title {
+        font-size: 13px;
+    }
     
 }
 @media (max-width: 320px){
+    .navbar-light .navbar-brand img {
+        width: 40px;
+        height: 40px;
+    }
+    header .navbar .navbar-toggler{
+        padding: 5px;
+        font-size: 15px;
+    }
+    header .dropdown-register button {
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+    .language .language-item img {
+        width: 18px;
+    }
+    .language::before {
+        height: 34px;
+    }
+    main .fes .fes-menu .fes-item{
+        padding: 10px 0;
+        padding-left: 15px;
+    }
+    main .fes .fes-menu .title {
+        line-height: 25px;
+        padding-bottom: 0px;
+    }
+    main .fes .fes-menu .fes-menu-info .detail {
+        line-height: 20px;
+    }
 }
 @media (max-width: 280px){
+    main .banner .center .banner-sologan {
+        font-size: 22px;
+    }
+    main .banner .center .banner-logo {
+        width: 80px;
+        height: 80px;
+    }
+    main .banner .center h1 {
+        font-size: 25px;
+    }
+    .navbar-light {
+        flex-grow: 0;
+    }
+    header .dropdown-register button {
+        font-size: 10px;
+    }
+    .dropdown-toggle::after {
+        font-size: 12px;
+    }
+    header .search-btn a {
+        width: 30px;
+    }
+    .language .language-item:not(:last-of-type) {
+        margin-right: 0px;
+    }
+    .language {
+        margin-left: 7px;
+        padding-left: 7px;
+    }
+    main .fes .fes-title p {
+        font-size: 22px;
+    }
+    main .tin-tuc .tin-tuc-content .item-title {
+        line-height: 20px;
+    }
+    main .tin-tuc-title {
+        font-size: 22px;
+    }
 }

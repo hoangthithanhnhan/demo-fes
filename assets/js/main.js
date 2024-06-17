@@ -103,7 +103,7 @@ $(document).ready(function() {
         margin:20,
         autoplay:false,
         autoplayTimeout:3000,
-        autoplayHoverPause:true
+        autoplayHoverPause:false
     });
     
 
@@ -198,11 +198,53 @@ $(document).ready(function() {
         $('.chuong-trinh-chinh-list').hide();
         $('#table').addClass('active');
         $('#list').removeClass('active');
-
     });
 
     $('[data-toggle="tooltip"]').tooltip()
+
+
+    $('#list').on('click', function () {
+        $(this).tooltip('hide');
+    });
+    $('#table').on('click', function () {
+        $(this).tooltip('hide');
+    });
+
+    
+    setTimeout(setMaxHeight,5000)
 })
+
+
+function resizeimage(){
+    $('main .su-kien-khac .su-kien-khac-right .card').each(function(){
+        var height = $(this).height();
+        console.log(height);
+        var width=height*0.75;
+        $(this).css('width',width)
+    })
+}
+
+$(function setMaxHeight(){
+    
+});
+// function setMaxHeight() {
+//     const container = document.getElementById('slide-nha-tai-tro');
+//     const items = container.getElementsByClassName('nha-tai-tro-item');
+//     let maxHeight = 0;
+//     for (let i = 0; i < items.length; i++) {
+//         const itemHeight = items[i].offsetHeight;
+//         console.log(itemHeight);
+//         if (itemHeight > maxHeight) {
+//             maxHeight = itemHeight;
+//         }
+//     }
+//     console.log(maxHeight);
+//     console.log(items);
+
+//     for (let i = 0; i < items.length; i++) {
+//         items[i].style.height = maxHeight +'px';
+//     }
+// }
 
 $(document).ready(function(){
     window.addEventListener("resize", resizeimage);
