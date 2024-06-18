@@ -102,10 +102,10 @@ $(document).ready(function() {
     $('#slide-nha-tai-tro').owlCarousel({
         items:7,
         loop:true,
-        margin:20,
-        autoplay:false,
+        margin:18,
+        autoplay:true,
         autoplayTimeout:3000,
-        autoplayHoverPause:false
+        autoplayHoverPause:true
     });
 
     document.getElementById('dynamic1').addEventListener('click', function() {
@@ -211,15 +211,20 @@ $(document).ready(function() {
     });
 
     // setTimeout(setMaxHeight,2000)
-    setMaxHeight();
 
 })
 
 function resizeimage(){
     let width=$('main .su-kien-khac .su-kien-khac-right .card').width();
-    console.log(width);
-    $('main .su-kien-khac .su-kien-khac-right .card').css('height',height=width/0.75)
-    console.log(height);
+    $('main .su-kien-khac .su-kien-khac-right .card').height(height=width/0.75);
+
+    let widthLH=$('main .le-hoi-vh .le-hoi-vh-content .content-item .card').width();
+    $('main .le-hoi-vh .le-hoi-vh-content .content-item .card').height(height=widthLH/0.68);
+
+    let widthIMG=$('main .tin-vh-dl .tin-vh-dl-content .card img').width();
+    $('main .tin-vh-dl .tin-vh-dl-content .card img').height(height=widthIMG/1.56);
+
+    
 }
 $(function(){
     window.addEventListener("resize",resizeimage);
@@ -229,45 +234,36 @@ $(function(){
     resizeimage()
 });
 
-// function resizeimage(){
-//     $('main .su-kien-khac .su-kien-khac-right .card').each(function(){
+
+// function setMaxHeight(){
+//     var maxHeight=0;
+//     $('main .tai-tro .tai-tro-content .nha-tai-tro-item').each(function(){
 //         var height = $(this).height();
 //         console.log(height);
-//         var width=height*0.75;
-//         $(this).css('width',width)
-//     })
+//         if(height>maxHeight){
+//             maxHeight=height;
+//         }
+//     })  
+//     $('main .tai-tro .tai-tro-content .nha-tai-tro-item').height(maxHeight);
+//         console.log(maxHeight)
 // }
 
-function setMaxHeight(){
-    var maxHeight=0;
-    $('main .tai-tro .tai-tro-content .nha-tai-tro-item').each(function(){
-        var height = $(this).height();
-        console.log(height);
-        maxHeight=height;   
-        if(height>maxHeight){
-            maxHeight=height;
-        }
-    })  
-    $(this).css('height',maxHeight)
-        console.log(maxHeight)
-}
+// function setMaxHeight() {
+//     const container = document.getElementById('slide-nha-tai-tro');
+//     const items = container.getElementsByClassName('nha-tai-tro-item');
+//     let maxHeight = 0;
+//     for (let i = 0; i < items.length; i++) {
+//         const itemHeight = items[i].offsetHeight;
+//         console.log(itemHeight);
+//         if (itemHeight > maxHeight) {
+//             maxHeight = itemHeight;
+//         }
+//     }
+//     console.log(maxHeight);
+//     console.log(items);
 
-function setMaxHeight() {
-    const container = document.getElementById('slide-nha-tai-tro');
-    const items = container.getElementsByClassName('nha-tai-tro-item');
-    let maxHeight = 0;
-    for (let i = 0; i < items.length; i++) {
-        const itemHeight = items[i].offsetHeight;
-        console.log(itemHeight);
-        if (itemHeight > maxHeight) {
-            maxHeight = itemHeight;
-        }
-    }
-    console.log(maxHeight);
-    console.log(items);
-
-    for (let i = 0; i < items.length; i++) {
-        items[i].style.height = maxHeight +'px';
-    }
-}
+//     for (let i = 0; i < items.length; i++) {
+//         items[i].style.height = maxHeight +'px';
+//     }
+// }
 
