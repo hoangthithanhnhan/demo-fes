@@ -1520,6 +1520,7 @@ main .le-hoi-vh .le-hoi-vh-content .item-hover .card-text{
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
+
 main .le-hoi-vh .le-hoi-vh-content .item-hover .btn{
     background-color: var(--red);
     border: none;

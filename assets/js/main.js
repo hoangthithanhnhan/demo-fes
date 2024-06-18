@@ -211,7 +211,6 @@ $(document).ready(function() {
     });
 
     // setTimeout(setMaxHeight,2000)
-
 })
 
 function resizeimage(){
@@ -223,8 +222,6 @@ function resizeimage(){
 
     let widthIMG=$('main .tin-vh-dl .tin-vh-dl-content .card img').width();
     $('main .tin-vh-dl .tin-vh-dl-content .card img').height(height=widthIMG/1.56);
-
-    
 }
 $(function(){
     window.addEventListener("resize",resizeimage);
