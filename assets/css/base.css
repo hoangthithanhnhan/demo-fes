@@ -18,13 +18,13 @@
   font-family: 'Mulish';
   font-style: normal;
   font-weight: 500;
-  src: url(../fonts/Mulish/Mulish-Medium.ttf) format('ttf');
+  src: url(../fonts/Mulish/Mulish-Medium.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Mulish';
   font-style: normal;
   font-weight: 600;
-  src: url(../fonts/Mulish/Mulish-SemiBold.ttf) format('ttf');
+  src: url(../fonts/Mulish/Mulish-SemiBold.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Mulish';

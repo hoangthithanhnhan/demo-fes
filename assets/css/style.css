@@ -191,8 +191,7 @@ header .dropdown-register:hover .dropdown-menu{
 main .banner{
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/banner/banner-background.png');
     background-size: cover;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
+    border-radius: 20px 20px 0 0;
     flex-direction: column;
 }
 main .center{
@@ -346,16 +345,7 @@ main .fes .fes-menu .item-violet{
 main .fes .fes-menu .item-violet:hover{
     background-color: #3B1C8E;
 }
-main .fes .fes-menu .item-red{
-    text-decoration: none;
-}
-main .fes .fes-menu .item-green{
-    text-decoration: none;
-}
-main .fes .fes-menu .item-violet{
-    text-decoration: none;
-}
-main .fes .fes-menu .item-yellow{
+main .fes .fes-menu .fes-item{
     text-decoration: none;
 }
 main .fes .fes-menu .title{
@@ -519,7 +509,6 @@ main .su-kien-lon .su-kien-lon-left .su-kien-lon-title{
     font-size: 30px;
     font-weight: 700;
     line-height: 40px;
-    /* margin-top: 20px; */
     margin-bottom: 20px;
 }
 main .su-kien-lon .su-kien-lon-left .su-kien-lon-date{
@@ -550,63 +539,6 @@ main .su-kien-lon .su-kien-lon-left .su-kien-lon-time .time-item{
     padding: 33px 16px;
     z-index: 100;
 }
-main .su-kien-lon .su-kien-lon-left .su-kien-lon-time .date{
-    position: relative;
-    padding-bottom: 34px;
-}
-main .su-kien-lon .su-kien-lon-left .su-kien-lon-time .date::after{
-    content:'Ngày';
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 24px;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom:0;
-}
-main .su-kien-lon .su-kien-lon-left .su-kien-lon-time .hour{
-    position: relative;
-    padding-bottom: 34px;
-}
-main .su-kien-lon .su-kien-lon-left .su-kien-lon-time .hour::after{
-    content:'Giờ';
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 24px;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom:0;
-}
-main .su-kien-lon .su-kien-lon-left .su-kien-lon-time .minute{
-    position: relative;
-    padding-bottom: 34px;
-}
-main .su-kien-lon .su-kien-lon-left .su-kien-lon-time .minute::after{
-    content:'Phút';
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 24px;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 0;
-}
-main .su-kien-lon .su-kien-lon-left .su-kien-lon-time .second{
-    position: relative;
-    padding-bottom: 34px;
-}
-main .su-kien-lon .su-kien-lon-left .su-kien-lon-time .second::after{
-    content:'Giây';
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 24px;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 0;
-}
-
 main .su-kien-lon .su-kien-lon-left .su-kien-lon-time .time-item::before{
     content: "";
     position: absolute;
@@ -621,6 +553,7 @@ main .su-kien-lon .su-kien-lon-left .su-kien-lon-time .time-item::before{
     left: 0;
     box-shadow: 0 2px 4px 0 rgba(236, 176, 157, 0.5);
 }
+
 main .su-kien-lon .su-kien-lon-left .su-kien-lon-time .time-item::after{
     content: "";
     position: absolute;
@@ -636,6 +569,16 @@ main .su-kien-lon .su-kien-lon-left .su-kien-lon-time .time-item::after{
     bottom:0;
     left: 0;
     box-shadow: 0 2px 4px 0 rgba(236, 176, 157, 0.5);
+}
+main .su-kien-lon .su-kien-lon-left .title-time{
+    padding-left: 18px;
+    margin-top: 10px;
+}
+main .su-kien-lon .su-kien-lon-left .title-time .title-time-item{
+    margin-right: 90px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
 }
 main .su-kien-lon .su-kien-lon-left .su-kien-lon-time .space{
     font-size: 40px;
@@ -669,14 +612,22 @@ main .su-kien-lon .su-kien-lon-right{
     background-size: cover;
     padding: 0;
     margin-left: -15px;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
+    border-radius: 0 10px 10px 0;
     height: 100%;
 }
 main .su-kien-lon .su-kien-lon-right img{
     height: 100%;
 }
+main .su-kien-lon .su-kien-lon-block .su-kien-lon-countdown{
+    padding: 0;
+}
+main .su-kien-lon .su-kien-lon-block .su-kien-lon-banner{
+    padding: 0;
+}
 /* sự kiện khác */ 
+main .su-kien-khac{
+    margin-bottom: 40px;
+}
 main .su-kien-khac .su-kien-khac-left .su-kien-khac-title .black{
     font-size: 30px;
     line-height: 40px;
@@ -716,8 +667,8 @@ main .su-kien-khac .su-kien-khac-left .img-topic .next .button-left{
 main .su-kien-khac .su-kien-khac-left .img-topic .next .button-right{
     cursor: pointer;
 }
-main .su-kien-khac .su-kien-khac-right{
-    height: 430px;
+main .su-kien-khac .owl-carousel.owl-drag .owl-item{
+    padding-bottom: 10px    ;
 }
 main .su-kien-khac .su-kien-khac-right .card{
     border: none;
@@ -740,15 +691,16 @@ main .su-kien-khac .su-kien-khac-right .card .card-title{
     font-weight: 600;
     line-height: 30px;
     text-align: center;
-    height: 67px;   
-    width: 53px;
     font-size: 14px;
+    padding: 5px;
+    margin: 0;
 }
 main .su-kien-khac .su-kien-khac-right .card .card-title span{
     font-size: 24px;
     font-weight: 700;
     line-height: 30px;
     color: #ffffff;
+    display: block;
 }
 main .su-kien-khac .su-kien-khac-right .card .card-date{
     font-size: 16px;
@@ -773,6 +725,10 @@ main .su-kien-khac .su-kien-khac-right .card .card-text{
     line-height: 24px;
     color: #ffffff;
     text-decoration: none;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 main .su-kien-khac .su-kien-khac-right .card .card-content{
     position: absolute;
@@ -1092,25 +1048,8 @@ main .chuong-trinh-chinh .chuong-trinh-chinh-content .table-striped thead tr th:
 main .chuong-trinh-chinh .chuong-trinh-chinh-content .table-striped thead tr th:nth-child(4){
     border-top-right-radius: 10px;
 }
-main .chuong-trinh-chinh .chuong-trinh-chinh-content table tr th:nth-child(3){
-    text-align: center;
-}
-main .chuong-trinh-chinh .chuong-trinh-chinh-content table tr th:nth-child(4){
-    text-align: center;
-}
-main .chuong-trinh-chinh .chuong-trinh-chinh-content table tr th:first-child {
+main .chuong-trinh-chinh .chuong-trinh-chinh-content table tr th:first-child{
     font-weight: 700;
-}
-main .chuong-trinh-chinh .chuong-trinh-chinh-content table tr td:nth-child(3){
-    text-align: center;
-    width: 10%;
-}
-main .chuong-trinh-chinh .chuong-trinh-chinh-content table tr td:nth-child(4){
-    text-align: center;
-    width: 15%;
-}
-main .chuong-trinh-chinh .chuong-trinh-chinh-content table tr td:nth-child(2){
-    width: 26%;
 }
 main .chuong-trinh-chinh .chuong-trinh-chinh-content table tr th{
     padding: 13px 20px;
@@ -1129,7 +1068,7 @@ main .chuong-trinh-chinh .chuong-trinh-chinh-content table tbody tr th{
 main .chuong-trinh-chinh .chuong-trinh-chinh-content table thead tr td{
     border-top: none;
 }
-main .chuong-trinh-chinh .chuong-trinh-chinh-content table thead tr th:not(:nth-child(4)){
+main .chuong-trinh-chinh .chuong-trinh-chinh-content table thead tr th:not(:last-child){
     border-right: none;
 }
 .table-bordered thead td, .table-bordered thead th {
@@ -1173,15 +1112,9 @@ main .chuong-trinh-chinh .chuong-trinh-chinh-list .list-item .location-item{
     line-height: 24px;
     color: #fff;
     margin-bottom: 5px;
-    position: relative;
-    padding-left: 21px;
 }
-main .chuong-trinh-chinh .chuong-trinh-chinh-list .list-item .location-item::before{
-    content:url('../images/chuong-trinh-chinh/location.png');
-    position: absolute;
-    left:0;
-    top:50%;
-    transform: translateY(-40%);
+main .chuong-trinh-chinh .chuong-trinh-chinh-list .list-item .location-item img{
+    margin-right: 5px;
 }
 main .chuong-trinh-chinh .chuong-trinh-chinh-list .list-item .date-time-item .date-time{
     font-size: 16px;
@@ -1189,16 +1122,8 @@ main .chuong-trinh-chinh .chuong-trinh-chinh-list .list-item .date-time-item .da
     line-height: 24px;
     color:#FEE411;
 }
-main .chuong-trinh-chinh .chuong-trinh-chinh-list .list-item .date-time-item .time{
-    position: relative;
-    padding-left: 21px;
-}
-main .chuong-trinh-chinh .chuong-trinh-chinh-list .list-item .date-time-item .time::before{
-    content: url('../images/chuong-trinh-chinh/calendar.png');
-    position: absolute;
-    left: 0;
-    top:50%;
-    transform: translateY(-40%);
+main .chuong-trinh-chinh .chuong-trinh-chinh-list .list-item .date-time-item img{
+    margin-right: 5px;
 }
 main .chuong-trinh-chinh .chuong-trinh-chinh-list .list-item .date-time-item .date{
     position: relative;
@@ -1246,12 +1171,10 @@ main .tin-le-hoi-chinh .tin-le-hoi-chinh-content .tin-le-hoi-chinh-content-item 
     object-fit: cover;
 }
 main .tin-le-hoi-chinh .tin-le-hoi-chinh-content .tin-le-hoi-chinh-content-item .img-item-top{
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
+    border-radius: 10px 0 0 10px;
 }
 main .tin-le-hoi-chinh .tin-le-hoi-chinh-content .tin-le-hoi-chinh-content-item .img-item-bottom{
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
+    border-radius: 0 10px 10px 0;
 }
 main .tin-le-hoi-chinh .tin-le-hoi-chinh-content .tin-le-hoi-chinh-content-item .tin-le-hoi-main-content{
     padding: 25px;
@@ -1309,9 +1232,6 @@ main .hoat-dong-huong-ung {
 }
 main .hoat-dong-huong-ung .block-hoat-dong-huong-ung{
     background-color: #F0F0F0;
-    padding-bottom: 40px;
-    padding-left: 40px;
-    padding-right: 40px;
     border-radius: 10px;
     padding: 40px;
 }
@@ -1324,8 +1244,7 @@ main .hoat-dong-huong-ung .block-hoat-dong-huong-ung .card{
 }
 main .hoat-dong-huong-ung .block-hoat-dong-huong-ung .card img{
     height: 250px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    border-radius: 10px 10px 0 0;
     object-fit: cover;
 }
 main .hoat-dong-huong-ung .block-hoat-dong-huong-ung .card:hover{
@@ -1352,8 +1271,7 @@ main .tai-tro .tai-tro-content .tin-tai-tro .tin-tai-tro-right img{
     object-fit: cover;
 }
 main .tai-tro .tai-tro-content .tin-tai-tro .tin-tai-tro-right {
-    /* width: 50%; */
-    padding-left: 15px;
+    height: 100%;
 }
 main .tai-tro .tai-tro-content .tin-tai-tro .card{
     border: none;
@@ -1373,6 +1291,8 @@ main .tai-tro .tai-tro-content .tin-tai-tro .card .card-title{
     position: absolute;
     bottom:0;
     text-decoration: none;
+    margin-bottom: 0;
+    padding: 20px;
 }
 main .tai-tro .tai-tro-content .tin-tai-tro .card .overlay{
     width: 100%;
@@ -1382,6 +1302,9 @@ main .tai-tro .tai-tro-content .tin-tai-tro .card .overlay{
     top: 0;
     left: 0;
     border-radius: 10px;
+}
+main .tai-tro .tai-tro-content .tin-tai-tro .card .card-img-overlay{
+    padding: 0;
 }
 main .tai-tro .tai-tro-content .tin-tai-tro .tin-tai-tro-left{
     /* width: 50%; */
@@ -1394,6 +1317,12 @@ main .tai-tro .tai-tro-content .nha-tai-tro-item{
     border: solid 1px #DFDFDF;
     border-radius: 10px;
     height: 100%;
+    width: 100%;
+}
+main .tai-tro .tai-tro-content .nha-tai-tro-item .nha-tai-tro-logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 main .tai-tro .tai-tro-content .nha-tai-tro-item:not(.last){
     margin-right: 20px;
@@ -1459,9 +1388,7 @@ main .tin-vh-dl .tin-vh-dl-content .card{
     transition: all 0.3s ease-in-out;
 }
 main .tin-vh-dl .tin-vh-dl-content .card img{
-    /* height: 250px; */
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    border-radius: 10px 10px 0 0;
 }
 main .tin-vh-dl .tin-vh-dl-content .card:hover{
     transform: scale(1.058);
@@ -1492,8 +1419,11 @@ main .le-hoi-vh .le-hoi-vh-content .content-item .card .card-img-overlay .card-t
     line-height: 24px;
     font-weight: 700;
     color: #ffffff;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    border-radius: 0 0 10px 10px;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 main .le-hoi-vh .le-hoi-vh-content .item-hover{
     position: absolute;
@@ -1562,8 +1492,8 @@ main .thu-vien-ban-do .thu-vien .video .poster-video{
 main .thu-vien-ban-do .thu-vien .video .play-video{
     position: absolute;
     top:50%;
-    left: 40%;
-    transform: translateY(-50%);
+    left: 50%;
+    transform: translate(-50%,-50%);
     z-index: 10;
 }
 main .thu-vien-ban-do .thu-vien .video .video-title{
@@ -1760,6 +1690,7 @@ footer .block-footer .copyright-right .cre img{
     right: 60px;
     bottom: 140px;
     cursor: pointer;
+    z-index: 10000;
 }
 @media (min-width: 1200px) {
     .container, .container-lg, .container-md, .container-sm, .container-xl {
@@ -2022,6 +1953,7 @@ footer .block-footer .copyright-right .cre img{
         display: flex;
         flex-direction: column-reverse;
     }
+    
     main .su-kien-lon .su-kien-lon-block .su-kien-lon-banner .su-kien-lon-right img{
         display: none;
     }
@@ -2030,19 +1962,13 @@ footer .block-footer .copyright-right .cre img{
     }
     main .su-kien-lon .su-kien-lon-right {
         margin-left: 0px;
-        border-top-right-radius: 10px;
-        border-top-left-radius: 10px;
-        border-bottom-right-radius: 0px;
+        border-radius: 10px 10px 0 0;
     }
     main .su-kien-lon .su-kien-lon-left {
-        padding-left: 30px;
-        padding-top: 20px;
-        padding-bottom: 30px;
+        padding:  20px 0 30px 20px;
         background-color: #FFF2EE;
         margin-right: 0px;
-        border-top-left-radius: 0px;
-        border-bottom-left-radius: 10px;
-        border-bottom-right-radius: 10px;
+        border-radius: 0 0 10px 10px;
     }
     main .su-kien-lon .su-kien-lon-left .su-kien-lon-title{
         text-align: center;

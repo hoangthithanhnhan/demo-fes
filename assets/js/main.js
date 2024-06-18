@@ -2,15 +2,12 @@ $(document).ready(function() {
     $(window).scroll(function() {
         if ($(this).scrollTop()) {
             $('#backtop').fadeIn();
+            $('header').css('box-shadow','0px 1px 8px 0px rgba(3, 17, 53, 0.12)')
         } else{
-            $('#backtop').fadeOut();    
+            $('#backtop').fadeOut();   
+            $('header').css('box-shadow','none')
         }
     });
-    $('#backtop').click(function(){
-        $('html,body').animate({
-            scrollTop:0
-        }, 1000);
-    })
 
     $('#slide-doan-nghe-si').owlCarousel({
         loop:true,
@@ -100,12 +97,29 @@ $(document).ready(function() {
     });
 
     $('#slide-nha-tai-tro').owlCarousel({
-        items:7,
         loop:true,
+        items:7,
         margin:18,
-        autoplay:true,
+        autoplay:false,
         autoplayTimeout:3000,
-        autoplayHoverPause:true
+        autoplayHoverPause:true,
+        // responsive:{
+        //     0:{
+        //         items:2
+        //     },
+        //     600:{
+        //         items:4
+        //     },
+        //     768:{
+        //         items:4
+        //     },
+        //     992:{
+        //         items:6
+        //     },
+        //     1024:{
+        //         items:6
+        //     },
+        // }
     });
 
     document.getElementById('dynamic1').addEventListener('click', function() {
@@ -215,13 +229,13 @@ $(document).ready(function() {
 
 function resizeimage(){
     let width=$('main .su-kien-khac .su-kien-khac-right .card').width();
-    $('main .su-kien-khac .su-kien-khac-right .card').height(height=width/0.75);
+    $('main .su-kien-khac .su-kien-khac-right .card').height(width/0.75);
 
     let widthLH=$('main .le-hoi-vh .le-hoi-vh-content .content-item .card').width();
-    $('main .le-hoi-vh .le-hoi-vh-content .content-item .card').height(height=widthLH/0.68);
+    $('main .le-hoi-vh .le-hoi-vh-content .content-item .card').height(widthLH/0.68);
 
     let widthIMG=$('main .tin-vh-dl .tin-vh-dl-content .card img').width();
-    $('main .tin-vh-dl .tin-vh-dl-content .card img').height(height=widthIMG/1.56);
+    $('main .tin-vh-dl .tin-vh-dl-content .card img').height(widthIMG/1.56);
 }
 $(function(){
     window.addEventListener("resize",resizeimage);
