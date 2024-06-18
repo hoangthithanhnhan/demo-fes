@@ -49,6 +49,7 @@ $(document).ready(function() {
             }
         }
     });
+
     $("#slide-tin-tuc-1").owlCarousel({
         items:1,
         loop:true,
@@ -79,6 +80,7 @@ $(document).ready(function() {
         autoplayTimeout:2000,
         autoplayHoverPause:true
     });
+
     var owl = $('#slide-su-kien-khac');
     owl.owlCarousel();
     $('.button-right').click(function() {
@@ -105,7 +107,6 @@ $(document).ready(function() {
         autoplayTimeout:3000,
         autoplayHoverPause:false
     });
-    
 
     document.getElementById('dynamic1').addEventListener('click', function() {
         lightGallery(document.getElementById('dynamic1'), {
@@ -202,7 +203,6 @@ $(document).ready(function() {
 
     $('[data-toggle="tooltip"]').tooltip()
 
-
     $('#list').on('click', function () {
         $(this).tooltip('hide');
     });
@@ -210,46 +210,64 @@ $(document).ready(function() {
         $(this).tooltip('hide');
     });
 
-    
-    setTimeout(setMaxHeight,5000)
-})
+    // setTimeout(setMaxHeight,2000)
+    setMaxHeight();
 
+})
 
 function resizeimage(){
-    $('main .su-kien-khac .su-kien-khac-right .card').each(function(){
-        var height = $(this).height();
-        console.log(height);
-        var width=height*0.75;
-        $(this).css('width',width)
-    })
+    let width=$('main .su-kien-khac .su-kien-khac-right .card').width();
+    console.log(width);
+    $('main .su-kien-khac .su-kien-khac-right .card').css('height',height=width/0.75)
+    console.log(height);
 }
-
-$(function setMaxHeight(){
-    
+$(function(){
+    window.addEventListener("resize",resizeimage);
+    window.onresize=function(){
+        resizeimage()
+    }
+    resizeimage()
 });
-// function setMaxHeight() {
-//     const container = document.getElementById('slide-nha-tai-tro');
-//     const items = container.getElementsByClassName('nha-tai-tro-item');
-//     let maxHeight = 0;
-//     for (let i = 0; i < items.length; i++) {
-//         const itemHeight = items[i].offsetHeight;
-//         console.log(itemHeight);
-//         if (itemHeight > maxHeight) {
-//             maxHeight = itemHeight;
-//         }
-//     }
-//     console.log(maxHeight);
-//     console.log(items);
 
-//     for (let i = 0; i < items.length; i++) {
-//         items[i].style.height = maxHeight +'px';
-//     }
+// function resizeimage(){
+//     $('main .su-kien-khac .su-kien-khac-right .card').each(function(){
+//         var height = $(this).height();
+//         console.log(height);
+//         var width=height*0.75;
+//         $(this).css('width',width)
+//     })
 // }
 
-$(document).ready(function(){
-    window.addEventListener("resize", resizeimage);
-    window.onresize = function(){
-        resizeimage()
-    };
-    resizeimage()
-})
+function setMaxHeight(){
+    var maxHeight=0;
+    $('main .tai-tro .tai-tro-content .nha-tai-tro-item').each(function(){
+        var height = $(this).height();
+        console.log(height);
+        maxHeight=height;   
+        if(height>maxHeight){
+            maxHeight=height;
+        }
+    })  
+    $(this).css('height',maxHeight)
+        console.log(maxHeight)
+}
+
+function setMaxHeight() {
+    const container = document.getElementById('slide-nha-tai-tro');
+    const items = container.getElementsByClassName('nha-tai-tro-item');
+    let maxHeight = 0;
+    for (let i = 0; i < items.length; i++) {
+        const itemHeight = items[i].offsetHeight;
+        console.log(itemHeight);
+        if (itemHeight > maxHeight) {
+            maxHeight = itemHeight;
+        }
+    }
+    console.log(maxHeight);
+    console.log(items);
+
+    for (let i = 0; i < items.length; i++) {
+        items[i].style.height = maxHeight +'px';
+    }
+}
+
