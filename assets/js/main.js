@@ -3,20 +3,16 @@ $(document).ready(function() {
         if ($(this).scrollTop()) {
             $('#backtop').fadeIn();
             $('header').addClass('header-fixed');
-        } 
-        else{
+        }else{
             $('#backtop').fadeOut();
             $('header').removeClass('header-fixed');
         }
     });
-    // $('.navbar-light .navbar-nav .nav-link').click(function(){
-    //     if ($(this).mouseup()){
-    //         $(this).addClass('navbar-click');
-    //     }
-    //     else{
-    //         $(this).removeClass('navbar-click');
-    //     }
-    // })
+    $('#backtop').click(function(){
+        $('html,body').animate({
+            scrollTop:0
+        }, 1000);
+    })
 
     $('#slide-doan-nghe-si').owlCarousel({
         loop:true,
@@ -31,9 +27,7 @@ $(document).ready(function() {
                 items:3
             },
             1024:{
-                items:3
-            },
-            1280:{
+                items:3,
                 margin:10
             },
             1366:{
@@ -42,25 +36,35 @@ $(document).ready(function() {
         }
     })
 
-    $("#slide-su-kien-khac").owlCarousel({
+    var owl = $('#slide-su-kien-khac');
+    owl.owlCarousel({
         loop:true,
         margin:30,
         autoplay:false,
         dots:false,
         autoplayTimeout:3000,
         autoplayHoverPause:true,
+        navText:['<img class="" src="./assets/images/su-kien-khac/left.png" alt="">','<img class="" src="./assets/images/su-kien-khac/right.png" alt="">'],
         responsive:{
             0:{
-                items:1
+                items:1,
+                nav:true,
             },
-            600:{
-                items:2
+            768:{
+                items:3,
+                nav:true,
             },
             1000:{
-                items:4
+                items:4,
             }
         }
     });
+    $('.button-right').click(function() {
+        owl.trigger('next.owl.carousel');
+    })
+    $('.button-left').click(function() {
+        owl.trigger('prev.owl.carousel', [300]);
+    })
 
     $("#slide-tin-tuc-1").owlCarousel({
         items:1,
@@ -93,14 +97,9 @@ $(document).ready(function() {
         autoplayHoverPause:true
     });
 
-    var owl = $('#slide-su-kien-khac');
-    owl.owlCarousel();
-    $('.button-right').click(function() {
-        owl.trigger('next.owl.carousel');
-    })
-    $('.button-left').click(function() {
-        owl.trigger('prev.owl.carousel', [300]);
-    })
+    
+
+
 
     $('#slide-tin-tai-tro').owlCarousel({
         items:2,
@@ -133,8 +132,29 @@ $(document).ready(function() {
                 items:6
             },
             1024:{
-                items:7
+                items:6
             },
+            1280:{
+                items:7
+            }
+        }
+    });
+
+    $("#slide-le-hoi-vh").owlCarousel({
+        loop: true,
+        autoplay: true,
+        autoplayTimeout: 1000,
+        dots:false,
+        responsive: {
+            1024: {
+                items: 4,
+                dots:false,
+                autoplay: true,
+                autoplayTimeout: 1000
+            },
+            768:{
+                items: 3
+            }
         }
     });
 
@@ -240,11 +260,7 @@ $(document).ready(function() {
         $(this).tooltip('hide');
     });
 
-    // setTimeout(setMaxHeight,2000)
-
-    setTimeout(() => {
-        
-    }, document);
+    //setTimeout(setMaxHeight,2000)
 })
 
 function resizeimage(){

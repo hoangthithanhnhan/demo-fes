@@ -912,6 +912,9 @@ main .doan-nghe-si .news .center .news-item .card:hover .hover-content{
     /* top:0; */
     transform: translateY(0);
 }
+main .doan-nghe-si .news .center .news-item .card:hover .card-title{
+    display: none;
+}
 main .doan-nghe-si .news .news-item .hover-content .hover-title{
     font-size: 20px;
     font-weight: 700;
@@ -937,14 +940,13 @@ main .doan-nghe-si .news .news-item .hover-content .hover-btn{
     line-height: 23px;
     color:var(--red);
     position: relative;
-    padding-left: 46px;
     text-decoration: none;
     text-align: left;
 }
-main .doan-nghe-si .news .news-item .hover-content .hover-btn::before{
-    content:url('../images/doan-nghe-si/xem-chi-tiet.png');
-    position: absolute;
-    left: 0;
+main .doan-nghe-si .news .news-item .hover-content .hover-btn img{
+    width: 36px;
+    height: 25px;
+    margin-right: 15px;
 }
 
 
@@ -1584,6 +1586,7 @@ main .thu-vien-ban-do .thu-vien-center .img-sm .album a {
     display: inline-block;
     position: relative;
     height: 190px;
+    width: 100%;
 }
 main .thu-vien-ban-do .thu-vien-center .img-sm .album a .overlay {
     position: absolute;
@@ -1618,6 +1621,7 @@ main .thu-vien-ban-do .thu-vien-center .img-sm .album .album-title{
 main .thu-vien-ban-do .ban-do .ban-do-item .item-top{
     margin-bottom: 20px;
     display: inline-block;
+
 }
 main .thu-vien-ban-do .ban-do .ban-do-item .item-bottom{
     display: inline-block;
@@ -1628,6 +1632,7 @@ main .thu-vien-ban-do .ban-do .ban-do-item a{
 main .thu-vien-ban-do .ban-do .ban-do-item img{
     width: 100%;
     height: 100%;
+    border-radius: 10px;
 }
 /* footer */
 footer{
@@ -1740,7 +1745,7 @@ footer .block-footer .copyright-right .cre img{
     right: 60px;
     bottom: 140px;
     cursor: pointer;
-    z-index: 1029;
+    z-index: 10000;
 }
 @media (min-width: 1200px) {
     .container, .container-lg, .container-md, .container-sm, .container-xl {
@@ -1846,9 +1851,9 @@ footer .block-footer .copyright-right .cre img{
     main .tin-tuc .tin-tuc-right {
         padding: 20px;
     }
-    main .tin-tuc .tin-tuc-content .item-date {
+    /* main .tin-tuc .tin-tuc-content .item-date {
         font-size: 12px;
-    }
+    } */
     main .tin-tuc .tin-tuc-left .img-left {
         height: 350px;
         object-fit: cover;
@@ -1934,6 +1939,27 @@ footer .block-footer .copyright-right .cre img{
     main .doan-nghe-si .news .news-item .hover-content .hover-btn {
         font-size: 15px;
     }
+    main .doan-nghe-si .news .owl-item .news-item img {
+        height: 290px;
+    }
+    main .doan-nghe-si .news .center .news-item img {
+        width: 100%;
+        height: 350px;
+    }
+    main .doan-nghe-si .news .news-item .hover-content .hover-title{
+        margin-bottom: 5px;
+        line-height: 25px;
+    }
+    main .doan-nghe-si .news .news-item .hover-content .hover-text{
+        line-height: 24px;
+    }
+    main .doan-nghe-si .owl-theme .owl-nav.disabled+.owl-dots {
+        margin-top: -25px;
+    }
+    main .doan-nghe-si .main h3 {
+        font-size: 30px;
+    }
+
     main .chuong-trinh-chinh .chuong-trinh-chinh-list .list-item .title-item {
         font-size: 16px;
     }
@@ -1962,16 +1988,42 @@ footer .block-footer .copyright-right .cre img{
         font-size: 20px;
         line-height: 23px;
     }
+    main .su-kien-khac {
+        margin-bottom: 20px;
+    }
     main .fes .fes-title p {
         font-size: 30px;
     }
-    main .doan-nghe-si .main h3 {
-        font-size: 30px;
+    .fes {
+        margin-bottom: 0px;
     }
+    main .hoat-dong-huong-ung .block-hoat-dong-huong-ung .card img {
+        height: 200px;
+    }
+    main .thu-vien-ban-do .thu-vien .video .poster-video{
+        height: 340px;
+    }
+    main .thu-vien-ban-do .thu-vien-center .img-sm .album a {
+        height: 160px;
+    }
+    main .thu-vien-ban-do .ban-do .ban-do-item a {
+        height: 160px;
+        object-fit: cover;
+    }
+    main .su-kien-lon {
+        margin-bottom: 30px;
+    }
+    .block-banner {
+        padding: 0px 15px;
+    }
+    
 }
 @media (max-width: 1024px){ 
+    body {
+        padding-top: 70px;
+    }
     .navbar-light .navbar-nav .nav-link {
-        font-size: 13px;
+        font-size: 14px;
         padding: 8px 5px;
     }
     header .dropdown-register button {
@@ -2054,7 +2106,7 @@ footer .block-footer .copyright-right .cre img{
         width: 50px;
     }
     main .tin-tuc .tin-tuc-left .img-left {
-        height: 250px;
+        height: 500px;
     }
     main .tin-tuc .tin-tuc-right .img-right {
         margin-right: 15px;
@@ -2064,41 +2116,37 @@ footer .block-footer .copyright-right .cre img{
         margin-bottom: 0px;
     }
     main .tin-tuc .tin-tuc-center .img-center {
-        width: 110px;
-        height: 80px;
+        width: 200px;
+        height: 130px;
     }
     main .tin-tuc .tin-tuc-content .item-title {
-        font-size: 14px;
+        font-size: 16px;
         line-height: 24px;
     }
     main .tin-tuc .tin-tuc-left .title-left {
-        font-size: 15px;
-        line-height: 20px;
-    }
-    main .tin-tuc .tin-tuc-left .content-left {
-        font-size: 15px;
-        line-height: 20px;
-    }
-    main .tin-tuc .tin-tuc-right .title-right {
-        font-size: 15px;
+        font-size: 20px;
     }
     main .tin-tuc .tin-tuc-right {
-        padding: 15px;
+        padding: 10px 20px;
+    }
+    main .tin-tuc .tin-tuc-right .title-right{
+        margin-top: 10px;
     }
     main .tin-tuc .tin-tuc-right .content-right{
-        margin-bottom: 20px;
+        margin-bottom: 10px;
     }
     main .su-kien-lon .su-kien-lon-left .su-kien-lon-title{
-        font-size: 22px;
+        font-size: 25px;
     }
     main .su-kien-lon .su-kien-lon-left .su-kien-lon-date{
-        font-size: 15px;
+        font-size: 20px;
     }
     main .su-kien-lon .su-kien-lon-left .su-kien-lon-location{
-        font-size: 15px;
+        font-size: 20px;
     }
     main .su-kien-lon .su-kien-lon-left .show{
-        font-size: 15px;
+        font-size: 20px;
+        padding: 15px 20px;
     }
     main .hoat-dong-huong-ung .block-hoat-dong-huong-ung .hoat-dong-huong-ung-item{
         margin-bottom: 20px;
@@ -2162,7 +2210,10 @@ footer .block-footer .copyright-right .cre img{
         display: none;
     }
     main .su-kien-khac .su-kien-khac-title{
-        display: flex;
+        text-align: center;
+    }
+    main .su-kien-khac .su-kien-khac-left .su-kien-khac-title .red::after{
+        display: none;
     }
     main .chuong-trinh-chinh .chuong-trinh-chinh-list .chuong-trinh-chinh-main .list-item {
         width: calc(100% / 2 - 80px / 2);
@@ -2173,6 +2224,110 @@ footer .block-footer .copyright-right .cre img{
     }
     main .tai-tro .tai-tro-content .tin-tai-tro .tin-tai-tro-right img{
         margin-top: 20px;
+    }
+    main .tin-tuc .tin-tuc-center .tin-tuc-center-item {
+        margin: 15px 0 15px 0;
+    }
+    main .tin-tuc .tin-tuc-right .content-right:not(:last-of-type) {
+        margin-bottom: 20px;
+    }
+    main .doan-nghe-si .news .owl-item .news-item img {
+        height: 220px;
+    }
+    main .doan-nghe-si .news .center .news-item img {
+        width: 100%;
+        height: 270px;
+    }
+    main .doan-nghe-si .news .owl-item .news-item .card-title {
+        font-size: 15px;
+    }
+    main .doan-nghe-si {
+        height: 450px;
+    }
+    main .doan-nghe-si .news .owl-stage {
+        height: 350px;
+    }
+    main .doan-nghe-si {
+        height: 400px;
+    }
+    main .doan-nghe-si .news .news-item .hover-content{
+        padding: 10px 15px;
+    }
+    main .doan-nghe-si .news .news-item .hover-content .hover-title {
+        margin-bottom: 0;
+        line-height: 20px;
+        font-size: 13px;
+    }
+    main .doan-nghe-si .news .news-item .hover-content .hover-text {
+        font-size: 13px;
+        line-height: 20px;
+        margin-bottom: 0px;
+    }
+    main .doan-nghe-si .news .news-item .hover-content .hover-btn img{
+        width: 30px;
+        height: 19px;
+        margin-right: 15px;
+    }
+    main .tin-le-hoi-chinh .tin-le-hoi-chinh-content .tin-le-hoi-chinh-content-item{
+        flex-direction: column;
+    }
+    main .tin-le-hoi-chinh .tin-le-hoi-chinh-content .tin-le-hoi-chinh-content-item .img-item-top{
+        border-radius: 10px 10px 0 0;
+        width: 100%;
+        height: 300px;
+    }
+    main .tin-le-hoi-chinh .tin-le-hoi-chinh-content .tin-le-hoi-chinh-content-item .img-item-bottom{
+        border-radius: 0 0 10px 10px;
+        width: 100%;
+        height: 300px;
+    }
+    main .tin-le-hoi-chinh .tin-le-hoi-chinh-content .tin-le-hoi-chinh-content-item .content-detail-1{
+        border-radius: 0 0 10px 10px;
+        height: 100%;
+        border-width: 0px 1px 1px 1px;
+    }
+    main .tin-le-hoi-chinh .tin-le-hoi-chinh-content .tin-le-hoi-chinh-content-item .content-detail-2{
+        border-radius: 0 0 10px 10px;
+        border-width: 0px 1px 1px 1px;
+        height: 100%;
+    }
+    main .tin-le-hoi-chinh .tin-le-hoi-chinh-content .tin-le-hoi-chinh-content-item .content-detail-3{
+        border-radius: 10px 10px 0 0;
+        height: 100%;
+        border-width: 1px 1px 0px 1px;
+    }
+    main .tin-le-hoi-chinh .tin-le-hoi-chinh-content .tin-le-hoi-chinh-content-item .content-detail-4{
+        border-radius: 10px 10px 0 0;
+        height: 100%;
+        border-width: 1px 1px 0px 1px;
+    }
+    main .tin-vh-dl .tin-vh-dl-content .tin-vl-dl-item{
+        margin-bottom: 30px;
+    }
+    main .chuong-trinh-chinh {
+        margin-top: 200px;
+        margin-bottom: 20px;
+    }
+    main .tin-le-hoi-chinh .tin-le-hoi-chinh-content {
+        margin-top: 20px;
+    }
+    main .hoat-dong-huong-ung {
+        margin-top: 30px;
+    }
+    main .hoat-dong-huong-ung .block-hoat-dong-huong-ung {
+        padding: 30px;
+    }
+    main .le-hoi-vh {
+        margin-top: 0px;
+    }
+    main .thu-vien-ban-do .ban-do .ban-do-item .item-top {
+        margin-bottom: 0px;
+        margin-right: 20px;
+    }
+    main .su-kien-khac .su-kien-khac-left .su-kien-khac-heading {
+        font-size: 15px;
+        padding: 0px 150px;
+        text-align: center;
     }
 }
 
@@ -2223,6 +2378,19 @@ footer .block-footer .copyright-right .cre img{
     main .tin-tuc .tin-tuc-center .tin-tuc-center-item {
         margin-top: 15px;
     }
+    main .doan-nghe-si .news .owl-item .card{
+        width: 60%;
+    }
+    main .doan-nghe-si .news .center .news-item img{
+        height:300px;
+    }
+    main .su-kien-khac .su-kien-khac-left .img-topic .next{
+        display: none !important;
+    }
+    .owl-theme .owl-nav [class*=owl-]:hover{
+        background-color:#fff;
+    }
+    
 }
 @media (max-width: 640px){
     .block-banner {
@@ -2439,8 +2607,17 @@ footer .block-footer .copyright-right .cre img{
     main .chuong-trinh-chinh .chuong-trinh-chinh-list .chuong-trinh-chinh-main .list-item {
         width: 100%;
     }
-    main .tin-vh-dl .tin-vh-dl-content .tin-vl-dl-item{
-        margin-bottom: 10px;
+    main .thu-vien-ban-do .thu-vien .video .poster-video {
+        height: 250px;
+    }
+    main .thu-vien-ban-do .thu-vien .video .play-video {
+        width: 70px;
+    }
+    main .thu-vien-ban-do .thu-vien .video .video-title {
+        font-size: 13px;
+        margin: 10px;
+    }
+    main .thu-vien-ban-do .thu-vien-center .img-sm .album a {
+        height: 120px;
     }
 }
-
