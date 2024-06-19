@@ -2,12 +2,21 @@ $(document).ready(function() {
     $(window).scroll(function() {
         if ($(this).scrollTop()) {
             $('#backtop').fadeIn();
-            $('header').css('box-shadow','0px 1px 8px 0px rgba(3, 17, 53, 0.12)')
-        } else{
-            $('#backtop').fadeOut();   
-            $('header').css('box-shadow','none')
+            $('header').addClass('header-fixed');
+        } 
+        else{
+            $('#backtop').fadeOut();
+            $('header').removeClass('header-fixed');
         }
     });
+    // $('.navbar-light .navbar-nav .nav-link').click(function(){
+    //     if ($(this).mouseup()){
+    //         $(this).addClass('navbar-click');
+    //     }
+    //     else{
+    //         $(this).removeClass('navbar-click');
+    //     }
+    // })
 
     $('#slide-doan-nghe-si').owlCarousel({
         loop:true,
@@ -18,11 +27,17 @@ $(document).ready(function() {
             0:{
                 items:1
             },
+            1000:{
+                items:3
+            },
             1024:{
                 items:3
             },
-            1000:{
-                items:3
+            1280:{
+                margin:10
+            },
+            1366:{
+                margin:30
             }
         }
     })
@@ -102,24 +117,25 @@ $(document).ready(function() {
         margin:18,
         autoplay:false,
         autoplayTimeout:3000,
+        dots:false,
         autoplayHoverPause:true,
-        // responsive:{
-        //     0:{
-        //         items:2
-        //     },
-        //     600:{
-        //         items:4
-        //     },
-        //     768:{
-        //         items:4
-        //     },
-        //     992:{
-        //         items:6
-        //     },
-        //     1024:{
-        //         items:6
-        //     },
-        // }
+        responsive:{
+            0:{
+                items:2
+            },
+            600:{
+                items:4
+            },
+            768:{
+                items:4
+            },
+            992:{
+                items:6
+            },
+            1024:{
+                items:7
+            },
+        }
     });
 
     document.getElementById('dynamic1').addEventListener('click', function() {
@@ -225,6 +241,10 @@ $(document).ready(function() {
     });
 
     // setTimeout(setMaxHeight,2000)
+
+    setTimeout(() => {
+        
+    }, document);
 })
 
 function resizeimage(){
@@ -232,7 +252,7 @@ function resizeimage(){
     $('main .su-kien-khac .su-kien-khac-right .card').height(width/0.75);
 
     let widthLH=$('main .le-hoi-vh .le-hoi-vh-content .content-item .card').width();
-    $('main .le-hoi-vh .le-hoi-vh-content .content-item .card').height(widthLH/0.68);
+    $('main .le-hoi-vh .le-hoi-vh-content .content-item > .card').height(widthLH/0.68);
 
     let widthIMG=$('main .tin-vh-dl .tin-vh-dl-content .card img').width();
     $('main .tin-vh-dl .tin-vh-dl-content .card img').height(widthIMG/1.56);
