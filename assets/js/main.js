@@ -50,12 +50,17 @@ $(document).ready(function() {
                 items:1,
                 nav:true,
             },
+            640:{
+                items:2,
+                nav:true
+            },
             768:{
+                loop:true,
                 items:3,
                 nav:true,
             },
-            1000:{
-                items:4,
+            1025:{
+                items:5
             }
         }
     });
@@ -96,10 +101,6 @@ $(document).ready(function() {
         autoplayTimeout:2000,
         autoplayHoverPause:true
     });
-
-    
-
-
 
     $('#slide-tin-tai-tro').owlCarousel({
         items:2,
@@ -142,18 +143,24 @@ $(document).ready(function() {
 
     $("#slide-le-hoi-vh").owlCarousel({
         loop: true,
-        autoplay: true,
-        autoplayTimeout: 1000,
         dots:false,
-        responsive: {
-            1024: {
-                items: 4,
-                dots:false,
-                autoplay: true,
-                autoplayTimeout: 1000
+        responsive:{
+            0:{
+                items:1
+            },
+            640:{
+                items: 2
             },
             768:{
                 items: 3
+            },
+            1024: {
+                items: 3,
+                autoplay: false,
+                autoplayTimeout: 1000
+            },
+            1920:{
+                items: 5
             }
         }
     });
