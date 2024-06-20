@@ -1834,7 +1834,7 @@ footer .block-footer .copyright-right .cre img{
         font-size: 15px;
     }
     main .tin-tuc .tin-tuc-content .item-title{
-        font-size: 13px;
+        font-size: 14px;
     }
     main .tin-tuc .tin-tuc-left .title-left {
         font-size: 18px;
@@ -1856,10 +1856,10 @@ footer .block-footer .copyright-right .cre img{
         font-size: 25px;
     }
     main .su-kien-khac .su-kien-khac-right .card .card-date {
-        font-size: 13px;
+        font-size: 14px;
     }
     main .su-kien-khac .su-kien-khac-right .card .card-text {
-        font-size: 13px;
+        font-size: 14px;
     }
     main .su-kien-khac .su-kien-khac-left .su-kien-khac-title .red {
         font-size: 35px;
@@ -1872,7 +1872,7 @@ footer .block-footer .copyright-right .cre img{
         font-size: 21px;
     }
     main .su-kien-khac .su-kien-khac-left .su-kien-khac-heading {
-        font-size: 12px;
+        font-size: 14px;
     }
     main .su-kien-khac .su-kien-khac-left .img-topic .main-img-topic {
         width: 55%;
@@ -1913,7 +1913,7 @@ footer .block-footer .copyright-right .cre img{
         margin: 10px;
     }
     main .tai-tro .tai-tro-content .nha-tai-tro .nha-tai-tro-item .card-title {
-        font-size: 13px;
+        font-size: 14px;
     }
     main .tin-vh-dl .tin-vh-dl-content .card .card-body .card-title h5 {
         font-size: 15px;
@@ -1978,7 +1978,7 @@ footer .block-footer .copyright-right .cre img{
     }
     main .le-hoi-vh .le-hoi-vh-content .item-hover .btn {
         margin-top: 10px;
-        font-size: 13px;
+        font-size: 14px;
     }
     
     main .su-kien-khac .su-kien-khac-right .card .card-title span{
@@ -2024,7 +2024,7 @@ footer .block-footer .copyright-right .cre img{
         padding: 8px 5px;
     }
     header .dropdown-register button {
-        font-size: 12px;
+        font-size: 14px;
         padding: 8px 15px;
     }
     .dropdown-toggle::after {
@@ -2082,10 +2082,10 @@ footer .block-footer .copyright-right .cre img{
         font-size: 15px;
     }
     main .banner .right .location {
-        font-size: 13px;
+        font-size: 14px;
     }
     main .banner .right .datetime {
-        font-size: 12px;
+        font-size: 14px;
     }
     main .right {
         margin-top: 50px;
@@ -2270,10 +2270,10 @@ footer .block-footer .copyright-right .cre img{
     main .doan-nghe-si .news .news-item .hover-content .hover-title {
         margin-bottom: 0;
         line-height: 20px;
-        font-size: 13px;
+        font-size: 14px;
     }
     main .doan-nghe-si .news .news-item .hover-content .hover-text {
-        font-size: 13px;
+        font-size: 14px;
         line-height: 20px;
         margin-bottom: 0px;
     }
@@ -2402,7 +2402,7 @@ footer .block-footer .copyright-right .cre img{
         height: 200px;
     }
     main .tin-tuc .tin-tuc-right .title-right {
-        font-size: 13px;
+        font-size: 14px;
     }
     main .tin-tuc .tin-tuc-right .img-right{
         width: 190px;
@@ -2429,7 +2429,7 @@ footer .block-footer .copyright-right .cre img{
     main .le-hoi-vh .le-hoi-vh-content .item-hover .card-text {
         -webkit-line-clamp: 9;
         line-height: 20px;
-        font-size: 13px;
+        font-size: 14px;
     }
     main .chuong-trinh-chinh .chuong-trinh-chinh-list .chuong-trinh-chinh-main .list-item{
         width: calc(100%/2 - 80px/2) ;
@@ -2529,11 +2529,11 @@ footer .block-footer .copyright-right .cre img{
         margin-top: 0px;
     }
     footer .block-footer .footer-right .contact {
-        font-size: 12px;
+        font-size: 14px;
         padding: 8px 12px;
     }
     footer .block-footer .footer-right .link-website .btn{
-        font-size: 12px;
+        font-size: 14px;
         padding: 4px 10px;
     }
     footer .block-footer .copyright-right{
@@ -2543,10 +2543,10 @@ footer .block-footer .copyright-right .cre img{
         font-size: 14px;
     }
     footer .block-footer .copyright-right .mxh p{
-        font-size: 13px;
+        font-size: 14px;
     }
     footer .block-footer .copyright-right .cre p{
-        font-size: 13px;
+        font-size: 14px;
     }
     /* .navbar-light{
         flex-grow: 1;
@@ -2562,7 +2562,7 @@ footer .block-footer .copyright-right .cre img{
         border-radius: 10px;
     }
     .dropdown-menu .dropdown-item{
-        font-size: 13px;
+        font-size: 14px;
         line-height: 20px;
     }
     .dropdown-menu {
@@ -2605,7 +2605,7 @@ footer .block-footer .copyright-right .cre img{
         font-size: 15px;
     }
     main .banner .right .location {
-        font-size: 12px;
+        font-size: 14px;
     }
     main .banner .right .datetime {
         font-size: 10px;
@@ -2638,11 +2638,11 @@ footer .block-footer .copyright-right .cre img{
         width: 100%;
     }
     main .chuong-trinh-chinh .chuong-trinh-chinh-content table tr th {
-        font-size: 13px;
+        font-size: 14px;
         padding: 10px 10px;
     }
     main .chuong-trinh-chinh .chuong-trinh-chinh-content table tbody tr td {
-        font-size: 13px;
+        font-size: 14px;
         padding: 10px 10px;
     }
     main .chuong-trinh-chinh .chuong-trinh-chinh-content table thead td{
@@ -2712,7 +2712,7 @@ footer .block-footer .copyright-right .cre img{
         margin-top: -20px;
     }
     main .center button span {
-        font-size: 13px;
+        font-size: 14px;
     }
     main .center button {
         padding: 7px 10px;
@@ -2818,13 +2818,13 @@ footer .block-footer .copyright-right .cre img{
         padding: 5px 0 30px 5px;
     }
     main .su-kien-lon .su-kien-lon-left .su-kien-lon-time .heading-date-time{
-        font-size: 12px;
+        font-size: 14px;
     }
     main .su-kien-lon .su-kien-lon-left .su-kien-lon-time .time-item{
         margin-bottom: 5px;
     }
     main .su-kien-lon .su-kien-lon-left .show {
-        font-size: 12px;
+        font-size: 14px;
     }
     main .su-kien-lon .su-kien-lon-left .show {
         padding: 5px 15px;
@@ -2841,11 +2841,11 @@ footer .block-footer .copyright-right .cre img{
         line-height: 30px;
     }
     main .doan-nghe-si .main p {
-        font-size: 12px;
+        font-size: 14px;
         line-height: 22px;
     }
     main .doan-nghe-si .main .btn {
-        font-size: 12px;
+        font-size: 14px;
         padding: 5px 15px;
     }
     main .doan-nghe-si .news .center .news-item img {
@@ -2858,7 +2858,7 @@ footer .block-footer .copyright-right .cre img{
         height: 360px;
     }
     main .doan-nghe-si .news .owl-item .news-item .card-title {
-        font-size: 13px;
+        font-size: 14px;
         line-height: 10px;
     }
     main .doan-nghe-si .owl-theme .owl-nav.disabled+.owl-dots {
@@ -2877,7 +2877,7 @@ footer .block-footer .copyright-right .cre img{
         width: 70px;
     }
     main .thu-vien-ban-do .thu-vien .video .video-title {
-        font-size: 13px;
+        font-size: 14px;
         margin: 10px;
     }
     main .thu-vien-ban-do .thu-vien-center .img-sm .album a {
@@ -2902,10 +2902,10 @@ footer .block-footer .copyright-right .cre img{
         margin-top: 10px;
     }
     main .su-kien-khac .su-kien-khac-right .card .card-date {
-        font-size: 13px;
+        font-size: 14px;
     }
     main .su-kien-khac .su-kien-khac-right .card .card-text {
-        font-size: 13px;
+        font-size: 14px;
     }
     main .doan-nghe-si .news .owl-item .card {
         width: 90%;
@@ -2914,7 +2914,7 @@ footer .block-footer .copyright-right .cre img{
         font-size: 14px;
     }
     main .doan-nghe-si .news .news-item .hover-content .hover-text {
-        font-size: 13px;
+        font-size: 14px;
         line-height: 20px;
         -webkit-line-clamp: 7;
     }
@@ -2945,7 +2945,7 @@ footer .block-footer .copyright-right .cre img{
         margin-bottom: 0px;
     }
     main .chuong-trinh-chinh .chuong-trinh-chinh-list .list-item .date-time-item .date-time{
-        font-size: 13px;
+        font-size: 14px;
     }
     main .chuong-trinh-chinh .chuong-trinh-chinh-list .chuong-trinh-chinh-main {
         max-height: 400px;
@@ -2964,7 +2964,7 @@ footer .block-footer .copyright-right .cre img{
         line-height: 20px;
     }
     main .tin-le-hoi-chinh .tin-le-hoi-chinh-content .tin-le-hoi-chinh-content-item .tin-le-hoi-main-content .tin-le-hoi-detail {
-        font-size: 13px;
+        font-size: 14px;
         -webkit-line-clamp: 4;
     }
     main .tin-le-hoi-chinh .tin-le-hoi-chinh-content .tin-le-hoi-chinh-content-item .tin-le-hoi-main-content {
@@ -3005,8 +3005,8 @@ footer .block-footer .copyright-right .cre img{
         margin-top: 20px;
     }
     main .thu-vien-ban-do .thu-vien-center .img-sm .album .album-title {
-        font-size: 12px;
-        line-height: 15px;
+        font-size: 14px;
+        line-height: 20px;
     }
     main .thu-vien-ban-do .ban-do {
         margin-top: 0px;
@@ -3025,10 +3025,10 @@ footer .block-footer .copyright-right .cre img{
         font-size: 15px;
     }
     footer .block-footer .footer-left h5 {
-        font-size: 13px;
+        font-size: 14px;
     }
     footer .block-footer .footer-left p {
-        font-size: 13px;
+        font-size: 14px;
     }
     footer .block-footer .footer-right .contact{
         margin-bottom: 0px;
@@ -3037,7 +3037,7 @@ footer .block-footer .copyright-right .cre img{
         font-size: 15px;
     }
     footer .block-footer .copyright .copyright-left {
-        font-size: 12px;
+        font-size: 14px;
         margin-bottom: 10px;
     }    
 }
