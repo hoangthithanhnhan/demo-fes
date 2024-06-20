@@ -2784,7 +2784,7 @@ footer .block-footer .copyright-right .cre img{
         padding: 0px 15px;
     }
     main .fes .fes-title p {
-        font-size: 20px;
+        font-size: 25px;
         margin-bottom: 0;
     }
     main .fes .fes-menu .fes-menu-info .detail {
@@ -2797,7 +2797,7 @@ footer .block-footer .copyright-right .cre img{
         margin-bottom: 20px;
     }
     main .tin-tuc-title {
-        font-size: 20px;
+        font-size: 25px;
         margin-bottom: 10px;
     }
     main .tin-tuc-title::before {
@@ -2834,7 +2834,7 @@ footer .block-footer .copyright-right .cre img{
         height: 200px;
     }
     main .su-kien-lon .su-kien-lon-left .su-kien-lon-title {
-        font-size: 17px;
+        font-size: 20px;
         margin-bottom: 0;
     }
     main .su-kien-lon .su-kien-lon-left .su-kien-lon-time .space {
@@ -2856,10 +2856,10 @@ footer .block-footer .copyright-right .cre img{
         padding: 5px 15px;
     }
     main .su-kien-lon .su-kien-lon-left .su-kien-lon-date {
-        font-size: 15px;
+        font-size: 17px;
     }
     main .su-kien-lon .su-kien-lon-left .su-kien-lon-location {
-        font-size: 15px;
+        font-size: 17px;
     }
     main .doan-nghe-si .main h3 {
         font-size: 22px;
@@ -2878,7 +2878,7 @@ footer .block-footer .copyright-right .cre img{
         height: 270px;
     }
     main .doan-nghe-si .news .owl-stage {
-        height: 350px;
+        height: 300px;
     }
     main .doan-nghe-si {
         height: 360px;
@@ -2888,7 +2888,7 @@ footer .block-footer .copyright-right .cre img{
         line-height: 10px;
     }
     main .doan-nghe-si .owl-theme .owl-nav.disabled+.owl-dots {
-        margin-top: -30px;
+        margin-top: 5px;
     }
     main .heading {
         font-size: 15px;
