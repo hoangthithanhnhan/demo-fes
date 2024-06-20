@@ -1967,18 +1967,20 @@ footer .block-footer .copyright-right .cre img{
         font-size: 15px;
     }
     main .le-hoi-vh .le-hoi-vh-content .item-hover .card-title {
-        font-size: 17px;
+        font-size: 20px;
     }
     main .le-hoi-vh .le-hoi-vh-content .item-hover .card-text{
         display: -webkit-box;
-        font-size: 15px;
-        -webkit-line-clamp: 10;
+        font-size: 18px;
+        -webkit-line-clamp: 15;
         -webkit-box-orient: vertical;
         overflow: hidden;
+        line-height: 27px;
     }
     main .le-hoi-vh .le-hoi-vh-content .item-hover .btn {
         margin-top: 10px;
-        font-size: 14px;
+        font-size: 18px;
+        padding: 18px 25px;
     }
     
     main .su-kien-khac .su-kien-khac-right .card .card-title span{
@@ -2275,6 +2277,7 @@ footer .block-footer .copyright-right .cre img{
     main .doan-nghe-si .news .news-item .hover-content .hover-text {
         font-size: 14px;
         line-height: 20px;
+        -webkit-line-clamp: 7;
         margin-bottom: 0px;
     }
     main .doan-nghe-si .news .news-item .hover-content .hover-btn img{
@@ -2341,7 +2344,7 @@ footer .block-footer .copyright-right .cre img{
         margin-top: 0px;
     }
     main .le-hoi-vh .le-hoi-vh-content .item-hover .card-text {
-        -webkit-line-clamp: 12;
+        -webkit-line-clamp: 10;
     }
     main .tai-tro .tai-tro-content .nha-tai-tro {
         margin-top: 40px;
@@ -2554,12 +2557,12 @@ footer .block-footer .copyright-right .cre img{
     .navbar-light .navbar-nav > li.active::before{
         display: none;
     }
-    .navbar-light .navbar-nav > li{
-        flex-grow: 100;
-    }
     .navbar-light .navbar-nav > li.active{
-        /* background-color: var(--orange); */
+        background-color: var(--orange);
         border-radius: 10px;
+    }
+    .navbar-light .navbar-nav > li{
+        padding: 0 15px;
     }
     .dropdown-menu .dropdown-item{
         font-size: 14px;
@@ -2571,7 +2574,30 @@ footer .block-footer .copyright-right .cre img{
     .navbar-light{
         flex-grow: 0;
     }
-
+    .logo-nav{
+        flex-grow: 1;
+    }
+    .navbar{
+        position: static;
+    }
+    .header-wraper{
+        position: relative;
+    }
+    .navbar-light .navbar-collapse{
+        position: absolute;
+        right: 0;
+        top: 100%;
+        width: 100%;
+        background-color: #fff;
+    }
+    .navbar-light .navbar-toggler{
+        border: 0;
+    }
+    .navbar-nav{
+        padding: 15px;
+        max-height: calc(100vh - 70px) ;
+        overflow:auto;
+    }
 }
 
 @media (max-width: 640px){
@@ -2934,7 +2960,7 @@ footer .block-footer .copyright-right .cre img{
         margin-top: 0;
     }
     main .chuong-trinh-chinh {
-        margin-top: 160px;
+        margin-top: 200px;
         margin-bottom: 10px;
     }
     main .heading {

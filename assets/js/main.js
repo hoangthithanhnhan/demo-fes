@@ -279,7 +279,7 @@ function resizeimage(){
     $('main .su-kien-khac .su-kien-khac-right .card').height(width/0.75);
 
     let widthLH=$('main .le-hoi-vh .le-hoi-vh-content .content-item .card').width();
-    $('main .le-hoi-vh .le-hoi-vh-content .content-item > .card').height(widthLH/0.68);
+    $('main .le-hoi-vh .le-hoi-vh-content .content-item .card').height(widthLH/0.68);
 
     let widthIMG=$('main .tin-vh-dl .tin-vh-dl-content .card img').width();
     $('main .tin-vh-dl .tin-vh-dl-content .card img').height(widthIMG/1.56);
