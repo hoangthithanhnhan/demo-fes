@@ -2548,6 +2548,30 @@ footer .block-footer .copyright-right .cre img{
     footer .block-footer .copyright-right .cre p{
         font-size: 13px;
     }
+    /* .navbar-light{
+        flex-grow: 1;
+    } */
+    .navbar-light .navbar-nav > li.active::before{
+        display: none;
+    }
+    .navbar-light .navbar-nav > li{
+        flex-grow: 100;
+    }
+    .navbar-light .navbar-nav > li.active{
+        /* background-color: var(--orange); */
+        border-radius: 10px;
+    }
+    .dropdown-menu .dropdown-item{
+        font-size: 13px;
+        line-height: 20px;
+    }
+    .dropdown-menu {
+        padding: 10px 0px;
+    }
+    .navbar-light{
+        flex-grow: 0;
+    }
+
 }
 
 @media (max-width: 640px){
@@ -2658,7 +2682,7 @@ footer .block-footer .copyright-right .cre img{
 }
 
 
-@media (max-width: 376px){
+@media (max-width: 480px){
     main .su-kien-lon .su-kien-lon-left .su-kien-lon-time .time-item {
         font-size: 20px;
         padding: 13px 15px;
@@ -2680,11 +2704,12 @@ footer .block-footer .copyright-right .cre img{
         height: 100px;
     }
     main .banner .center h1 {
-        font-size: 30px;
+        font-size: 40px;
         line-height: 50px;
     }
     main .banner .center .banner-sologan {
-        font-size: 25px;
+        font-size: 35px;
+        margin-top: -20px;
     }
     main .center button span {
         font-size: 13px;
@@ -2727,7 +2752,7 @@ footer .block-footer .copyright-right .cre img{
         line-height: 15px;
     }
     main .right {
-        margin-top: 30px;
+        margin-top: 20px;
     }
     .block-banner {
         padding: 0px 15px;
@@ -2737,10 +2762,10 @@ footer .block-footer .copyright-right .cre img{
         margin-bottom: 0;
     }
     main .fes .fes-menu .fes-menu-info .detail {
-        font-size: 11px;
+        font-size: 14px;
     }
     main .fes .fes-menu .title {
-        font-size: 13px;
+        font-size: 16px;
     }
     main .fes .fes-menu .fes-menu-block {
         margin-bottom: 20px;
@@ -2759,17 +2784,17 @@ footer .block-footer .copyright-right .cre img{
         height: 250px;
     }
     main .tin-tuc .tin-tuc-content .item-title {
-        font-size: 11px;
+        font-size: 14px;
     }
     main .tin-tuc .tin-tuc-left .title-left {
-        font-size: 13px;
+        font-size: 15px;
     }
     main .tin-tuc .tin-tuc-left .content-left {
-        font-size: 12px;
+        font-size: 15px;
         line-height: 20px;
     }
     main .tin-tuc .tin-tuc-content .item-date {
-        font-size: 12px;
+        font-size: 14px;
     }
     main .tin-tuc .tin-tuc-center .img-center {
         width: 130px;
@@ -2824,10 +2849,10 @@ footer .block-footer .copyright-right .cre img{
         padding: 5px 15px;
     }
     main .doan-nghe-si .news .center .news-item img {
-        height: 250px;
+        height: 270px;
     }
     main .doan-nghe-si .news .owl-stage {
-        height: 300px;
+        height: 350px;
     }
     main .doan-nghe-si {
         height: 360px;
@@ -2835,6 +2860,9 @@ footer .block-footer .copyright-right .cre img{
     main .doan-nghe-si .news .owl-item .news-item .card-title {
         font-size: 13px;
         line-height: 10px;
+    }
+    main .doan-nghe-si .owl-theme .owl-nav.disabled+.owl-dots {
+        margin-top: -30px;
     }
     main .heading {
         font-size: 15px;
@@ -2853,7 +2881,7 @@ footer .block-footer .copyright-right .cre img{
         margin: 10px;
     }
     main .thu-vien-ban-do .thu-vien-center .img-sm .album a {
-        height: 120px;
+        height: 150px;
     }
     main .su-kien-khac .su-kien-khac-left .su-kien-khac-title .red {
         font-size: 30px;
@@ -2868,13 +2896,19 @@ footer .block-footer .copyright-right .cre img{
     }
     main .su-kien-khac .su-kien-khac-left .su-kien-khac-heading {
         padding: 0;
-        font-size: 13px;
+        font-size: 15px;
     }
     main .su-kien-khac .su-kien-khac-right {
-        margin-top: 0px;
+        margin-top: 10px;
+    }
+    main .su-kien-khac .su-kien-khac-right .card .card-date {
+        font-size: 13px;
+    }
+    main .su-kien-khac .su-kien-khac-right .card .card-text {
+        font-size: 13px;
     }
     main .doan-nghe-si .news .owl-item .card {
-        width: 100%;
+        width: 90%;
     }
     main .doan-nghe-si .news .news-item .hover-content .hover-title {
         font-size: 14px;
@@ -2920,10 +2954,10 @@ footer .block-footer .copyright-right .cre img{
         margin-top: 0;
     }
     main .tin-le-hoi-chinh .tin-le-hoi-chinh-content .tin-le-hoi-chinh-content-item .img-item-top {
-        height: 200px;
+        height: 250px;
     }
     main .tin-le-hoi-chinh .tin-le-hoi-chinh-content .tin-le-hoi-chinh-content-item .img-item-bottom {
-        height: 200px;
+        height: 250px;
     }
     main .tin-le-hoi-chinh .tin-le-hoi-chinh-content .tin-le-hoi-chinh-content-item .tin-le-hoi-main-content .tin-le-hoi-title {
         font-size: 14px;
@@ -2977,8 +3011,12 @@ footer .block-footer .copyright-right .cre img{
     main .thu-vien-ban-do .ban-do {
         margin-top: 0px;
     }
+    main .thu-vien-ban-do .ban-do .ban-do-item a{
+        width: 100%;
+        height: 100%;
+    }
     footer .block-footer{
-        padding: 0px;
+        padding: 10px 0px;
     }
     footer .line-top {
         margin-bottom: -12px;
@@ -2993,7 +3031,7 @@ footer .block-footer .copyright-right .cre img{
         font-size: 13px;
     }
     footer .block-footer .footer-right .contact{
-        margin-bottom: 10px;
+        margin-bottom: 0px;
     }
     footer .block-footer .footer-right p span {
         font-size: 15px;
@@ -3001,6 +3039,5 @@ footer .block-footer .copyright-right .cre img{
     footer .block-footer .copyright .copyright-left {
         font-size: 12px;
         margin-bottom: 10px;
-    }
-
+    }    
 }

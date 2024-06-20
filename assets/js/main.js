@@ -47,10 +47,6 @@ $(document).ready(function() {
         navText:['<img class="" src="./assets/images/su-kien-khac/left.png" alt="">','<img class="" src="./assets/images/su-kien-khac/right.png" alt="">'],
         responsive:{
             0:{
-                items:1,
-                nav:true,
-            },
-            640:{
                 items:2,
                 nav:true
             },
@@ -103,12 +99,20 @@ $(document).ready(function() {
     });
 
     $('#slide-tin-tai-tro').owlCarousel({
-        items:2,
         loop:true,
         autoplay:false,
         margin:30,
         autoplayTimeout:3000,
-        autoplayHoverPause:true
+        autoplayHoverPause:true,
+        responsive:{
+            0:{
+                items:1,
+                dots:false
+            },
+            640:{
+                items:2
+            }
+        }
     });
 
     $('#slide-nha-tai-tro').owlCarousel({
