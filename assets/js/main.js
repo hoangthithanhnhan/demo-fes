@@ -275,8 +275,13 @@ $(document).ready(function() {
     });
 
     //setTimeout(setMaxHeight,2000)
+    // var splash=document.getElementById('splash-screen');
+    // window.addEventListener("load",function(){
+    //     setTimeout(() => {
+    //         splash.style.display='none';
+    //     }, 1000);
+    // })
 })
-
 function resizeimage(){
     let width=$('main .su-kien-khac .su-kien-khac-right .card').width();
     $('main .su-kien-khac .su-kien-khac-right .card').height(width/0.75);
