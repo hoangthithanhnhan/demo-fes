@@ -40,7 +40,7 @@ $(document).ready(function() {
     owl.owlCarousel({
         loop:true,
         margin:30,
-        autoplay:false,
+        autoplay:true,
         dots:false,
         autoplayTimeout:3000,
         autoplayHoverPause:true,
@@ -56,7 +56,7 @@ $(document).ready(function() {
                 nav:true,
             },
             1025:{
-                items:5
+                items:4
             }
         }
     });
@@ -73,7 +73,7 @@ $(document).ready(function() {
         margin:30,
         nav:false,
         dots:false,
-        autoplay:false,
+        autoplay:true,
         autoplayTimeout:2000,
         autoplayHoverPause:true
     });
@@ -83,7 +83,7 @@ $(document).ready(function() {
         margin:30,
         nav:false,
         dots:false,
-        autoplay:false,
+        autoplay:true,
         autoplayTimeout:2000,
         autoplayHoverPause:true
     });
@@ -93,14 +93,14 @@ $(document).ready(function() {
         margin:30,
         nav:false,
         dots:false,
-        autoplay:false,
+        autoplay:true,
         autoplayTimeout:2000,
         autoplayHoverPause:true
     });
 
     $('#slide-tin-tai-tro').owlCarousel({
         loop:true,
-        autoplay:false,
+        autoplay:true,
         margin:30,
         autoplayTimeout:3000,
         autoplayHoverPause:true,
@@ -119,7 +119,7 @@ $(document).ready(function() {
         loop:true,
         items:7,
         margin:18,
-        autoplay:false,
+        autoplay:true,
         autoplayTimeout:3000,
         dots:false,
         autoplayHoverPause:true,
@@ -159,9 +159,12 @@ $(document).ready(function() {
                 items: 3
             },
             1024: {
-                items: 3,
-                autoplay: false,
-                autoplayTimeout: 1000
+                items: 3   ,
+                autoplay: true,
+                autoplayTimeout: 3000
+            },
+            1280:{
+                items:4
             },
             1920:{
                 items: 5
@@ -283,6 +286,7 @@ function resizeimage(){
 
     let widthIMG=$('main .tin-vh-dl .tin-vh-dl-content .card img').width();
     $('main .tin-vh-dl .tin-vh-dl-content .card img').height(widthIMG/1.56);
+
 }
 $(function(){
     window.addEventListener("resize",resizeimage);

@@ -1873,9 +1873,10 @@ footer .block-footer .copyright-right .cre img{
     }
     main .su-kien-khac .su-kien-khac-left .su-kien-khac-heading {
         font-size: 14px;
+        line-height: 20px;
     }
     main .su-kien-khac .su-kien-khac-left .img-topic .main-img-topic {
-        width: 55%;
+        width: 50%;
     }
     main .su-kien-khac .su-kien-khac-left .img-topic .next .button-right a img{
         width: 80%;
@@ -1967,20 +1968,20 @@ footer .block-footer .copyright-right .cre img{
         font-size: 15px;
     }
     main .le-hoi-vh .le-hoi-vh-content .item-hover .card-title {
-        font-size: 20px;
+        font-size: 18px;
     }
     main .le-hoi-vh .le-hoi-vh-content .item-hover .card-text{
         display: -webkit-box;
-        font-size: 18px;
-        -webkit-line-clamp: 15;
+        font-size: 16px;
+        -webkit-line-clamp: 10;
         -webkit-box-orient: vertical;
         overflow: hidden;
-        line-height: 27px;
+        line-height: 24px;
     }
     main .le-hoi-vh .le-hoi-vh-content .item-hover .btn {
         margin-top: 10px;
-        font-size: 18px;
-        padding: 18px 25px;
+        font-size: 15px;
+        padding: 10px 15px;
     }
     
     main .su-kien-khac .su-kien-khac-right .card .card-title span{
