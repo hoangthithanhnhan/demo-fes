@@ -47,7 +47,7 @@ $(document).ready(function() {
         navText:['<img class="" src="./assets/images/su-kien-khac/left.png" alt="">','<img class="" src="./assets/images/su-kien-khac/right.png" alt="">'],
         responsive:{
             0:{
-                items:2,
+                items:1,
                 nav:true
             },
             768:{
