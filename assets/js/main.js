@@ -50,6 +50,10 @@ $(document).ready(function() {
                 items:1,
                 nav:true
             },
+            480:{
+                items:2,
+                nav:true,
+            },
             768:{
                 loop:true,
                 items:3,
@@ -278,9 +282,7 @@ $(document).ready(function() {
 
     var splash=document.getElementById('splash-screen');
     window.addEventListener("load",function(){
-        setTimeout(() => {
-            splash.style.display='none';
-        }, 1000);
+        splash.style.display='none';
     })
 })
 function resizeimage(){
