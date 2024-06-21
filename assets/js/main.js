@@ -274,7 +274,7 @@ $(document).ready(function() {
         $(this).tooltip('hide');
     });
 
-    setTimeout(setMaxHeight,2000)
+    // setTimeout(setMaxHeight,2000)
 
     var splash=document.getElementById('splash-screen');
     window.addEventListener("load",function(){
