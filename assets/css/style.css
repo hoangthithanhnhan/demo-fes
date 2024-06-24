@@ -19,7 +19,7 @@ body{
     left: 0;
     width: 100%;
     z-index: 1041;
-    display: none;
+    /* display: none; */
 }
 #splash-screen .splash-content{
     display: flex;
