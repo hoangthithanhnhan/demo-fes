@@ -30,15 +30,19 @@
 </head>
 <body>
     <div id="splash-screen">
+        <img class="splash-pattern" src="./assets/images/splash-pattern.png" alt="Festival Huế 2024">   
         <div class="splash-content">
             <img class="splash-logo" src="./assets/images/logofes.png" alt="">
-            <p class="splash-title">FESTIVAL HUẾ</p>
+            <div class="splash-title">
+                <p class="splash-title-top">FESTIVAL HUẾ</p>
+                <p class="splash-title-bottom">FESTIVAL HUẾ</p>
+            </div>
             <p class="splash-sologan">Di sản văn hóa với hội nhập và phát triển</p>
         </div>
     </div>
     <header>
         <div class="header-wraper">
-            <div class="container">
+            <div class="container"> 
                 <div class="header-container d-flex flex-wrap">
                     <nav class="navbar navbar-expand-lg navbar-light logo-nav">
                         <a class="navbar-brand" href="#"><img src="./assets/images/logofes.png" alt=""></a>
@@ -122,8 +126,10 @@
                             </ul>
                         </div>
                     </nav>
-                    <div data-toggle="modal" data-target="#myModal" class="search-btn align-self-center">
-                        <a href="#"><img src="./assets/images/header/search.png" alt=""></a>
+                    <div class="search-btn align-self-center">
+                        <button data-toggle="modal" data-target="#exampleModal" style="border: none; background-color:#fff;">
+                            <img src="./assets/images/header/search.png" alt="">
+                        </button>
                     </div>
                     <div class="dropdown align-self-center dropdown-register">
                         <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
@@ -151,6 +157,40 @@
         </div>
     </header>
     <main>
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="search-block modal-content">
+                    <h5 class="modal-title" id="exampleModalLabel">Tìm kiếm</h5>
+                    <div class="search-box">
+                        <input type="text" class="form-search" placeholder="Từ khóa ...">
+                        <button class="button-search">
+                            <img src="./assets/images/search.png" alt="Search Icon">
+                        </button>
+                    </div>
+                </div>
+                <div class="search-result-block modal-content">
+                    <h5 class="search-result-title">Pages</h5>
+                    <div class="search-result">
+                        <a href="#" class="search-result-heading">Huế - Kinh đô áo dài của Việt Nam</a>
+                        <a href="#" class="search-result-detail">đô áo dài...đô áo dài...</a>
+                    </div>
+                    <div class="search-result">
+                        <a href="#" class="search-result-heading">Huế - Kinh đô áo dài của Việt Nam</a>
+                        <a href="#" class="search-result-detail">đô áo dài...đô áo dài...</a>
+                    </div>
+                    <h5 class="search-result-title">Trình diễn chuyên mục</h5>
+                    <div class="search-result">
+                        <a href="#" class="search-result-heading">Huế - Kinh đô áo dài của Việt Nam</a>
+                        <a href="#" class="search-result-detail">đô áo dài...đô áo dài...</a>
+                    </div>
+                    <div class="search-result">
+                        <a href="#" class="search-result-heading">Huế - Kinh đô áo dài của Việt Nam</a>
+                        <a href="#" class="search-result-detail">đô áo dài...đô áo dài...</a>
+                    </div>
+                    <div class="search-result-title">Xem kết quả khác</div>
+                </div>
+            </div>
+        </div>
         <section class="block-banner container-fluid">
             <div class="banner d-flex">
                 <div class="center d-flex">
@@ -948,7 +988,7 @@
             <div class="container tin-tuc-title"><p><span class="black">Lễ hội </span><span class=  "red">Văn hóa</span></p></div>
             <div class="container le-hoi-vh-content">
                 <div id="slide-le-hoi-vh" class="row owl-carousel owl-theme">
-                    <div class="col-sm content-item item">
+                    <div class="col content-item item">
                         <div class="card bg-dark text-white">
                             <img src="./assets/images/le-hoi-vh/img1.png" class="card-img" alt="...">
                             <div class="card-img-overlay">
@@ -964,7 +1004,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm  content-item item">
+                    <div class="col content-item item">
                         <div class="card bg-dark text-white">
                             <img src="./assets/images/le-hoi-vh/img2.png" class="card-img" alt="...">
                             <div class="card-img-overlay">
@@ -979,7 +1019,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm content-item item">
+                    <div class="col content-item item">
                         <div class="card bg-dark text-white">
                             <img src="./assets/images/le-hoi-vh/img3.png" class="card-img" alt="...">
                             <div class="card-img-overlay">
@@ -994,7 +1034,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm content-item item">
+                    <div class="col content-item item">
                         <div class="card bg-dark text-white">
                             <img src="./assets/images/le-hoi-vh/img4.png" class="card-img" alt="...">
                             <div class="card-img-overlay">
@@ -1009,7 +1049,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm content-item item">
+                    <div class="col content-item item">
                         <div class="card bg-dark text-white">
                             <img src="./assets/images/le-hoi-vh/img5.png" class="card-img" alt="...">
                             <div class="card-img-overlay">

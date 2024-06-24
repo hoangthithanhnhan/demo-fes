@@ -163,12 +163,12 @@ $(document).ready(function() {
                 items: 3
             },
             1024: {
-                items: 3   ,
-                autoplay: true,
-                autoplayTimeout: 3000
+                items: 3,
             },
             1280:{
-                items:4
+                items:4,
+                autoplay: true,
+                autoplayTimeout: 3000
             },
             1920:{
                 items: 5
@@ -280,10 +280,21 @@ $(document).ready(function() {
 
     // setTimeout(setMaxHeight,2000)
 
-    var splash=document.getElementById('splash-screen');
-    window.addEventListener("load",function(){
-        splash.style.display='none';
+    // var splash=document.getElementById('splash-screen');
+    // window.addEventListener("load",function(){
+    //     splash.style.display='none';
+    // })
+
+    $('main .modal .modal-dialog .search-block .search-box .form-search').on('keyup',function(){
+        var value=$(this).val().trim();
+        if (value!==''){
+            $('main .modal .modal-dialog .search-result-block').show();
+        }
+        else{
+            $('main .modal .modal-dialog .search-result-block').hide();
+        }
     })
+        
 })
 function resizeimage(){
     let width=$('main .su-kien-khac .su-kien-khac-right .card').width();

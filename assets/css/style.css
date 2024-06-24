@@ -11,23 +11,35 @@ body{
 }
 /* splash */
 #splash-screen{
-    background-image: url('../images/Splash.png');
+    background-image: url('../images/splash.png');
     background-size: cover;
-    text-align: center;
-    height: 100%;
+    height: 100vh;
     position: fixed;
     top:0;
     left: 0;
     width: 100%;
-    z-index: 10000;
+    z-index: 1041;
     /* display: none; */
+}
+#splash-screen .splash-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+#splash-screen .splash-pattern{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: -1;
 }
 #splash-screen .splash-logo{
     width: 300px;
     height: 300px;
-    margin-top: 205px;
 }
-#splash-screen .splash-title{
+#splash-screen .splash-title-top{
     font-family: 'UTM Alberta Heavy';
     font-size: 64px;
     font-weight: 400;
@@ -35,17 +47,23 @@ body{
     background: linear-gradient(360deg, #630000 0%, #C90000 100%);
     color: transparent;
     -webkit-background-clip: text;
-    position: relative;
-    margin-top: -7px;
+    /* margin-top: -7px; */
+    /* position: absolute; */
 }
-#splash-screen .splash-title::after {
-    content: 'FESTIVAL HUẾ';
-    display: block;
-    margin-top: -28px;
+#splash-screen .splash-title{
+    position: relative;
+}
+#splash-screen .splash-title-bottom{
+    font-size: 64px;
+    font-weight: 400;
+    font-family: 'UTM Alberta Heavy';
+    line-height: 85px;
     transform: scaleY(-1);
     background: linear-gradient(360deg, rgba(130, 0, 0, 0.46) 0%, rgba(118, 0, 0, 0.01) 45.22%, rgba(118, 0, 0, 0) 73.53%);
+    color: transparent;
     -webkit-background-clip: text;
-    position: relative;
+    position: absolute;
+    top:calc(100% - 28px);
 }
 #splash-screen .splash-sologan{
     font-family: 'SVN-Allea Script';
@@ -53,17 +71,89 @@ body{
     font-weight: 420;
     line-height: 73.6px;
     color:rgba(71, 0, 0, 1);
-    margin-top: -55px;
-    padding-bottom: 273px;
+    /* margin-top: -70px; */
 }
-#splash-screen{
-    /* opacity: 0; */
+/* form search */
+main .show{
+    padding: 0;
+}
+main .modal .modal-dialog{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+main .modal .modal-dialog .search-block{
+    padding: 15px 20px;
+    width: 400px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+}
+main .modal .modal-dialog .search-block .modal-title{
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 20px;
+    margin-bottom: 15px;
+}
+main .modal .modal-dialog .search-block .search-box{
+    display: flex;
+    border: 1px solid #ECD0C4;
+    width: 100%;
+    padding: 10px 15px;
+    border-radius: 60px;
+}
+main .modal .modal-dialog .search-block .search-box .form-search{
+    width: 100%;
+    border: none;
+}
+main .modal .modal-dialog .search-block .search-box .form-search:focus {
+    outline: none;
+    border: none;
+}
+main .modal .modal-dialog .search-block .search-box .form-search::placeholder{
+    font-size: 16px;
+    line-height: 20px;
+    color: #B77865;
+}
+main .modal .modal-dialog .search-block .search-box .button-search{
+    border:none;
+    background: none;
+}
+main .modal .modal-dialog .search-result-block{
+    display: none;
+    width: 400px;
+    border-radius: 10px;
+    padding-top: 15px;
+}
+main .modal .modal-dialog .search-result-block .search-result-title{
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 20px;
+    color:rgba(111, 0, 0, 1);
+    background-color: rgba(255, 242, 238, 1);
+    padding: 10px 15px;
+    text-decoration: none;
+    margin-bottom: 15px;
+}
+main .modal .modal-dialog .search-result-block .search-result{
+    display:flex;
+    flex-direction: column;
+    padding: 0 15px;
+    margin-bottom: 15px;
+}
+main .modal .modal-dialog .search-result-block .search-result .search-result-heading{
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    text-decoration: none;
+    color: var(--body);
+}
+main .modal .modal-dialog .search-result-block .search-result .search-result-detail{
+    text-decoration: none;
+    color: var(--body);
 }
 
 /* header */
-/* .navbar-click{
-    background-color: red;
-} */
 .header-fixed{
     box-shadow: 0px 1px 8px 0px rgba(3, 17, 53, 0.12);
 }
@@ -1819,20 +1909,6 @@ footer .block-footer .copyright-right .cre img{
     main .su-kien-khac .su-kien-khac-right .card .card-text {
         font-size: 14px;
     }
-    #splash-screen .splash-logo {
-        width: 200px;
-        height: 200px;
-        margin-top: 100px;
-    }
-    #splash-screen .splash-title{
-        font-size: 50px;
-    }
-    #splash-screen .splash-title::after{
-        margin-top: -41px;
-    }
-    #splash-screen .splash-sologan{
-        font-size: 50px;
-    }
 }
 
 @media (max-width: 1280px){
@@ -1840,12 +1916,11 @@ footer .block-footer .copyright-right .cre img{
         margin-bottom: 30px;
     }
     .navbar-light .navbar-nav .nav-link {
-        font-size: 18px;
+        font-size: 17px;
         padding: 8px 5px;
     }
-    header .search-btn a {
-        width: 40px;
-        height: 40px;
+    header .search-btn {
+        padding: 0 12px;
     }
     main .fes .fes-menu .title {
         font-size: 16px;
@@ -2036,7 +2111,6 @@ footer .block-footer .copyright-right .cre img{
     .block-banner {
         padding: 0px 15px;
     }
-    
 }
 @media (max-width: 1024px){ 
     body {
@@ -2622,7 +2696,7 @@ footer .block-footer .copyright-right .cre img{
     #splash-screen .splash-logo {
         width: 150px;
         height: 150px;
-        margin-top: 100px;
+        margin-top: 50px;
     }
     #splash-screen .splash-title{
         font-size: 50px;
@@ -2632,6 +2706,21 @@ footer .block-footer .copyright-right .cre img{
     }
     #splash-screen .splash-sologan{
         font-size: 50px;
+    }
+    #splash-screen .splash-pattern {
+    width: 50%;
+    }
+    #splash-screen .splash-title-top {
+        font-size: 40px;
+        margin-top: -20px;
+    }
+    #splash-screen .splash-title-bottom{
+        font-size: 40px;
+        top: calc(100% - 49px);
+    }
+    #splash-screen .splash-sologan{
+        font-size: 40px;
+        margin-top: -25px;
     }
 }
 
@@ -3113,6 +3202,16 @@ footer .block-footer .copyright-right .cre img{
         margin-top: -49px;
     }
     #splash-screen .splash-sologan{
-        font-size: 40px;
+        display: none;
+    }
+    .navbar-light .navbar-brand img{
+        width: 48px;
+        height: 48px;
+    }
+    main .modal .modal-dialog .search-block {
+        width: 350px;
+    }
+    main .modal .modal-dialog .search-result-block{
+        width: 350px;
     }
 }
