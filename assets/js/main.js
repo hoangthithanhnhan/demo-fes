@@ -285,6 +285,10 @@ $(document).ready(function() {
         splash.style.display='none';
     })
 
+    // $('header .header-wraper .header-container .search-btn').click(function() {
+    //     $('main .modal .modal-dialog .search-block .search-box .form-search').focus();
+    // });
+    
     $('main .modal .modal-dialog .search-block .search-box .form-search').on('keyup',function(){
         var value=$(this).val().trim();
         if (value!==''){
@@ -294,7 +298,6 @@ $(document).ready(function() {
             $('main .modal .modal-dialog .search-result-block').hide();
         }
     })
-        
 })
 function resizeimage(){
     let width=$('main .su-kien-khac .su-kien-khac-right .card').width();
