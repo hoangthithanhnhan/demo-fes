@@ -138,8 +138,6 @@ main .modal .modal-dialog .search-result-block .search-result-title{
     margin-bottom: 15px;
 }
 main .modal .modal-dialog .search-result-block .search-result{
-    display:flex;
-    flex-direction: column;
     padding: 0 15px;
     margin-bottom: 15px;
 }
