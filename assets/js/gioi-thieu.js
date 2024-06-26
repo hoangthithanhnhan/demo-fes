@@ -299,6 +299,23 @@ $(document).ready(function() {
         splash.style.display='none';    
     })
 
+    $('#exampleModal').on('shown.bs.modal',function(){
+        $('#form-search').trigger('focus');
+    })
+    
+    $('#form-search').on('keyup',function(){
+        var value=$(this).val().trim();
+        if (value!==''){
+            $('main .modal .modal-dialog .search-result-block').show();
+        }
+        else{
+            $('main .modal .modal-dialog .search-result-block').hide();
+        }
+    })
+    $('#exampleModal').on('hidden.bs.modal',function(){
+        $('#form-search').val('');
+        $('main .modal .search-result-block').hide();
+    })
 })
 function resizeimage(){
     let width=$('main .su-kien-khac .su-kien-khac-right .card').width();
