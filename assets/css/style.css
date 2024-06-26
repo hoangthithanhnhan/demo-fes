@@ -3325,13 +3325,6 @@ main .content-gioi-thieu .content-left  nav>ul li a{
     color: #fff;
     text-decoration: none;
 }
-main .content-gioi-thieu .content-left  nav ul li .dropdown-menu{
-    max-width: 100%;
-    padding: 0;
-}
-main .content-gioi-thieu .content-left  nav ul li .dropdown-menu .dropdown-item{
-    color: var(--body);
-}
 main .content-gioi-thieu .content-left  nav ul .active a{
     color:var(--red);
     position: relative;
@@ -3345,14 +3338,6 @@ main .content-gioi-thieu .content-left  nav ul .active a::before{
 }
 main .content-gioi-thieu .content-left  nav ul li .nav-link{
     padding: 0;
-}
-main .content-gioi-thieu .content-left nav ul li .dropdown-toggle{
-    position: relative;
-}
-main .content-gioi-thieu .content-left nav ul li .dropdown-toggle::after{
-    content: url('../images/ve-festival/down.png');
-    position: absolute;
-    right: 0;
 }
 main .content-gioi-thieu .content-left .gioi-thieu-menu .menu-title{
     color:#fff;
