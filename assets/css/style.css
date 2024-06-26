@@ -12,7 +12,6 @@ body{
 /* splash */
 #splash-screen{
     background-image: url("../images/splash-bg.png");
-    
     background-size: cover;
     height: 100vh;
     position: fixed;
@@ -1867,6 +1866,12 @@ footer .block-footer .copyright-right .cre img{
 
 /* responsive */
 @media (max-width: 1440px){ 
+    .navbar-light .navbar-nav .nav-link{
+        font-size: 18px;
+    }
+    header .dropdown-register button{
+        font-size: 17px;
+    }
     .navbar-light .navbar-nav > li {
         margin-right: 0px;
     }
@@ -1918,8 +1923,12 @@ footer .block-footer .copyright-right .cre img{
         margin-bottom: 30px;
     }
     .navbar-light .navbar-nav .nav-link {
-        font-size: 17px;
+        font-size: 16px;
         padding: 8px 5px;
+    }
+    header .dropdown-register button {
+        font-size: 15px;
+        padding: 8px 15px;
     }
     header .search-btn {
         padding: 0 12px;
