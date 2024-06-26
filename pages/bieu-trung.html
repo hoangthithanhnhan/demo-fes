@@ -28,6 +28,17 @@
     <script src="../assets/js/main.js"></script>
 </head>
 <body>
+    <div id="splash-screen">
+        <img class="splash-pattern" src="./assets/images/splash-pattern.png" alt="Festival Huế 2024">   
+        <div class="splash-content">
+            <img class="splash-logo" src="./assets/images/logofes.png" alt="">
+            <div class="splash-title">
+                <p class="splash-title-top">FESTIVAL HUẾ</p>
+                <p class="splash-title-bottom">FESTIVAL HUẾ</p>
+            </div>
+            <p class="splash-sologan">Di sản văn hóa với hội nhập và phát triển</p>
+        </div>
+    </div>
     <header>
         <div class="header-wraper">
             <div class="container"> 
@@ -44,8 +55,8 @@
                                         Giới thiệu
                                     </a>
                                     <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="../pages/ve-festival.html">Về Festival Huế</a></li>
-                                        <li><a class="dropdown-item" href="../pages/bieu-trung.html">Biểu trưng Festival Huế</a></li>
+                                        <li><a class="dropdown-item" href="./ve-festival.html">Về Festival Huế</a></li>
+                                        <li><a class="dropdown-item" href="./bieu-trung.html">Biểu trưng Festival Huế</a></li>
                                         <li><a class="dropdown-item" href="#">Các đoàn nghệ thuật</a></li>
                                         <li><a class="dropdown-item" href="#">Danh sách nhà tài trợ</a></li>
                                         <li><a class="dropdown-item" href="#">Danh sách phóng viên, đơn vị truyền thông</a></li>
@@ -150,7 +161,7 @@
                 <div class="search-block modal-content">
                     <h5 class="modal-title" id="exampleModalLabel">Tìm kiếm</h5>
                     <div class="search-box">
-                        <input type="text" class="form-search" placeholder="Từ khóa ...">
+                        <input type="text" id="form-search" placeholder="Từ khóa ...">
                         <button class="button-search">
                             <img src="../assets/images/search.png" alt="Search Icon">
                         </button>
@@ -185,7 +196,7 @@
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="../index.html">Trang chủ</a></li>
-                    <li class="breadcrumb-item"><a href="./ve-festival.html">Giới thiệu</a></li>
+                    <li class="breadcrumb-item"><a href="./ve-festival.html">Festival Huế</a></li>
                     <li class="breadcrumb-item active" aria-current="page"><a href="./bieu-trung.html">Biểu trưng Festival Huế</a></li>
                 </ol>
             </nav>
@@ -195,28 +206,27 @@
             <div class="d-flex flex-wrap">
                 <div class="col-3 content-left">
                     <div class="gioi-thieu-menu">
-                        <div class="menu-title">Giới thiệu</div>
+                        <div class="menu-title">Festival Huế</div>
                         <nav>
                             <ul>
                                 <li class="menu-item">
-                                    <a  href="./ve-festival.html">
-                                    Về Festival Huế</a>
+                                    <a  href="./ve-festival.html">Về Festival Huế</a>
                                 </li>
                                 <hr>
                                 <li class="menu-item active">
-                                    <a href="./bieu-trung.html"><img src="../assets/images/ve-festival/active.png" alt="">Biểu trưng Festival Huế</a>
+                                    <a href="./bieu-trung.html">Biểu trưng Festival Huế</a>
                                 </li>
                                 <hr>
-                                <li class="nav-item dropdown">
+                                <li class="menu-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
                                         Các kỳ Festival
                                     </a>
-                                    <div class="dropdown-menu">
-                                        <a class="dropdown-item" href="#"></a>
-                                        <a class="dropdown-item" href="#">Another action</a>
-                                        <div class="dropdown-divider"></div>
-                                        <a class="dropdown-item" href="#">Something else here</a>
-                                    </div>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Kỳ Festival 2021</a></li>
+                                        <li><a class="dropdown-item" href="#">Kỳ Festival 2022</a></li>
+                                        <li><a class="dropdown-item" href="#">Kỳ Festival 2023</a></li>
+                                        <li><a class="dropdown-item" href="#">Kỳ Festival 2024</a></li>
+                                    </ul>
                                 </li>
                                 <hr>
                                 <li class="menu-item">
@@ -237,32 +247,34 @@
                             </ul>
                         </nav>
                     </div>
-                    <div class="fes-menu-block ">
-                        <a href="#" class="d-block fes-item item-red">
-                            <p class="title">Lịch chương trình Festival 2024</p>
-                            <div class="fes-menu-info d-flex">
-                                <img src="../assets/images/fes/lich2.png" alt="">
-                                <p class="detail">Xem lịch tổng thể các chương trình, địa điểm, và thời gian diễn ra trong 4 mùa Festival Huế.</p>
-                            </div>
-                        </a>
-                    </div>
                     <div class="fes-menu-block">
-                        <a href="#" class="d-block fes-item item-green">
-                            <p class="title">Bản đồ điểm diễn ra chương trình</p>
-                            <div class="fes-menu-info d-flex">
-                                <img src="../assets/images/fes/ban-do.png" alt="">
-                                <p class="detail">Hướng dẫn cho du khách tìm vị trí các điểm diễn ra chương trình, lễ hội một cách dễ dàng.</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="fes-menu-block ">
-                        <a href="#" class="d-block fes-item item-violet">
-                            <p class="title">Mua vé các chương trình Festival</p>
-                            <div class="fes-menu-info d-flex">
-                                <img src="../assets/images/fes/mua-ve.png" alt="">
-                                <p class="detail">Du khách đặt vé online sẽ tiết kiệm được rất nhiều thời gian và dễ dàng, tiện lợi hơn.</p>
-                            </div>
-                        </a>
+                        <div class="fes-menu">
+                            <a href="#" class="d-block fes-item item-red">
+                                <p class="title">Lịch chương trình Festival 2024</p>
+                                <div class="fes-menu-info d-flex">
+                                    <img src="../assets/images/fes/lich2.png" alt="">
+                                    <p class="detail">Xem lịch tổng thể các chương trình, địa điểm, và thời gian diễn ra trong 4 mùa Festival Huế.</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="fes-menu">
+                            <a href="#" class="d-block fes-item item-green">
+                                <p class="title">Bản đồ điểm diễn ra chương trình</p>
+                                <div class="fes-menu-info d-flex">
+                                    <img src="../assets/images/fes/ban-do.png" alt="">
+                                    <p class="detail">Hướng dẫn cho du khách tìm vị trí các điểm diễn ra chương trình, lễ hội một cách dễ dàng.</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="fes-menu">
+                            <a href="#" class="d-block fes-item item-violet">
+                                <p class="title">Mua vé các chương trình Festival</p>
+                                <div class="fes-menu-info d-flex">
+                                    <img src="../assets/images/fes/mua-ve.png" alt="">
+                                    <p class="detail">Du khách đặt vé online sẽ tiết kiệm được rất nhiều thời gian và dễ dàng, tiện lợi hơn.</p>
+                                </div>
+                            </a>
+                        </div>
                     </div>
                     <div class="tin-tuc-noi-bat">
                         <div class="title">Tin tức nổi bật</div>
