@@ -3328,14 +3328,6 @@ main .content-gioi-thieu .content-left  nav>ul li a{
 }
 main .content-gioi-thieu .content-left  nav ul .active a{
     color:var(--red);
-    position: relative;
-    padding-left: 34px;
-}
-main .content-gioi-thieu .content-left  nav ul .active a::before{
-    content: url('../images/ve-festival/active.png');
-    position: absolute;
-    left: 0;
-    top:0;
 }
 main .content-gioi-thieu .content-left  nav ul li .nav-link{
     padding: 0;
