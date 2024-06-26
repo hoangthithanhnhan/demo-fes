@@ -3422,26 +3422,20 @@ main .content-gioi-thieu .content-left .fes-menu-info .detail{
 main .content-gioi-thieu .content-left .fes-menu-info{
     padding-right: 20px;
 }
-main .content-gioi-thieu .content-left .ve-tau{
-    background-image: url('../images/ve-festival/mua-ve.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-}
-main .content-gioi-thieu .content-left .ve-tau:hover{
-    background-image: url('../images/ve-festival/mua-ve-hover.png');
-    transition: all 0.1s ease-in-out;
-}
-main .content-gioi-thieu .content-left .ve-tham-quan{
-    background-image: url('../images/ve-festival/ve-tham-quan.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-}
-main .content-gioi-thieu .content-left .ve-tham-quan:hover{
-    background-image: url('../images/ve-festival/ve-tham-quan-hover.png');
-    transition: all 0.1s ease-in-out;
+main .content-gioi-thieu .content-left .dat-ve img{
+    width: 100%;
+    height: 100%;
 }  
+main .content-gioi-thieu .content-left .dat-ve .img-hover{
+    display: none;
+}
+main .content-gioi-thieu .content-left .dat-ve:hover .img{
+    display: none;
+}
+main .content-gioi-thieu .content-left .dat-ve:hover .img-hover{
+    display: block;
+    transition: all 0.2s ease-in-out;
+} 
 main .content-gioi-thieu .content-left .tin-tuc-noi-bat{
     padding: 20px 20px 5px 20px;
     border: solid 1px #E2E2E2;
