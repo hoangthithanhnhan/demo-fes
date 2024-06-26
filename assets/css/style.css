@@ -74,7 +74,7 @@ body{
     /* margin-top: -70px; */
 }
 /*form search*/
-main .show{
+main .modal.show{
     padding: 0;
 }
 main .modal .modal-dialog{
@@ -3298,12 +3298,19 @@ main .content-gioi-thieu .content-left  nav ul hr{
     margin: 5px 0 5px 0;
     background: rgba(255, 255, 255, 0.2);
 }
-main .content-gioi-thieu .content-left  nav ul li a{
+main .content-gioi-thieu .content-left  nav>ul li a{
     font-size: 16px;
     font-weight: 700;
     line-height: 24px;
     color: #fff;
     text-decoration: none;
+}
+main .content-gioi-thieu .content-left  nav ul li .dropdown-menu{
+    max-width: 100%;
+    padding: 0;
+}
+main .content-gioi-thieu .content-left  nav ul li .dropdown-menu .dropdown-item{
+    color: var(--body);
 }
 main .content-gioi-thieu .content-left  nav ul .active a{
     color:var(--red);

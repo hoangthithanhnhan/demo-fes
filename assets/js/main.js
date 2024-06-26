@@ -175,82 +175,96 @@ $(document).ready(function() {
             }
         }
     });
-
-    document.getElementById('dynamic1').addEventListener('click', function() {
-        lightGallery(document.getElementById('dynamic1'), {
-            dynamic: true,
-            dynamicEl: [{   
-                "src": './assets/images/thu-vien-anh-video/img2.png',
-                'thumb': './assets/images/thu-vien-anh-video/img2.png',
-            }, {
-                'src': './assets/images/thu-vien-anh-video/img2.png',
-                'thumb': './assets/images/thu-vien-anh-video/img2.png',
-            }, {
-                'src': './assets/images/thu-vien-anh-video/img2.png',
-                'thumb': './assets/images/thu-vien-anh-video/img2.png',
-            }]
-        })
-    });
-    document.getElementById('dynamic2').addEventListener('click', function() {
-        lightGallery(document.getElementById('dynamic2'), {
-            dynamic: true,
-            dynamicEl: [{   
-                "src": './assets/images/thu-vien-anh-video/img3.png',
-                'thumb': './assets/images/thu-vien-anh-video/img3.png',
-            }, {
-                'src': './assets/images/thu-vien-anh-video/img3.png',
-                'thumb': './assets/images/thu-vien-anh-video/img3.png',
-            }, {
-                'src': './assets/images/thu-vien-anh-video/img3.png',
-                'thumb': './assets/images/thu-vien-anh-video/img3.png',
-            }]
-        })
-    });
-    document.getElementById('dynamic3').addEventListener('click', function() {
-        lightGallery(document.getElementById('dynamic3'), {
-            dynamic: true,
-            dynamicEl: [{   
-                "src": './assets/images/thu-vien-anh-video/img5.png',
-                'thumb': './assets/images/thu-vien-anh-video/img5.png',
-            }, {
-                'src': './assets/images/thu-vien-anh-video/img5.png',
-                'thumb': './assets/images/thu-vien-anh-video/img5.png',
-            }, {
-                'src': './assets/images/thu-vien-anh-video/img5.png',
-                'thumb': './assets/images/thu-vien-anh-video/img5.png',
-            }]
-        })
-    });
-    document.getElementById('dynamic4').addEventListener('click', function() {
-        lightGallery(document.getElementById('dynamic4'), {
-            dynamic: true,
-            dynamicEl: [{   
-                "src": './assets/images/thu-vien-anh-video/img4.png',
-                'thumb': './assets/images/thu-vien-anh-video/img4.png',
-            }, {
-                'src': './assets/images/thu-vien-anh-video/img4.png',
-                'thumb': './assets/images/thu-vien-anh-video/img4.png',
-            }, {
-                'src': './assets/images/thu-vien-anh-video/img4.png',
-                'thumb': './assets/images/thu-vien-anh-video/img4.png',
-            }]
-        })
-    });
-    document.getElementById('dynamic-video').addEventListener('click', function() {
-        lightGallery(document.getElementById('dynamic4'), {
-            dynamic: true,
-            dynamicEl: [{   
-                "src": 'https://youtu.be/IDVkEvj0KZM?si=MuEaUGYLHCLqN7Yy',
-                'thumb': 'https://youtu.be/IDVkEvj0KZM?si=MuEaUGYLHCLqN7Yy',
-            }, {
-                'src': 'https://youtu.be/IDVkEvj0KZM?si=MuEaUGYLHCLqN7Yy',
-                'thumb': 'https://youtu.be/IDVkEvj0KZM?si=MuEaUGYLHCLqN7Yy',
-            }, {
-                'src': 'https://youtu.be/IDVkEvj0KZM?si=MuEaUGYLHCLqN7Yy',
-                'thumb': 'https://youtu.be/IDVkEvj0KZM?si=MuEaUGYLHCLqN7Yy',
-            }]
-        })
-    });
+    if(document.getElementById('dynamic1')!=null){
+        document.getElementById('dynamic1').addEventListener('click', function() {
+            lightGallery(document.getElementById('dynamic1'), {
+                dynamic: true,
+                dynamicEl: [{   
+                    "src": './assets/images/thu-vien-anh-video/img2.png',
+                    'thumb': './assets/images/thu-vien-anh-video/img2.png',
+                }, {
+                    'src': './assets/images/thu-vien-anh-video/img2.png',
+                    'thumb': './assets/images/thu-vien-anh-video/img2.png',
+                }, {
+                    'src': './assets/images/thu-vien-anh-video/img2.png',
+                    'thumb': './assets/images/thu-vien-anh-video/img2.png',
+                }]
+            })
+        });
+    }else{
+    }
+    if(document.getElementById('dynamic2')!=null){
+        document.getElementById('dynamic2').addEventListener('click', function() {
+            lightGallery(document.getElementById('dynamic2'), {
+                dynamic: true,
+                dynamicEl: [{   
+                    "src": './assets/images/thu-vien-anh-video/img3.png',
+                    'thumb': './assets/images/thu-vien-anh-video/img3.png',
+                }, {
+                    'src': './assets/images/thu-vien-anh-video/img3.png',
+                    'thumb': './assets/images/thu-vien-anh-video/img3.png',
+                }, {
+                    'src': './assets/images/thu-vien-anh-video/img3.png',
+                    'thumb': './assets/images/thu-vien-anh-video/img3.png',
+                }]
+            })
+        });
+    }else{
+    }
+    if(document.getElementById('dynamic3')!=null){
+        document.getElementById('dynamic3').addEventListener('click', function() {
+            lightGallery(document.getElementById('dynamic3'), {
+                dynamic: true,
+                dynamicEl: [{   
+                    "src": './assets/images/thu-vien-anh-video/img5.png',
+                    'thumb': './assets/images/thu-vien-anh-video/img5.png',
+                }, {
+                    'src': './assets/images/thu-vien-anh-video/img5.png',
+                    'thumb': './assets/images/thu-vien-anh-video/img5.png',
+                }, {
+                    'src': './assets/images/thu-vien-anh-video/img5.png',
+                    'thumb': './assets/images/thu-vien-anh-video/img5.png',
+                }]
+            })
+        });
+    }else{
+    }
+    if(document.getElementById('dynamic4')!=null){
+        document.getElementById('dynamic4').addEventListener('click', function() {
+            lightGallery(document.getElementById('dynamic4'), {
+                dynamic: true,
+                dynamicEl: [{   
+                    "src": './assets/images/thu-vien-anh-video/img4.png',
+                    'thumb': './assets/images/thu-vien-anh-video/img4.png',
+                }, {
+                    'src': './assets/images/thu-vien-anh-video/img4.png',
+                    'thumb': './assets/images/thu-vien-anh-video/img4.png',
+                }, {
+                    'src': './assets/images/thu-vien-anh-video/img4.png',
+                    'thumb': './assets/images/thu-vien-anh-video/img4.png',
+                }]
+            })
+        });
+    }else{
+    }
+    if(document.getElementById('dynamic-video')!=null){
+        document.getElementById('dynamic-video').addEventListener('click', function() {
+            lightGallery(document.getElementById('dynamic4'), {
+                dynamic: true,
+                dynamicEl: [{   
+                    "src": 'https://youtu.be/IDVkEvj0KZM?si=MuEaUGYLHCLqN7Yy',
+                    'thumb': 'https://youtu.be/IDVkEvj0KZM?si=MuEaUGYLHCLqN7Yy',
+                }, {
+                    'src': 'https://youtu.be/IDVkEvj0KZM?si=MuEaUGYLHCLqN7Yy',
+                    'thumb': 'https://youtu.be/IDVkEvj0KZM?si=MuEaUGYLHCLqN7Yy',
+                }, {
+                    'src': 'https://youtu.be/IDVkEvj0KZM?si=MuEaUGYLHCLqN7Yy',
+                    'thumb': 'https://youtu.be/IDVkEvj0KZM?si=MuEaUGYLHCLqN7Yy',
+                }]
+            })
+        });
+    }else{
+    }
 
     lightGallery(document.getElementById('lightgallery'));
     lightGallery(document.getElementById('video-gallery'));
@@ -288,6 +302,9 @@ $(document).ready(function() {
     // $('header .header-wraper .header-container .search-btn').click(function() {
     //     $('main .modal .modal-dialog .search-block .search-box .form-search').focus();
     // });
+    $('main .modal').on('shown.bs.modal',function(){
+        $('main .modal .modal-dialog .search-block .search-box .form-search').trigger('focus');
+    })
     
     $('main .modal .modal-dialog .search-block .search-box .form-search').on('keyup',function(){
         var value=$(this).val().trim();
@@ -297,6 +314,10 @@ $(document).ready(function() {
         else{
             $('main .modal .modal-dialog .search-result-block').hide();
         }
+    })
+    $('main .modal').on('hidden.bs.modal',function(){
+        $('main .modal .modal-dialog .search-block .search-box .form-search').val('');
+        $('main .moda .search-result-block').hide();
     })
 })
 function resizeimage(){
