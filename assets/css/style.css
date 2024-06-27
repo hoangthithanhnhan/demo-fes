@@ -3087,11 +3087,11 @@ main .content-gioi-thieu .content-right .main-content .heading{
         font-size: 40px;
         margin-top: -25px;
     }
-    main .content-gioi-thieu .content-left{
-        margin-bottom: 25px;
-    }
     main .banner-festival {
         height: 250px;
+    }
+    main .content-gioi-thieu .content-left{
+        display: none;
     }
 }
 
