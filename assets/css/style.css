@@ -482,6 +482,10 @@ main .fes .fes-menu .fes-menu-info .detail{
     line-height: 24px;
     font-weight: 500;
     color: #ffffff;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Số dòng muốn hiển thị */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 main .fes .fes-menu .fes-menu-info{
     padding-right: 20px;
@@ -1865,6 +1869,309 @@ footer .block-footer .copyright-right .cre img{
     cursor: pointer;
     z-index: 1029;
 }
+
+/* banner giới thiệu */
+main .banner-festival{
+    background-image: url('../images/ve-festival/banner-background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 0;
+    margin-bottom: 20px;
+    height: 320px;
+    width: 100%;
+}
+main .banner-festival .line-bottom{
+    position: absolute;
+    bottom:0;
+    z-index: 10; 
+    width: 100%;
+}
+main .banner-festival nav{
+    z-index: 1;
+}
+main .banner-festival .overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+main .banner-festival .title-banner{
+    font-family: Playfair Display;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 64px;
+    color: #fff;
+    position: relative;
+    padding-bottom: 12px;
+}
+main .banner-festival .title-banner::after{
+    content: "";
+    display: block;
+    width: 150px;
+    height: 2px;
+    background: var(--red);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom:0;
+}
+main .banner-festival .breadcrumb-item+.breadcrumb-item{
+    position: relative;
+    padding-left: 24px;
+    margin-left: 10px;
+}
+main .banner-festival .breadcrumb-item+.breadcrumb-item::before {
+    content:url('../images/ve-festival/breadcrumb.png');
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    left: 0;
+}
+main .banner-festival .breadcrumb{
+    background: none;
+    padding: 0;
+    margin:25px 0 0 0;
+}
+main .banner-festival .breadcrumb-item a{
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 26px;
+    color: #fff;
+    text-decoration: none;
+}
+main .banner-festival .active a{
+    color:#FFCB00;
+}
+/*Về festival*/
+main .content-gioi-thieu .content-left .gioi-thieu-menu{
+    background: var(--body);
+    border-radius: 10px;
+    box-shadow: 0 6px 0 0 rgba(15, 17, 67, 0.2);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+main .content-gioi-thieu .content-left  nav ul li{
+    list-style: none;
+    margin:8px 0 8px 0;
+}
+main .content-gioi-thieu .content-left  nav ul hr{
+    margin: 5px 0 5px 0;
+    background: rgba(255, 255, 255, 0.2);
+}
+main .content-gioi-thieu .content-left  nav>ul li a{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    color: #fff;
+    text-decoration: none;
+}
+main .content-gioi-thieu .content-left  nav ul .active a{
+    color:var(--red);
+}
+main .content-gioi-thieu .content-left  nav ul li .nav-link{
+    padding: 0;
+}
+main .content-gioi-thieu .content-left .gioi-thieu-menu .menu-title{
+    color:#fff;
+    font-family: 'Playfair Display';
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 30px;
+    position: relative;
+    padding-left: 13px;
+    margin-bottom: 20px;
+}
+main .content-gioi-thieu .content-left .gioi-thieu-menu .menu-title::before{
+    content: "";
+    display: block;
+    height: 24px;
+    width: 3px;
+    background: var(--red);
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    left: 0;
+}
+main .content-gioi-thieu .content-left .fes-menu-block{
+    height: 130px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+}
+main .content-gioi-thieu .content-left .fes-menu-block .fes-item{
+    padding: 20px;
+}
+main .content-gioi-thieu .content-left .fes-menu-block .fes-item .title{
+    padding: 0;
+}
+main .content-gioi-thieu .content-left .fes-menu-block .fes-item .fes-menu-info{
+    padding: 0;
+}
+main .content-gioi-thieu .content-left .ve-tau{
+    box-shadow: 0 5px 5px 0 #FFC58E;
+}
+main .content-gioi-thieu .content-left .ve-tham-quan{
+    box-shadow: 0 5px 5px 0 rgba(139, 139, 139, 0.4);
+}
+main .content-gioi-thieu .content-left .dat-ve img{
+    width: 100%;
+    height: 100%;
+}  
+main .content-gioi-thieu .content-left .dat-ve .img-hover{
+    display: none;
+}
+main .content-gioi-thieu .content-left .dat-ve:hover .img{
+    display: none;
+}
+main .content-gioi-thieu .content-left .dat-ve:hover .img-hover{
+    display: block;
+    transition: all 0.2s ease-in-out;
+} 
+main .content-gioi-thieu .content-left .tin-tuc-noi-bat{
+    padding: 20px 20px 5px 20px;
+    border: solid 1px #E2E2E2;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-top: 20px;
+}
+main .content-gioi-thieu .content-left .tin-tuc-noi-bat .title{
+    color: var(--body);
+    font-family: 'Playfair Display';
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 30px;
+    position: relative;
+    padding-left: 13px;
+    margin-bottom: 20px;
+}
+main .content-gioi-thieu .content-left .tin-tuc-noi-bat .title::before{
+    content: "";
+    display: block;
+    background: var(--red);
+    width: 3px;
+    height: 24px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+}
+main .content-gioi-thieu .content-left .tin-tuc-noi-bat .content{
+    display: flex;
+    margin-bottom: 15px;
+}
+main .content-gioi-thieu .content-left .tin-tuc-noi-bat .content .img{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-right: 15px;
+}
+main .content-gioi-thieu .content-left .tin-tuc-noi-bat .content .text .text-title{
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    color: #6F0000;
+    text-decoration: none;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-bottom: 5px;
+}
+main .content-gioi-thieu .content-left .tin-tuc-noi-bat .content .text .text-date{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    color:#EF7E4E;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+main .content-gioi-thieu .content-left .tin-tuc-noi-bat .content .text .text-date .icon-date{
+    width: 16px;
+    height: 16px;
+    border-radius: 0px;
+    margin-right: 7px;
+}
+
+main .content-gioi-thieu .content-right .main-content{
+    /* background: red; */
+    width: 100%;
+    height: 100%;
+}
+main .content-gioi-thieu .content-right .main-content hr{
+    margin: 20px 0 20px 0;
+    color:#DBDBDB;
+}
+main .content-gioi-thieu .content-right .main-content .title{
+    font-family:'Playfair Display';
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 40px;
+    color:#E35851;
+    position: relative;
+    padding-left: 19px;
+}
+main .content-gioi-thieu .content-right .main-content .title::before{
+    content: "";
+    display: block;
+    width: 4px;
+    height: 30px;
+    background:#E35851;
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    left: 0;
+}
+main .content-gioi-thieu .content-right .main-content .text-content p{
+    text-align: justify;
+    font-size: 16px;
+    line-height: 24px;
+}
+main .content-gioi-thieu .content-right .main-content .text-content p:not(:last-child){
+    margin-bottom: 15px;
+}
+main .content-gioi-thieu .content-right .main-content .text-content .img{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px auto;
+}
+main .content-gioi-thieu .content-right .main-content .text-content .img .img-top{
+    width: 1030px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+main .content-gioi-thieu .content-right .main-content .text-content .img .img-bottom img{
+    width: 505px;
+    height: 350px;
+    border-radius: 10px;
+}
+main .content-gioi-thieu .content-right .main-content .text-content .img .img-bottom img:not(:last-child){
+    margin-right: 20px;
+}
+/* Biểu trưng Festival */
+main .content-gioi-thieu .content-right .main-content .text-content .img .img-logo{
+    width: 810px;
+    height: 803px;
+}
+main .content-gioi-thieu .content-right .main-content .heading{
+    text-align: left;   
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 24px;
+    color:#6F0000;
+    margin: 0 0 15px 0;
+}
 @media (min-width: 1200px) {
     .container, .container-lg, .container-md, .container-sm, .container-xl {
         max-width: 1680px;
@@ -2133,6 +2440,10 @@ footer .block-footer .copyright-right .cre img{
     }
     .block-banner {
         padding: 0px 15px;
+    }
+    main .content-gioi-thieu .content-right .main-content .text-content .img .img-top {
+        width: 850px;
+        height: 400px;
     }
 }
 @media (max-width: 1024px){ 
@@ -3248,298 +3559,4 @@ footer .block-footer .copyright-right .cre img{
     header .header-wraper .header-container .navbar-dropdown{
         display: none;
     }
-}
-
-/* banner giới thiệu */
-main .banner-festival{
-    background-image: url('../images/ve-festival/banner-background.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    padding: 0;
-    margin-bottom: 20px;
-    height: 320px;
-    width: 100%;
-}
-main .banner-festival .line-bottom{
-    position: absolute;
-    bottom:0;
-    z-index: 10; 
-    width: 100%;
-}
-main .banner-festival nav{
-    z-index: 1;
-}
-main .banner-festival .overlay{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-}
-main .banner-festival .title-banner{
-    font-family: Playfair Display;
-    font-size: 48px;
-    font-weight: 700;
-    line-height: 64px;
-    color: #fff;
-    position: relative;
-    padding-bottom: 12px;
-}
-main .banner-festival .title-banner::after{
-    content: "";
-    display: block;
-    width: 150px;
-    height: 2px;
-    background: var(--red);
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom:0;
-}
-main .banner-festival .breadcrumb-item+.breadcrumb-item{
-    position: relative;
-    padding-left: 24px;
-    margin-left: 10px;
-}
-main .banner-festival .breadcrumb-item+.breadcrumb-item::before {
-    content:url('../images/ve-festival/breadcrumb.png');
-    position: absolute;
-    top:50%;
-    transform: translateY(-50%);
-    left: 0;
-}
-main .banner-festival .breadcrumb{
-    background: none;
-    padding: 0;
-    margin:25px 0 0 0;
-}
-main .banner-festival .breadcrumb-item a{
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 26px;
-    color: #fff;
-    text-decoration: none;
-}
-main .banner-festival .active a{
-    color:#FFCB00;
-}
-/*Về festival*/
-main .content-gioi-thieu .content-left .gioi-thieu-menu{
-    background: var(--body);
-    border-radius: 10px;
-    box-shadow: 0 6px 0 0 rgba(15, 17, 67, 0.2);
-    padding: 20px;
-    margin-bottom: 20px;
-}
-main .content-gioi-thieu .content-left  nav ul li{
-    list-style: none;
-    margin:8px 0 8px 0;
-}
-main .content-gioi-thieu .content-left  nav ul hr{
-    margin: 5px 0 5px 0;
-    background: rgba(255, 255, 255, 0.2);
-}
-main .content-gioi-thieu .content-left  nav>ul li a{
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 24px;
-    color: #fff;
-    text-decoration: none;
-}
-main .content-gioi-thieu .content-left  nav ul .active a{
-    color:var(--red);
-}
-main .content-gioi-thieu .content-left  nav ul li .nav-link{
-    padding: 0;
-}
-main .content-gioi-thieu .content-left .gioi-thieu-menu .menu-title{
-    color:#fff;
-    font-family: 'Playfair Display';
-    font-size: 24px;
-    font-weight: 700;
-    line-height: 30px;
-    position: relative;
-    padding-left: 13px;
-    margin-bottom: 20px;
-}
-main .content-gioi-thieu .content-left .gioi-thieu-menu .menu-title::before{
-    content: "";
-    display: block;
-    height: 24px;
-    width: 3px;
-    background: var(--red);
-    position: absolute;
-    top:50%;
-    transform: translateY(-50%);
-    left: 0;
-}
-main .content-gioi-thieu .content-left .fes-menu-block{
-    height: 130px;
-    margin-bottom: 15px;
-    border-radius: 10px;
-}
-main .content-gioi-thieu .content-left .ve-tau{
-    box-shadow: 0 5px 5px 0 #FFC58E;
-}
-main .content-gioi-thieu .content-left .ve-tham-quan{
-    box-shadow: 0 5px 5px 0 rgba(139, 139, 139, 0.4);
-}
-main .content-gioi-thieu .content-left .dat-ve img{
-    width: 100%;
-    height: 100%;
-}  
-main .content-gioi-thieu .content-left .dat-ve .img-hover{
-    display: none;
-}
-main .content-gioi-thieu .content-left .dat-ve:hover .img{
-    display: none;
-}
-main .content-gioi-thieu .content-left .dat-ve:hover .img-hover{
-    display: block;
-    transition: all 0.2s ease-in-out;
-} 
-main .content-gioi-thieu .content-left .tin-tuc-noi-bat{
-    padding: 20px 20px 5px 20px;
-    border: solid 1px #E2E2E2;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    margin-top: 20px;
-}
-main .content-gioi-thieu .content-left .tin-tuc-noi-bat .title{
-    color: var(--body);
-    font-family: 'Playfair Display';
-    font-size: 24px;
-    font-weight: 700;
-    line-height: 30px;
-    position: relative;
-    padding-left: 13px;
-    margin-bottom: 20px;
-}
-main .content-gioi-thieu .content-left .tin-tuc-noi-bat .title::before{
-    content: "";
-    display: block;
-    background: var(--red);
-    width: 3px;
-    height: 24px;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 0;
-}
-main .content-gioi-thieu .content-left .tin-tuc-noi-bat .content{
-    display: flex;
-    margin-bottom: 15px;
-}
-main .content-gioi-thieu .content-left .tin-tuc-noi-bat .content .img{
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    border-radius: 10px;
-    margin-right: 15px;
-}
-main .content-gioi-thieu .content-left .tin-tuc-noi-bat .content .text .text-title{
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 24px;
-    color: #6F0000;
-    text-decoration: none;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    margin-bottom: 5px;
-}
-main .content-gioi-thieu .content-left .tin-tuc-noi-bat .content .text .text-date{
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 24px;
-    color:#EF7E4E;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-}
-main .content-gioi-thieu .content-left .tin-tuc-noi-bat .content .text .text-date .icon-date{
-    width: 16px;
-    height: 16px;
-    border-radius: 0px;
-    margin-right: 7px;
-}
-
-main .content-gioi-thieu .content-right .main-content{
-    /* background: red; */
-    width: 100%;
-    height: 100%;
-}
-main .content-gioi-thieu .content-right .main-content hr{
-    margin: 20px 0 20px 0;
-    color:#DBDBDB;
-}
-main .content-gioi-thieu .content-right .main-content .title{
-    font-family:'Playfair Display';
-    font-size: 30px;
-    font-weight: 700;
-    line-height: 40px;
-    color:#E35851;
-    position: relative;
-    padding-left: 19px;
-}
-main .content-gioi-thieu .content-right .main-content .title::before{
-    content: "";
-    display: block;
-    width: 4px;
-    height: 30px;
-    background:#E35851;
-    position: absolute;
-    top:50%;
-    transform: translateY(-50%);
-    left: 0;
-}
-main .content-gioi-thieu .content-right .main-content .text-content p{
-    text-align: justify;
-    font-size: 16px;
-    line-height: 24px;
-}
-main .content-gioi-thieu .content-right .main-content .text-content p:not(:last-child){
-    margin-bottom: 15px;
-}
-main .content-gioi-thieu .content-right .main-content .text-content .img{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 30px auto;
-}
-main .content-gioi-thieu .content-right .main-content .text-content .img .img-top{
-    width: 1030px;
-    height: 500px;
-    object-fit: cover;
-    border-radius: 10px;
-    margin-bottom: 20px;
-}
-
-main .content-gioi-thieu .content-right .main-content .text-content .img .img-bottom img{
-    width: 505px;
-    height: 350px;
-    border-radius: 10px;
-}
-main .content-gioi-thieu .content-right .main-content .text-content .img .img-bottom img:not(:last-child){
-    margin-right: 20px;
-}
-/* Biểu trưng Festival */
-main .content-gioi-thieu .content-right .main-content .text-content .img .img-logo{
-    width: 810px;
-    height: 803px;
-}
-main .content-gioi-thieu .content-right .main-content .heading{
-    text-align: left;   
-    font-size: 24px;
-    font-weight: 700;
-    line-height: 24px;
-    color:#6F0000;
-    margin: 0 0 15px 0;
 }
