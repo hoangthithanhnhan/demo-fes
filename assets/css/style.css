@@ -1873,6 +1873,8 @@ footer .block-footer .copyright-right .cre img{
 /* banner giới thiệu */
 main .banner-festival{
     background-image: url('../images/ve-festival/banner-background.png');
+}
+main .banner-main{
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -1886,22 +1888,22 @@ main .banner-festival{
     height: 320px;
     width: 100%;
 }
-main .banner-festival .line-bottom{
+main .banner-main .line-bottom{
     position: absolute;
     bottom:0;
     z-index: 10; 
     width: 100%;
 }
-main .banner-festival nav{
+main .banner-main nav{
     z-index: 1;
 }
-main .banner-festival .overlay{
+main .banner-main .overlay{
     position: absolute;
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
 }
-main .banner-festival .title-banner{
+main .banner-main .title-banner{
     font-family: Playfair Display;
     font-size: 48px;
     font-weight: 700;
@@ -1910,7 +1912,7 @@ main .banner-festival .title-banner{
     position: relative;
     padding-bottom: 12px;
 }
-main .banner-festival .title-banner::after{
+main .banner-main .title-banner::after{
     content: "";
     display: block;
     width: 150px;
@@ -1921,31 +1923,31 @@ main .banner-festival .title-banner::after{
     transform: translateX(-50%);
     bottom:0;
 }
-main .banner-festival .breadcrumb-item+.breadcrumb-item{
+main .banner-main .breadcrumb-item+.breadcrumb-item{
     position: relative;
     padding-left: 24px;
     margin-left: 10px;
 }
-main .banner-festival .breadcrumb-item+.breadcrumb-item::before {
+main .banner-main .breadcrumb-item+.breadcrumb-item::before {
     content:url('../images/ve-festival/breadcrumb.png');
     position: absolute;
     top:50%;
     transform: translateY(-50%);
     left: 0;
 }
-main .banner-festival .breadcrumb{
+main .banner-main .breadcrumb{
     background: none;
     padding: 0;
     margin:25px 0 0 0;
 }
-main .banner-festival .breadcrumb-item a{
+main .banner-main .breadcrumb-item a{
     font-size: 18px;
     font-weight: 700;
     line-height: 26px;
     color: #fff;
     text-decoration: none;
 }
-main .banner-festival .active a{
+main .banner-main .active a{
     color:#FFCB00;
 }
 /*Về festival*/
@@ -2035,14 +2037,14 @@ main .content-gioi-thieu .content-left .dat-ve:hover .img-hover{
     display: block;
     transition: all 0.2s ease-in-out;
 } 
-main .content-gioi-thieu .content-left .tin-tuc-noi-bat{
+main .content-gioi-thieu .content-left .tin-tuc-main{
     padding: 20px 20px 5px 20px;
     border: solid 1px #E2E2E2;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     margin-top: 20px;
 }
-main .content-gioi-thieu .content-left .tin-tuc-noi-bat .title{
+main .content-gioi-thieu .content-left .tin-tuc-main .title{
     color: var(--body);
     font-family: 'Playfair Display';
     font-size: 24px;
@@ -2052,7 +2054,7 @@ main .content-gioi-thieu .content-left .tin-tuc-noi-bat .title{
     padding-left: 13px;
     margin-bottom: 20px;
 }
-main .content-gioi-thieu .content-left .tin-tuc-noi-bat .title::before{
+main .content-gioi-thieu .content-left .tin-tuc-main .title::before{
     content: "";
     display: block;
     background: var(--red);
@@ -2063,18 +2065,18 @@ main .content-gioi-thieu .content-left .tin-tuc-noi-bat .title::before{
     transform: translateY(-50%);
     left: 0;
 }
-main .content-gioi-thieu .content-left .tin-tuc-noi-bat .content{
+main .content-gioi-thieu .content-left .tin-tuc-main .content{
     display: flex;
     margin-bottom: 15px;
 }
-main .content-gioi-thieu .content-left .tin-tuc-noi-bat .content .img{
+main .content-gioi-thieu .content-left .tin-tuc-main .content .img{
     width: 100px;
     height: 100px;
     object-fit: cover;
     border-radius: 10px;
     margin-right: 15px;
 }
-main .content-gioi-thieu .content-left .tin-tuc-noi-bat .content .text .text-title{
+main .content-gioi-thieu .content-left .tin-tuc-main .content .text .text-title{
     font-size: 16px;
     font-weight: 600;
     line-height: 24px;
@@ -2086,7 +2088,7 @@ main .content-gioi-thieu .content-left .tin-tuc-noi-bat .content .text .text-tit
     overflow: hidden;
     margin-bottom: 5px;
 }
-main .content-gioi-thieu .content-left .tin-tuc-noi-bat .content .text .text-date{
+main .content-gioi-thieu .content-left .tin-tuc-main .content .text .text-date{
     font-size: 16px;
     font-weight: 500;
     line-height: 24px;
@@ -2095,7 +2097,7 @@ main .content-gioi-thieu .content-left .tin-tuc-noi-bat .content .text .text-dat
     display: flex;
     align-items: center;
 }
-main .content-gioi-thieu .content-left .tin-tuc-noi-bat .content .text .text-date .icon-date{
+main .content-gioi-thieu .content-left .tin-tuc-main .content .text .text-date .icon-date{
     width: 16px;
     height: 16px;
     border-radius: 0px;
@@ -2175,6 +2177,54 @@ main .content-gioi-thieu .content-right .main-content .heading{
     color:#6F0000;
     margin: 0 0 15px 0;
 }
+/* Tin tức sự kiện */
+main .banner-tin-tuc-hd{
+    background-image: url('../images/tin-tuc-su-kien/banner-bg.png');
+}
+main .content-gioi-thieu .content-left .bai-doc-nhieu-nhat .content .text .text-heading{
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+main .content-gioi-thieu .content-left .bai-doc-nhieu-nhat .content .text .text-title{
+    margin-bottom: 0;
+}
+main .content-gioi-thieu .content-right .main-content .content-item{
+    width: calc(100%/3 - 60px/3);
+}
+main .content-gioi-thieu .content-right .main-content .content-item .img-cover{
+    width: 100%;
+    height: 250px;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+main .content-gioi-thieu .content-right .main-content .content-item .img-cover.null{
+    border-radius: 0;
+}
+main .content-gioi-thieu .content-right .main-content .content{
+    column-gap: 30px;
+    row-gap: 30px;
+}
+main .content-gioi-thieu .content-right .main-content .content-item .text .text-title{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    color:rgba(111, 0, 0, 1);
+    margin-bottom: 5px;
+}
+main .content-gioi-thieu .content-right .main-content .content-item .text .text-detail{
+    font-size: 16px;
+    line-height: 24px;
+    text-align: justify;
+    font-size: 16px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+
+
 @media (min-width: 1200px) {
     .container, .container-lg, .container-md, .container-sm, .container-xl {
         max-width: 1680px;
@@ -2455,7 +2505,7 @@ main .content-gioi-thieu .content-right .main-content .heading{
     main .content-gioi-thieu .content-left .fes-menu .title{
         font-size: 15px;
     }
-    main .content-gioi-thieu .content-left .tin-tuc-noi-bat .content .text .text-title {
+    main .content-gioi-thieu .content-left .tin-tuc-main .content .text .text-title {
         font-size: 15px;
     }
 }
@@ -3087,7 +3137,7 @@ main .content-gioi-thieu .content-right .main-content .heading{
         font-size: 40px;
         margin-top: -25px;
     }
-    main .banner-festival {
+    main .banner-main {
         height: 250px;
     }
     main .content-gioi-thieu .content-left{
@@ -3601,14 +3651,14 @@ main .content-gioi-thieu .content-right .main-content .heading{
         width: 430px;
         height: 280px;
     }
-    main .banner-festival .breadcrumb-item a {
+    main .banner-main .breadcrumb-item a {
         font-size: 15px;
     }
     main .content-gioi-thieu .content-right .main-content .text-content .img .img-logo {
         width: 400px;
         height: 400px;
     }
-    main .banner-festival .breadcrumb-item+.breadcrumb-item {
+    main .banner-main .breadcrumb-item+.breadcrumb-item {
         padding-left: 15px;
         margin-left: 5px;
     }
