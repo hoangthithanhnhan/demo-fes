@@ -1,19 +1,4 @@
 $(document).ready(function() {
-    $(window).scroll(function() {
-        if ($(this).scrollTop()) {
-            $('#backtop').fadeIn();
-            $('header').addClass('header-fixed');
-        }else{
-            $('#backtop').fadeOut();
-            $('header').removeClass('header-fixed');
-        }
-    });
-    $('#backtop').click(function(){
-        $('html,body').animate({
-            scrollTop:0
-        }, 1000);
-    })
-
     $('#slide-doan-nghe-si').owlCarousel({
         loop:true,
         margin:30,
@@ -175,7 +160,7 @@ $(document).ready(function() {
             }
         }
     });
-    if(document.getElementById('dynamic1')!=null){
+    // if(document.getElementById('dynamic1')!=null){
         document.getElementById('dynamic1').addEventListener('click', function() {
             lightGallery(document.getElementById('dynamic1'), {
                 dynamic: true,
@@ -191,9 +176,8 @@ $(document).ready(function() {
                 }]
             })
         });
-    }else{
-    }
-    if(document.getElementById('dynamic2')!=null){
+    // }else{
+    // }
         document.getElementById('dynamic2').addEventListener('click', function() {
             lightGallery(document.getElementById('dynamic2'), {
                 dynamic: true,
@@ -209,9 +193,6 @@ $(document).ready(function() {
                 }]
             })
         });
-    }else{
-    }
-    if(document.getElementById('dynamic3')!=null){
         document.getElementById('dynamic3').addEventListener('click', function() {
             lightGallery(document.getElementById('dynamic3'), {
                 dynamic: true,
@@ -227,9 +208,6 @@ $(document).ready(function() {
                 }]
             })
         });
-    }else{
-    }
-    if(document.getElementById('dynamic4')!=null){
         document.getElementById('dynamic4').addEventListener('click', function() {
             lightGallery(document.getElementById('dynamic4'), {
                 dynamic: true,
@@ -245,9 +223,6 @@ $(document).ready(function() {
                 }]
             })
         });
-    }else{
-    }
-    if(document.getElementById('dynamic-video')!=null){
         document.getElementById('dynamic-video').addEventListener('click', function() {
             lightGallery(document.getElementById('dynamic4'), {
                 dynamic: true,
@@ -263,8 +238,6 @@ $(document).ready(function() {
                 }]
             })
         });
-    }else{
-    }
 
     lightGallery(document.getElementById('lightgallery'));
     lightGallery(document.getElementById('video-gallery'));
@@ -293,29 +266,6 @@ $(document).ready(function() {
     });
 
     // setTimeout(setMaxHeight,2000)
-
-    var splash=document.getElementById('splash-screen');
-    window.addEventListener("load",function(){
-        splash.style.display='none';    
-    })
-
-    $('#exampleModal').on('shown.bs.modal',function(){
-        $('#form-search').trigger('focus');
-    })
-    
-    $('#form-search').on('keyup',function(){
-        var value=$(this).val().trim();
-        if (value!==''){
-            $('main .modal .modal-dialog .search-result-block').show();
-        }
-        else{
-            $('main .modal .modal-dialog .search-result-block').hide();
-        }
-    })
-    $('#exampleModal').on('hidden.bs.modal',function(){
-        $('#form-search').val('');
-        $('main .modal .search-result-block').hide();
-    })
 })
 function resizeimage(){
     let width=$('main .su-kien-khac .su-kien-khac-right .card').width();

@@ -25,7 +25,8 @@
     <script src="../assets/js/lg-thumbnail.min.js"></script>
     <script src="../assets/js/lg-zoom.min.js"></script>
     <script src="../assets/js/owl.carousel.min.js"></script>
-    <script src="../assets/js/gioi-thieu.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/festival-hue.js"></script>
 </head>
 <body>
     <div id="splash-screen">
@@ -162,7 +163,10 @@
                     <h5 class="modal-title" id="exampleModalLabel">Tìm kiếm</h5>
                     <div class="search-box">
                         <input type="text" id="form-search" placeholder="Từ khóa ...">
-                        <button class="button-search">
+                        <button id="button-clear">
+                            <img src="../assets/images/icon-dismiss.png" alt="Delete Icon">
+                        </button>
+                        <button class="button-search" >
                             <img src="../assets/images/search.png" alt="Search Icon">
                         </button>
                     </div>
@@ -190,7 +194,7 @@
                 </div>
             </div>
         </div>
-        <section class="banner-gioi-thieu container-fluid">
+        <section class="banner-festival container-fluid">
             <div class="overlay"></div>
             <div class="title-banner">Giới thiệu</div>
             <nav aria-label="breadcrumb">
@@ -200,9 +204,9 @@
                     <li class="breadcrumb-item active" aria-current="page"><a href="./bieu-trung.html">Biểu trưng Festival Huế</a></li>
                 </ol>
             </nav>
-            <img style="z-index: 10; width: 100%;" src="../assets/images/banner/bottom-line.png" alt="">
+            <img class="line-bottom" src="../assets/images/banner/bottom-line.png" alt="">
         </section>
-        <section class="container content-gioi-thieu">
+        <section class="container fes content-gioi-thieu">
             <div class="d-flex flex-wrap">
                 <div class="col-3 content-left">
                     <div class="gioi-thieu-menu">
@@ -239,8 +243,8 @@
                             </ul>
                         </nav>
                     </div>
-                    <div class="fes-menu-block">
-                        <div class="fes-menu">
+                    <div class="fes-menu">
+                        <div class="fes-menu-block">
                             <a href="#" class="d-block fes-item item-red">
                                 <p class="title">Lịch chương trình Festival 2024</p>
                                 <div class="fes-menu-info d-flex">
@@ -249,7 +253,7 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="fes-menu">
+                        <div class="fes-menu-block">
                             <a href="#" class="d-block fes-item item-green">
                                 <p class="title">Bản đồ điểm diễn ra chương trình</p>
                                 <div class="fes-menu-info d-flex">
@@ -258,7 +262,7 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="fes-menu">
+                        <div class="fes-menu-block">
                             <a href="#" class="d-block fes-item item-violet">
                                 <p class="title">Mua vé các chương trình Festival</p>
                                 <div class="fes-menu-info d-flex">
@@ -266,6 +270,14 @@
                                     <p class="detail">Du khách đặt vé online sẽ tiết kiệm được rất nhiều thời gian và dễ dàng, tiện lợi hơn.</p>
                                 </div>
                             </a>
+                        </div>
+                        <div class="fes-menu-block ve-tau dat-ve">
+                            <img class="img" src="../assets/images/ve-festival/mua-ve.png" alt="">
+                            <img class="img-hover" src="../assets/images/ve-festival/mua-ve-hover.png" alt="">
+                        </div>
+                        <div class="fes-menu-block ve-tham-quan dat-ve">
+                            <img class="img" src="../assets/images/ve-festival/ve-tham-quan.png" alt="">
+                            <img class="img-hover" src="../assets/images/ve-festival/ve-tham-quan-hover.png" alt="">
                         </div>
                     </div>
                     <div class="tin-tuc-noi-bat">

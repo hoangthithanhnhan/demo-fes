@@ -99,7 +99,7 @@ main .modal .modal-dialog .search-block .search-box{
     display: flex;
     border: 1px solid #ECD0C4;
     width: 100%;
-    padding: 10px 15px;
+    padding: 9px 20px 9px 15px;
     border-radius: 60px;
     background-color: #FFF2EE;
 }
@@ -120,6 +120,18 @@ main .modal .modal-dialog .search-block .search-box #form-search::placeholder{
 main .modal .modal-dialog .search-block .search-box .button-search{
     border:none;
     background: none;
+    display: flex;
+    align-items: center;
+
+}
+main .modal .modal-dialog .search-block .search-box #button-clear{
+    border:none;
+    background: none;
+    margin-right: 5px;
+    display: none;
+}
+main .modal .modal-dialog .search-block .search-box #button-clear img{
+    width: 18px;
 }
 main .modal .modal-dialog .search-result-block{
     display: none;
@@ -2129,17 +2141,25 @@ footer .block-footer .copyright-right .cre img{
     }
     .navbar-light .navbar-nav .nav-link {
         font-size: 14px;
-        padding: 8px 5px;
+        padding: 8px 3px;
+    }
+    header .search-btn {
+        width: 40px;
+        height: 40px;
+    }
+    header .search-btn button img{
+        width: 18px;
+        height: 18px;
     }
     header .dropdown-register button {
         font-size: 14px;
-        padding: 8px 15px;
+        padding: 8px 10px;
     }
     .dropdown-toggle::after {
         font-size: 15px;
     }
     .language .language-item:not(:last-of-type) {
-        margin-right: 5px;
+        margin-right: 3px;
     }
     .navbar-light .navbar-brand img {
         width: 60px;
@@ -2717,7 +2737,7 @@ footer .block-footer .copyright-right .cre img{
         font-size: 50px;
     }
     #splash-screen .splash-pattern {
-    width: 50%;
+        width: 50%;
     }
     #splash-screen .splash-title-top {
         font-size: 40px;
@@ -3231,7 +3251,7 @@ footer .block-footer .copyright-right .cre img{
 }
 
 /* banner giới thiệu */
-main .banner-gioi-thieu{
+main .banner-festival{
     background-image: url('../images/ve-festival/banner-background.png');
     background-size: cover;
     background-repeat: no-repeat;
@@ -3239,20 +3259,29 @@ main .banner-gioi-thieu{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     position: relative;
     padding: 0;
     margin-bottom: 20px;
+    height: 320px;
+    width: 100%;
 }
-main .banner-gioi-thieu nav{
+main .banner-festival .line-bottom{
+    position: absolute;
+    bottom:0;
+    z-index: 10; 
+    width: 100%;
+}
+main .banner-festival nav{
     z-index: 1;
 }
-main .banner-gioi-thieu .overlay{
+main .banner-festival .overlay{
     position: absolute;
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
 }
-main .banner-gioi-thieu .title-banner{
+main .banner-festival .title-banner{
     font-family: Playfair Display;
     font-size: 48px;
     font-weight: 700;
@@ -3261,7 +3290,7 @@ main .banner-gioi-thieu .title-banner{
     position: relative;
     padding-bottom: 12px;
 }
-main .banner-gioi-thieu .title-banner::after{
+main .banner-festival .title-banner::after{
     content: "";
     display: block;
     width: 150px;
@@ -3272,32 +3301,31 @@ main .banner-gioi-thieu .title-banner::after{
     transform: translateX(-50%);
     bottom:0;
 }
-main .banner-gioi-thieu .breadcrumb-item+.breadcrumb-item{
+main .banner-festival .breadcrumb-item+.breadcrumb-item{
     position: relative;
     padding-left: 24px;
     margin-left: 10px;
 }
-main .banner-gioi-thieu .breadcrumb-item+.breadcrumb-item::before {
+main .banner-festival .breadcrumb-item+.breadcrumb-item::before {
     content:url('../images/ve-festival/breadcrumb.png');
     position: absolute;
     top:50%;
     transform: translateY(-50%);
     left: 0;
 }
-main .banner-gioi-thieu .breadcrumb{
+main .banner-festival .breadcrumb{
     background: none;
     padding: 0;
-    margin-top: 25px;
-    margin-bottom: 55px;
+    margin:25px 0 0 0;
 }
-main .banner-gioi-thieu .breadcrumb-item a{
+main .banner-festival .breadcrumb-item a{
     font-size: 18px;
     font-weight: 700;
     line-height: 26px;
     color: #fff;
     text-decoration: none;
 }
-main .banner-gioi-thieu .active a{
+main .banner-festival .active a{
     color:#FFCB00;
 }
 /*Về festival*/
@@ -3307,9 +3335,6 @@ main .content-gioi-thieu .content-left .gioi-thieu-menu{
     box-shadow: 0 6px 0 0 rgba(15, 17, 67, 0.2);
     padding: 20px;
     margin-bottom: 20px;
-}
-main .content-gioi-thieu .content-left{
-    padding-left: 0;
 }
 main .content-gioi-thieu .content-left  nav ul li{
     list-style: none;
@@ -3353,66 +3378,16 @@ main .content-gioi-thieu .content-left .gioi-thieu-menu .menu-title::before{
     transform: translateY(-50%);
     left: 0;
 }
-main .content-gioi-thieu .content-left .fes-menu{
+main .content-gioi-thieu .content-left .fes-menu-block{
     height: 130px;
     margin-bottom: 15px;
     border-radius: 10px;
 }
-main .content-gioi-thieu .content-left .fes-item{
-    background-image: url('../images/fes/bg.png');
-    background-blend-mode: soft-light;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    border-radius: 10px;
-    height: 100%;
-    padding:16px 0;
-    padding-left: 20px;
+main .content-gioi-thieu .content-left .ve-tau{
+    box-shadow: 0 5px 5px 0 #FFC58E;
 }
-main .content-gioi-thieu .content-left .fes-item img{
-    padding-right: 20px;
-    height: 100%;
-    align-self: center;
-}
-main .content-gioi-thieu .content-left .item-red{
-    background-color: var(--red);
-    box-shadow: 0 5px 5px 0 rgba(255, 0, 0, 0.4);
-}
-main .content-gioi-thieu .content-left .item-red:hover{
-    background-color: #BA251D;
-}
-main .content-gioi-thieu .content-left .item-green{
-    background-color: #32B669;
-    box-shadow: 0 5px 5px 0 rgba(0, 160, 35, 0.4);
-}
-main .content-gioi-thieu .content-left .item-green:hover{
-    background-color: #00923D;
-}
-main .content-gioi-thieu .content-left .item-violet{
-    background-color: #5635B6;
-    box-shadow: 0 5px 5px 0 rgba(77, 59, 180, 0.4);
-}
-main .content-gioi-thieu .content-left .item-violet:hover{
-    background-color: #3B1C8E;
-}
-main .content-gioi-thieu .content-left .fes-item{
-    text-decoration: none;
-    padding: 20px;
-}
-main .content-gioi-thieu .content-left .title{
-    font-size: 22px;
-    line-height: 28px;
-    font-weight: 700;
-    color: #ffffff;
-}
-main .content-gioi-thieu .content-left .fes-menu-info .detail{
-    font-size: 16px;
-    line-height: 24px;
-    font-weight: 500;
-    color: #ffffff;
-}
-main .content-gioi-thieu .content-left .fes-menu-info{
-    padding-right: 20px;
+main .content-gioi-thieu .content-left .ve-tham-quan{
+    box-shadow: 0 5px 5px 0 rgba(139, 139, 139, 0.4);
 }
 main .content-gioi-thieu .content-left .dat-ve img{
     width: 100%;
@@ -3495,8 +3470,6 @@ main .content-gioi-thieu .content-left .tin-tuc-noi-bat .content .text .text-dat
     margin-right: 7px;
 }
 
-
-
 main .content-gioi-thieu .content-right .main-content{
     /* background: red; */
     width: 100%;
@@ -3505,9 +3478,6 @@ main .content-gioi-thieu .content-right .main-content{
 main .content-gioi-thieu .content-right .main-content hr{
     margin: 20px 0 20px 0;
     color:#DBDBDB;
-}
-main .content-gioi-thieu .content-right{
-    padding-right: 0;
 }
 main .content-gioi-thieu .content-right .main-content .title{
     font-family:'Playfair Display';
