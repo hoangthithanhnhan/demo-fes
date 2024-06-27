@@ -47,5 +47,6 @@ $(document).ready(function() {
     $('#exampleModal').on('hidden.bs.modal',function(){
         $('#form-search').val('');
         $('main .modal .search-result-block').hide();
+        $('#button-clear').hide();
     })
 })

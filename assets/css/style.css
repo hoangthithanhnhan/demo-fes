@@ -2211,6 +2211,7 @@ main .content-gioi-thieu .content-right .main-content .content-item .text .text-
     line-height: 24px;
     color:rgba(111, 0, 0, 1);
     margin-bottom: 5px;
+    text-decoration: none;
 }
 main .content-gioi-thieu .content-right .main-content .content-item .text .text-detail{
     font-size: 16px;
@@ -2221,6 +2222,37 @@ main .content-gioi-thieu .content-right .main-content .content-item .text .text-
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
+    text-decoration: none;
+    color: var(--body);
+}
+main .content-gioi-thieu .content-right .main-content nav{
+    margin-top: 40px;
+}
+main .content-gioi-thieu .content-right .main-content nav ul{
+    justify-content:end;
+}
+main .content-gioi-thieu .content-right .main-content nav ul li .page-link{
+    border:solid 1px #E6E6E6;
+    border-radius: 6px;
+    font-weight: 600;
+    line-height: 18px;
+    color: var(--body);
+    min-width: 32px;
+    height: 100%;
+}
+main .content-gioi-thieu .content-right .main-content nav ul li .active{
+    background-color: #00B24A;
+    color: #fff;
+    border-color: #00B24A;
+}
+main .content-gioi-thieu .content-right .main-content nav ul li .between{
+    border: 0;
+}
+main .content-gioi-thieu .content-right .main-content nav ul li .nav-btn{
+    padding: 7px 8px 8px 8px;
+}
+main .content-gioi-thieu .content-right .main-content nav ul .page-item{
+    margin-left: 5px;
 }
 
 
@@ -2899,6 +2931,9 @@ main .content-gioi-thieu .content-right .main-content .content-item .text .text-
         width: 600px;
         height: 600px;
     }
+    main .content-gioi-thieu .content-right .main-content .content-item {
+        width: calc(100% / 2 - 30px / 2);
+    }
 }
 @media (max-width: 768px){
     main .right .info {
@@ -3140,8 +3175,15 @@ main .content-gioi-thieu .content-right .main-content .content-item .text .text-
     main .banner-main {
         height: 250px;
     }
-    main .content-gioi-thieu .content-left{
+    main .content-gioi-thieu .content-left .gioi-thieu-menu{
         display: none;
+    }
+    main .content-gioi-thieu .content-right{
+        order:1;
+        margin-bottom: 25px;
+    }
+    main .content-gioi-thieu .content-left{
+        order: 2;
     }
 }
 
@@ -3661,6 +3703,9 @@ main .content-gioi-thieu .content-right .main-content .content-item .text .text-
     main .banner-main .breadcrumb-item+.breadcrumb-item {
         padding-left: 15px;
         margin-left: 5px;
+    }
+    main .content-gioi-thieu .content-right .main-content .content-item {
+        width: 100%;
     }
 }
 @media (max-width: 376px){
