@@ -2109,10 +2109,6 @@ main .content-gioi-thieu .content-right .main-content{
     width: 100%;
     height: 100%;
 }
-main .content-gioi-thieu .content-right .main-content hr{
-    margin: 20px 0 20px 0;
-    color:#DBDBDB;
-}
 main .content-gioi-thieu .content-right .main-content .title{
     font-family:'Playfair Display';
     font-size: 30px;
@@ -2253,6 +2249,71 @@ main .content-gioi-thieu .content-right .main-content nav ul li .nav-btn{
 }
 main .content-gioi-thieu .content-right .main-content nav ul .page-item{
     margin-left: 5px;
+}
+/* tin tức sự kiện chi tiết */
+main .tin-tuc-hd-news .content-right .main-content .head{
+    justify-content: space-between;
+}
+main .tin-tuc-hd-news .content-right .main-content .head .back{
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    color:var(--red);
+    position: relative;
+    padding-left: 46px;
+    text-decoration: none;
+}
+main .tin-tuc-hd-news .content-right .main-content .head .back::before{
+    content: url('../images/tin-tuc-su-kien/back.png');
+    position: absolute;
+    left: 0;
+}
+main .tin-tuc-hd-news .content-right .main-content .more{
+    justify-content: space-between;
+}
+main .tin-tuc-hd-news .content-right .main-content .more .feature button{
+    border: 0;
+    background: 0;
+    width: 18px;
+    height: 18px;
+    margin-left: 10px;
+}
+main .tin-tuc-hd-news .content-right .main-content .more .feature p:not(:first-child){
+    margin-left: 10px;
+}
+main .tin-tuc-hd-news .content-right .main-content .heading{
+    margin-top: 21px;
+}
+main .tin-tuc-hd-news .content-right .main-content .internal-link .heading-link{
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 30px;
+    color: var(--red);
+    margin-top: 30px;
+}
+hr{
+    margin: 10px 0 20px 0;
+}
+main .tin-tuc-hd-news .content-right .main-content .internal-link >ul{
+    margin-left: 30px;
+}
+main .tin-tuc-hd-news .content-right .main-content .internal-link >ul li a{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    color:#73190F;
+}
+main .tin-tuc-hd-news .content-right .main-content .internal-link >ul li:not(:last-child){
+    margin-bottom: 12px;
+}
+main .tin-tuc-hd-news .content-right .main-content .internal-link >ul li a .date{
+    color:#EF7E4E;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+}
+::marker{
+    color:#73190F;
 }
 
 
@@ -3706,6 +3767,9 @@ main .content-gioi-thieu .content-right .main-content nav ul .page-item{
     }
     main .content-gioi-thieu .content-right .main-content .content-item {
         width: 100%;
+    }
+    main .tin-tuc-hd-news .content-right .main-content .more{
+        flex-direction: column;
     }
 }
 @media (max-width: 376px){
