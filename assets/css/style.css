@@ -2302,6 +2302,7 @@ main .tin-tuc-hd-news .content-right .main-content .internal-link >ul li a{
     font-weight: 700;
     line-height: 24px;
     color:#73190F;
+    text-decoration: none;
 }
 main .tin-tuc-hd-news .content-right .main-content .internal-link >ul li:not(:last-child){
     margin-bottom: 12px;
