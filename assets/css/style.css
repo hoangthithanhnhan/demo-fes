@@ -62,7 +62,7 @@ body{
     background: linear-gradient(360deg, rgba(130, 0, 0, 0.46) 0%, rgba(118, 0, 0, 0.01) 45.22%, rgba(118, 0, 0, 0) 73.53%);
     color: transparent;
     -webkit-background-clip: text;
-    position: absolute;
+    position: absolute; 
     top:calc(100% - 28px);
 }
 #splash-screen .splash-sologan{
