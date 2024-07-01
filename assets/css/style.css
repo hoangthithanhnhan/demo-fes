@@ -1961,11 +1961,13 @@ main .content-gioi-thieu .content-left .gioi-thieu-menu{
 }
 main .content-gioi-thieu .content-left  nav ul li{
     list-style: none;
-    margin:13px 0 13px 0;
 }
-main .content-gioi-thieu .content-left  nav ul hr{
-    margin:0;
+main .content-gioi-thieu .content-left  nav ul li a{
+    padding: 8px;
+}
+main .content-gioi-thieu .content-left  nav ul li hr{
     background: rgba(255, 255, 255, 0.2);
+    margin:5px 0 5px 0;
 }
 main .content-gioi-thieu .content-left  nav>ul li a{
     font-size: 16px;
@@ -1977,7 +1979,7 @@ main .content-gioi-thieu .content-left  nav>ul li a{
 main .content-gioi-thieu .content-left  nav>ul li .active{
     color: #FFCB00;
 }
-main .content-gioi-thieu .content-left  nav ul .active a{
+main .content-gioi-thieu .content-left  nav ul .active> a{
     color:var(--red);
 }
 main .content-gioi-thieu .content-left  nav ul li .nav-link{
