@@ -2328,6 +2328,9 @@ main .banner-fes-mua-xuan{
 main .banner-fes-mua-xuan .overlay{
     background:rgba(0, 0, 0, 0.3);
 }
+main .fes .collapse>ul li{
+    padding: 0px 34px;
+}
 main .content-right .main-content .title .title-breadcrumb{
     font-size: 20px;
     font-weight: 700;
@@ -2479,8 +2482,17 @@ main .fes-xuan .content-right .content .modal .modal-content .modal-body .map im
 main .banner-fes-nghe-si{
     background-image: url('../images/festival-hue/doan-nghe-thuat/banner-bg.png');
 }
-
-
+main .fes .content-left .gioi-thieu-menu nav>ul li a{
+    width: 100%;
+}
+main .fes .content-left .gioi-thieu-menu nav>ul .dropdown{
+    position: relative;
+}
+main .fes .content-left .gioi-thieu-menu nav>ul .dropdown::after{
+    content:url('../images/festival-hue/down.png');
+    position: absolute;
+    right:0;
+}
 
 
 
@@ -3938,6 +3950,19 @@ main .banner-fes-nghe-si{
     }
     main .banner-main .title-banner{
         font-size: 40px;
+    }
+    main .banner-main .breadcrumb {
+        display: flex;
+        justify-content: center;
+    }
+    main .content-right .main-content .title img{
+        display: none;
+    }
+    main .content-right .main-content .title .title-breadcrumb{
+        display: none;
+    }
+    main .banner-main .breadcrumb-item a{
+        font-size: 16px;
     }
 }
 @media (max-width: 376px){
