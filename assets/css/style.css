@@ -1940,6 +1940,7 @@ main .banner-main .breadcrumb{
     background: none;
     padding: 0;
     margin:25px 0 0 0;
+    justify-content: center;
 }
 main .banner-main .breadcrumb-item a{
     font-size: 18px;
@@ -1959,30 +1960,30 @@ main .content-gioi-thieu .content-left .gioi-thieu-menu{
     padding: 20px;
     margin-bottom: 20px;
 }
-main .content-gioi-thieu .content-left  nav ul li{
+main .content-gioi-thieu .content-left ul li{
     list-style: none;
 }
-main .content-gioi-thieu .content-left  nav ul li a{
+main .content-gioi-thieu .content-left ul li a{
     padding: 8px;
 }
-main .content-gioi-thieu .content-left  nav ul li hr{
+main .content-gioi-thieu .content-left ul li hr{
     background: rgba(255, 255, 255, 0.2);
     margin:5px 0 5px 0;
 }
-main .content-gioi-thieu .content-left  nav>ul li a{
+main .content-gioi-thieu .content-left ul li a{
     font-size: 16px;
     font-weight: 700;
     line-height: 24px;
     color: #fff;
     text-decoration: none;
 }
-main .content-gioi-thieu .content-left  nav>ul li .active{
+main .content-gioi-thieu .content-left ul li .active{
     color: #FFCB00;
 }
-main .content-gioi-thieu .content-left  nav ul .active> a{
+main .content-gioi-thieu .content-left ul .active> a{
     color:var(--red);
 }
-main .content-gioi-thieu .content-left  nav ul li .nav-link{
+main .content-gioi-thieu .content-left ul li .nav-link{
     padding: 0;
 }
 main .content-gioi-thieu .content-left .gioi-thieu-menu .menu-title{
@@ -2333,10 +2334,10 @@ main .banner-fes-mua-xuan{
 main .banner-fes-mua-xuan .overlay{
     background:rgba(0, 0, 0, 0.3);
 }
-main .fes .collapse>ul li{
+main .fes .collapse>li{
     padding: 0px 34px;
 }
-main .fes .collapsing >ul li{
+main .fes .collapsing> li{
     padding: 0px 34px;
 }
 main .content-right .main-content .title .title-breadcrumb{
@@ -2401,6 +2402,7 @@ main .fes-xuan .content-right .content .content-item .text .text-title{
 }
 main .fes-xuan .content-right .content .modal .modal-content{
     border-radius: 10px;
+    width: 1650px;
 }
 main .fes-xuan .content-right .content .modal .modal-content .modal-header{
     background: var(--red);
@@ -2490,19 +2492,25 @@ main .fes-xuan .content-right .content .modal .modal-content .modal-body .map im
 main .banner-fes-nghe-si{
     background-image: url('../images/festival-hue/doan-nghe-thuat/banner-bg.png');
 }
-main .fes .content-left .gioi-thieu-menu nav>ul li a{
+main .fes .content-left .gioi-thieu-menu ul li a{
     width: 100%;
 }
-main .fes .content-left .gioi-thieu-menu nav>ul li a{
+main .fes .content-left .gioi-thieu-menu ul li a{
     display: inline-block;
 }
-main .fes .content-left .gioi-thieu-menu nav>ul li .dropdown{
+main .fes .content-left .gioi-thieu-menu ul li .dropdown{
     position: relative;
 }
-main .fes .content-left .gioi-thieu-menu nav>ul li .dropdown::after{
+main .fes .content-left .gioi-thieu-menu ul li .dropdown::after{
     content:url('../images/festival-hue/down.png');
     position: absolute;
     right:0;
+}
+main .fes .content-left .gioi-thieu-menu ul li .dropdown[aria-expanded="true"]::after{
+    transform: scaleY(-1);
+}
+main .fes .content-left .gioi-thieu-menu .collapse li a{
+    padding: 8px;
 }
 
 
@@ -2570,6 +2578,9 @@ main .fes .content-left .gioi-thieu-menu nav>ul li .dropdown::after{
     }
     main .su-kien-khac .su-kien-khac-right .card .card-text {
         font-size: 14px;
+    }
+    main .fes-xuan .content-right .content .modal .modal-content{
+        width: 1300px;
     }
 }
 @media (max-width: 1280px){
@@ -2789,6 +2800,9 @@ main .fes .content-left .gioi-thieu-menu nav>ul li .dropdown::after{
     }
     main .content-gioi-thieu .content-left .tin-tuc-main .content .text .text-title {
         font-size: 15px;
+    }
+    main .fes-xuan .content-right .content .modal .modal-content {
+        width: 1200px;
     }
 }
 @media (max-width: 1024px){ 
@@ -3184,6 +3198,15 @@ main .fes .content-left .gioi-thieu-menu nav>ul li .dropdown::after{
     main .content-gioi-thieu .content-right .main-content .content-item {
         width: calc(100% / 2 - 30px / 2);
     }
+    main .fes-xuan .content-right .content .modal .modal-content {
+        width: 1000px;
+    }
+    main .fes-xuan .content-right .content .modal .modal-content .modal-header .modal-title {
+        font-size: 20px;
+    }
+    main .fes-xuan .content-right .content .modal .modal-content .modal-body #slide-img-fes .item img {
+        height: 500px;
+    }
 }
 @media (max-width: 768px){
     main .right .info {
@@ -3434,6 +3457,18 @@ main .fes .content-left .gioi-thieu-menu nav>ul li .dropdown::after{
     main .content-gioi-thieu .content-left{
         order: 2;
     }
+    main .fes-xuan .content-right .content .modal .modal-content {
+        width: 700PX;
+    }
+    main .fes-xuan .content-right .content .modal .modal-content .modal-body #slide-img-fes .item img {
+        height: 400px;
+    }
+    main .fes-xuan .content-right .content .modal .modal-content .modal-body h4 {
+        font-size: 18px;
+    }
+    main .fes-xuan .content-right .content .modal .modal-content .modal-body {
+        padding:20px;
+    }
 }
 
 @media (max-width: 640px){
@@ -3540,6 +3575,15 @@ main .fes .content-left .gioi-thieu-menu nav>ul li .dropdown::after{
     #backtop {
         right: 30px;
         bottom: 30px;
+    }
+    main .fes-xuan .content-right .content .modal .modal-content {
+        width: 580px;
+    }
+    main .fes-xuan .content-right .content .modal .modal-content .modal-body #slide-img-fes .item img {
+        height: 360px;
+    }
+    main .fes-xuan .content-right .content .modal .modal-content .modal-body .map img {
+        height: 350px;
     }
 }
 
@@ -3974,6 +4018,15 @@ main .fes .content-left .gioi-thieu-menu nav>ul li .dropdown::after{
     }
     main .banner-main .breadcrumb-item a{
         font-size: 16px;
+    }
+    main .fes-xuan .content-right .content .modal .modal-content {
+        width: 450px;
+    }
+    main .fes-xuan .content-right .content .modal .modal-content .modal-body #slide-img-fes .item img {
+        height: 250px;
+    }
+    main .fes-xuan .content-right .content .modal .modal-content .modal-body .map img {
+        height: 250px;
     }
 }
 @media (max-width: 376px){
