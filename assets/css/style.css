@@ -2335,10 +2335,10 @@ main .banner-fes-mua-xuan .overlay{
     background:rgba(0, 0, 0, 0.3);
 }
 main .fes .collapse>li{
-    padding: 0px 34px;
+    padding: 0px 17px;
 }
 main .fes .collapsing> li{
-    padding: 0px 34px;
+    padding: 0px 17px;
 }
 main .content-right .main-content .title .title-breadcrumb{
     font-size: 20px;
@@ -2402,7 +2402,6 @@ main .fes-xuan .content-right .content .content-item .text .text-title{
 }
 main .fes-xuan .content-right .content .modal .modal-content{
     border-radius: 10px;
-    width: 1650px;
 }
 main .fes-xuan .content-right .content .modal .modal-content .modal-header{
     background: var(--red);
@@ -2505,9 +2504,12 @@ main .fes .content-left .gioi-thieu-menu ul li .dropdown::after{
     content:url('../images/festival-hue/down.png');
     position: absolute;
     right:0;
+    transition: all 0.5s ease-in-out;
 }
 main .fes .content-left .gioi-thieu-menu ul li .dropdown[aria-expanded="true"]::after{
     transform: scaleY(-1);
+    top:0;
+    transition: all 0.5s ease-in-out;
 }
 main .fes .content-left .gioi-thieu-menu .collapse li a{
     padding: 8px;
@@ -2578,9 +2580,6 @@ main .fes .content-left .gioi-thieu-menu .collapse li a{
     }
     main .su-kien-khac .su-kien-khac-right .card .card-text {
         font-size: 14px;
-    }
-    main .fes-xuan .content-right .content .modal .modal-content{
-        width: 1300px;
     }
 }
 @media (max-width: 1280px){
@@ -2800,9 +2799,6 @@ main .fes .content-left .gioi-thieu-menu .collapse li a{
     }
     main .content-gioi-thieu .content-left .tin-tuc-main .content .text .text-title {
         font-size: 15px;
-    }
-    main .fes-xuan .content-right .content .modal .modal-content {
-        width: 1200px;
     }
 }
 @media (max-width: 1024px){ 
@@ -3204,9 +3200,6 @@ main .fes .content-left .gioi-thieu-menu .collapse li a{
     main .fes-xuan .content-right .content .modal .modal-content .modal-header .modal-title {
         font-size: 20px;
     }
-    main .fes-xuan .content-right .content .modal .modal-content .modal-body #slide-img-fes .item img {
-        height: 500px;
-    }
 }
 @media (max-width: 768px){
     main .right .info {
@@ -3457,9 +3450,6 @@ main .fes .content-left .gioi-thieu-menu .collapse li a{
     main .content-gioi-thieu .content-left{
         order: 2;
     }
-    main .fes-xuan .content-right .content .modal .modal-content {
-        width: 700PX;
-    }
     main .fes-xuan .content-right .content .modal .modal-content .modal-body #slide-img-fes .item img {
         height: 400px;
     }
@@ -3575,9 +3565,6 @@ main .fes .content-left .gioi-thieu-menu .collapse li a{
     #backtop {
         right: 30px;
         bottom: 30px;
-    }
-    main .fes-xuan .content-right .content .modal .modal-content {
-        width: 580px;
     }
     main .fes-xuan .content-right .content .modal .modal-content .modal-body #slide-img-fes .item img {
         height: 360px;
@@ -4019,9 +4006,6 @@ main .fes .content-left .gioi-thieu-menu .collapse li a{
     main .banner-main .breadcrumb-item a{
         font-size: 16px;
     }
-    main .fes-xuan .content-right .content .modal .modal-content {
-        width: 450px;
-    }
     main .fes-xuan .content-right .content .modal .modal-content .modal-body #slide-img-fes .item img {
         height: 250px;
     }
@@ -4046,5 +4030,10 @@ main .fes .content-left .gioi-thieu-menu .collapse li a{
 @media (min-width: 992px){
     header .header-wraper .header-container .navbar-dropdown{
         display: none;
+    }
+}
+@media (min-width: 1200px) {
+    .modal-xl {
+        max-width: 1650px;
     }
 }

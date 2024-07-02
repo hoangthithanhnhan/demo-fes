@@ -15,8 +15,8 @@ $(document).ready(function() {
     })
 
     var splash=document.getElementById('splash-screen');
-    window.addEventListener("load",function(){
-        splash.style.display='none';    
+    $(window).on('load',function(){
+        splash.style.display='none'; 
     })
 
     $('#exampleModal').on('shown.bs.modal',function(){
