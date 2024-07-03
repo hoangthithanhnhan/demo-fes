@@ -2584,6 +2584,9 @@ main .fes .content-left .gioi-thieu-menu .collapse li a{
     main .modal.show{
         margin-right: 0;
     }
+    main .fes-xuan .content-right .content .modal-dialog {
+        margin: 1.75rem 20px;
+    }
 }
 @media (max-width: 1280px){
     main .fes .fes-menu .fes-menu-block{
@@ -3203,6 +3206,9 @@ main .fes .content-left .gioi-thieu-menu .collapse li a{
     main .fes-xuan .content-right .content .modal .modal-content .modal-header .modal-title {
         font-size: 20px;
     }
+    main .fes-xuan .content-right .content .modal-dialog {
+        margin: 1.75rem auto;
+    }
 }
 @media (max-width: 768px){
     main .right .info {
@@ -3577,6 +3583,9 @@ main .fes .content-left .gioi-thieu-menu .collapse li a{
     }
     main .fes-xuan .content-right .content .modal .modal-content .modal-body .map img {
         height: 350px;
+    }
+    main .fes-xuan .content-right .content .modal .modal-content .modal-body #slide-img-fes .owl-dots{
+        bottom:50px;
     }
 }
 
