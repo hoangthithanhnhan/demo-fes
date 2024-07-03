@@ -2402,11 +2402,13 @@ main .fes-xuan .content-right .content .content-item .text .text-title{
 }
 main .fes-xuan .content-right .content .modal .modal-content{
     border-radius: 10px;
+    border:none;
 }
 main .fes-xuan .content-right .content .modal .modal-content .modal-header{
     background: var(--red);
     border-radius: 10px 10px 0 0;
     padding: 18px 30px;
+    border:none;
 }
 main .fes-xuan .content-right .content .modal .modal-content .modal-header .modal-title{
     font-size: 24px;
