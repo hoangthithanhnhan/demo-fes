@@ -83,6 +83,7 @@ main .modal .modal-dialog{
     align-items: center; */
 }
 main .modal .modal-dialog .search-block{
+    margin: 0 auto;
     padding: 15px 20px;
     width: 400px;
     border-radius: 10px;
@@ -138,6 +139,7 @@ main .modal .modal-dialog .search-result-block{
     width: 400px;
     border-radius: 10px;
     padding-top: 15px;
+    margin: 0 auto;
 }
 main .modal .modal-dialog .search-result-block .search-result-title{
     font-size: 18px;
@@ -2419,6 +2421,10 @@ main .fes-xuan .content-right .content .modal .modal-content .modal-header .moda
     width: 100%;
     text-align: center;
 }
+.modal-header .close {
+    padding: 0;
+    margin: 0;
+}
 main .fes-xuan .content-right .content .modal .modal-content .modal-body {
     padding: 30px 50px 50px 50px;
 }
@@ -4032,6 +4038,17 @@ main .fes .content-left .gioi-thieu-menu .collapse li a{
     }
     main .fes-xuan .content-right .content .modal-dialog {
         margin: 1.75rem 10px;
+    }
+    main .fes-xuan .content-right .content .modal .modal-content .modal-header .modal-title {
+        font-size: 16px;
+    }
+    .modal-header .close img{
+        width: 20px;
+        height: 20px;
+    }
+    main .fes-xuan .content-right .content .modal .modal-content .modal-body h4 {
+        line-height: 25px;
+        font-size: 16px;
     }
 }
 @media (max-width: 376px){
