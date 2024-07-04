@@ -504,6 +504,7 @@ main .tin-tuc-title{
 }
 main .tin-tuc-title h3{
     padding-left: 15px;
+    margin-bottom: 0;
 }
 main .tin-tuc-title::before{
     content: "";
