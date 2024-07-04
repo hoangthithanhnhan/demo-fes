@@ -78,9 +78,9 @@ main .modal.show{
     padding: 0;
 }
 main .modal .modal-dialog{
-    display: flex;
+    /* display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center; */
 }
 main .modal .modal-dialog .search-block{
     padding: 15px 20px;
@@ -2585,7 +2585,7 @@ main .fes .content-left .gioi-thieu-menu .collapse li a{
         font-size: 14px;
     }
     main .modal.show{
-        margin-right: 0;
+        padding-right: 0 !important;
     }
     main .fes-xuan .content-right .content .modal-dialog {
         margin: 1.75rem 20px;
@@ -4030,6 +4030,9 @@ main .fes .content-left .gioi-thieu-menu .collapse li a{
     main .fes-xuan .content-right .content .modal .modal-content .modal-body .map img {
         height: 250px;
     }
+    main .fes-xuan .content-right .content .modal-dialog {
+        margin: 1.75rem 10px;
+    }
 }
 @media (max-width: 376px){
     main .content-gioi-thieu .content-right .main-content .text-content .img .img-bottom img {
@@ -4050,10 +4053,16 @@ main .fes .content-left .gioi-thieu-menu .collapse li a{
         display: none;
     }
 }
-
+@media (min-width: 576px) {
+    .modal-xl {
+        max-width: 600px;
+        margin: 1.75rem auto;
+    }
+}
 @media (min-width: 1200px) {
     .modal-xl {
         max-width: 1650px;
     }
 }
+
 
