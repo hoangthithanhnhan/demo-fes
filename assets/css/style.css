@@ -3215,9 +3215,6 @@ main .fes .content-left .gioi-thieu-menu .collapse li a{
     main .fes-xuan .content-right .content .modal .modal-content .modal-header .modal-title {
         font-size: 20px;
     }
-    main .fes-xuan .content-right .content .modal-dialog {
-        margin: 1.75rem auto;
-    }
 }
 @media (max-width: 768px){
     main .right .info {
@@ -3479,6 +3476,9 @@ main .fes .content-left .gioi-thieu-menu .collapse li a{
     }
     main .fes-xuan .content-right .content .modal .modal-content .modal-body {
         padding:20px;
+    }
+    main .fes-xuan .content-right .content .modal-dialog {
+        margin: 1.75rem auto;
     }
 }
 
@@ -4077,7 +4077,7 @@ main .fes .content-left .gioi-thieu-menu .collapse li a{
         margin: 1.75rem auto;
     }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1000px) {
     .modal-xl {
         max-width: 1650px;
     }
