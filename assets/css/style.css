@@ -2411,13 +2411,13 @@ main .fes-xuan .content-right .content .modal .modal-content{
     border-radius: 10px;
     border:none;
 }
-main .fes-xuan .content-right .content .modal .modal-content .modal-header{
+main .content-right .content .modal .modal-content .modal-header{
     background: var(--red);
     border-radius: 10px 10px 0 0;
     padding: 18px 30px;
     border:none;
 }
-main .fes-xuan .content-right .content .modal .modal-content .modal-header .modal-title{
+main .content-right .content .modal .modal-content .modal-header .modal-title{
     font-size: 24px;
     font-weight: 700;
     line-height: 22px;  
@@ -2429,18 +2429,18 @@ main .fes-xuan .content-right .content .modal .modal-content .modal-header .moda
     padding: 0;
     margin: 0;
 }
-main .fes-xuan .content-right .content .modal .modal-content .modal-body {
+main .content-right .content .modal .modal-content .modal-body {
     padding: 30px 50px 50px 50px;
 }
-main .fes-xuan .content-right .content .modal .modal-content .modal-body #slide-img-fes .item img{
+main .content-right .content .modal .modal-content .modal-body #slide-img-fes .item img{
     border-radius: 10px;
     height: 600px;
     object-fit: cover;
 }
-main .fes-xuan .content-right .content .modal .modal-content .modal-body #slide-img-fes .item{
+main .content-right .content .modal .modal-content .modal-body #slide-img-fes .item{
     position: relative;
 }
-main .fes-xuan .content-right .content .modal .modal-content .modal-body #slide-img-fes .owl-dots{
+main .content-right .content .modal .modal-content .modal-body #slide-img-fes .owl-dots{
     position: absolute;
     margin: 0;
     bottom:100px;
@@ -2453,28 +2453,28 @@ main .fes-xuan .content-right .content .modal .modal-content .modal-body #slide-
 .owl-theme .owl-dots .owl-dot span{
     margin: 0 5px;
 }
-main .fes-xuan .content-right .content .modal .modal-content .modal-body h4{
+main .content-right .content .modal .modal-content .modal-body h4{
     font-size: 20px;
     font-weight: 700;
     line-height: 30px;
     color: var(--brown);
     margin: 20px 0;
 }
-main .fes-xuan .content-right .content .modal .modal-content .modal-body .detail{
+main .content-right .content .modal .modal-content .modal-body .detail{
     column-gap: 50px;
     row-gap: 10px;
 }
-main .fes-xuan .content-right .content .modal .modal-content .modal-body .detail .detail-item{
+main .content-right .content .modal .modal-content .modal-body .detail .detail-item{
     width: calc(100%/3 - 100px/3);
 }
-main .fes-xuan .content-right .content .modal .modal-content .modal-body .detail .detail-item .heading {
+main .content-right .content .modal .modal-content .modal-body .detail .detail-item .heading {
     font-size: 14px;
     font-weight: 400;
     line-height: 24px;
     color:var(--body);
     margin: 0;
 }
-main .fes-xuan .content-right .content .modal .modal-content .modal-body .detail .detail-item .text{
+main .content-right .content .modal .modal-content .modal-body .detail .detail-item .text{
     font-size: 16px;
     font-weight: 700;
     line-height: 24px;
@@ -2486,15 +2486,15 @@ main .fes-xuan .content-right .content .modal .modal-content .modal-body .detail
 .text-green{
     color:#00B24A;
 }
-main .fes-xuan .content-right .content .modal .modal-content .modal-body .content-text{
+main .content-right .content .modal .modal-content .modal-body .content-text{
     margin: 20px 0 30px 0;
 }
-main .fes-xuan .content-right .content .modal .modal-content .modal-body .content-text p{
+main .content-right .content .modal .modal-content .modal-body .content-text p{
     margin-bottom: 10px;
     font-size: 16px;
     line-height: 24px;
 }
-main .fes-xuan .content-right .content .modal .modal-content .modal-body .map img{
+main .content-right .content .modal .modal-content .modal-body .map img{
     width: 100%;
     height: 400px;
     object-fit: cover;
@@ -2525,7 +2525,7 @@ main .fes .content-left .gioi-thieu-menu ul li .dropdown[aria-expanded="true"]::
     transition: all 0.5s ease-in-out;
 }
 main .fes .content-left .gioi-thieu-menu .collapse li a{
-    padding: 8px;
+    padding: 8px 0;
 }
 /* hoạt động hưởng ứng */
 main .fes-hd-huong-ung .content-right .main-content .content-item .text .text-detail{
