@@ -2527,7 +2527,27 @@ main .fes .content-left .gioi-thieu-menu ul li .dropdown[aria-expanded="true"]::
 main .fes .content-left .gioi-thieu-menu .collapse li a{
     padding: 8px;
 }
-
+/* hoạt động hưởng ứng */
+main .fes-hd-huong-ung .content-right .main-content .content-item .text .text-detail{
+    font-size: 14px;
+    line-height: 22px;
+    text-align: left;
+}
+main .fes-hd-huong-ung .content-right .main-content .content-item .text .text-detail .date{
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+main .fes-hd-huong-ung .content-right .main-content .content-item .text .text-detail .date img{
+    margin-right: 5px;
+}
+main .fes-hd-huong-ung .content-right .main-content .content-item .text .text-detail .location{
+    display: flex;
+    align-items: start;
+}
+main .fes-hd-huong-ung .content-right .main-content .content-item .text .text-detail .location img{
+    margin-right: 5px;
+}
 
 
 @media (min-width: 1200px) {
