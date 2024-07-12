@@ -1967,7 +1967,7 @@ main .content-gioi-thieu .content-left ul li{
     list-style: none;
 }
 main .content-gioi-thieu .content-left ul li a{
-    padding: 8px;
+    padding: 8px 0 ;
 }
 main .content-gioi-thieu .content-left ul li hr{
     background: rgba(255, 255, 255, 0.2);
@@ -2555,7 +2555,7 @@ main .banner-tai-tro{
 main .tai-tro .content-right .content .content-item{
     width: calc(100% / 5 - 120px / 5);
     height: 300px;
-    padding: 15px 15px 0 15px;
+    padding: 15px;
     box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2);
     text-decoration: none;
     display: flex;
@@ -2565,7 +2565,6 @@ main .tai-tro .content-right .content .content-item{
 main .tai-tro .content-right .content .content-item img{
     width: 100%;
     height: 192px;
-    object-fit: cover ;
     border-radius: 10px;
 }
 main .tai-tro .content-right .content .content-item .nha-tai-tro{
@@ -2574,6 +2573,10 @@ main .tai-tro .content-right .content .content-item .nha-tai-tro{
     line-height: 24px;
     text-align: center;
     margin-top: 10px;
+    margin: 10px 0 0 0;
+}
+main .fes.tai-tro{
+    margin-top: 20px;
 }
 
 @media (min-width: 1200px) {
@@ -2581,7 +2584,7 @@ main .tai-tro .content-right .content .content-item .nha-tai-tro{
         max-width: 1680px;
     }
 }
-@media (max-width: 1200px) {
+@media (max-width: 1200p44x) {
     .container, .container-lg, .container-md, .container-sm, .container-xl {
         max-width: 100%;
     }
@@ -4127,7 +4130,8 @@ main .tai-tro .content-right .content .content-item .nha-tai-tro{
         font-size: 16px;
     }
     main .tai-tro .content-right .content .content-item {
-        width: calc(100% / 2 - 40px / 2);
+        width: calc(100% / 2 - 20px / 2);
+        height: 280px;
     }
 }
 @media (max-width: 376px){

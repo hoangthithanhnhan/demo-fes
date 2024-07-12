@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Mulish";
+    font-weight: 400;
+    color: var(--body);
+}
+.main-sidebar .brand-text{
+    font-family: "Playfair Display";
+    background: linear-gradient(to top,rgba(255, 122, 0, 1),rgba(251, 255, 69, 1));
+    color: transparent;
+    -webkit-background-clip: text;
+    font-size: 26px;
+    font-weight: 900;
+    line-height: 35px;
+}
+.brand-link{
+    padding: 0 0 0 16px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    background-color: #350000;
+}
+.brand-link .brand-image{
+    margin: 0 8px 0 0 ;
+    max-height: 45px;
+    width: 45px;
+}
+[class*=sidebar-dark-]{
+    background-color: #4B0000;
+}
+[class*=sidebar-dark] .brand-link {
+    border-color: #963333;
+}
