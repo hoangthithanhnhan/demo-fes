@@ -2584,7 +2584,7 @@ main .fes.tai-tro{
         max-width: 1680px;
     }
 }
-@media (max-width: 1200p44x) {
+@media (max-width: 1200x) {
     .container, .container-lg, .container-md, .container-sm, .container-xl {
         max-width: 100%;
     }
