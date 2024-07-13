@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../assets/css/icheck-bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <link rel="stylesheet" href="../assets/css/adminlte.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/base.css">
     <link rel="stylesheet" href="../assets/css/cms.css">
 </head>
@@ -22,13 +23,68 @@
                 <span class="brand-text ">Festival Huế</span>
             </a>
             <div class="sidebar">
-                
+                <div class="gioi-thieu-menu">
+                    <ul>
+                        <li class="menu-item active">
+                            <a class="dropdown" data-toggle="collapse" href="#collapse1" role="button"><img src="../assets/images/cms/ic1.png" alt="">Quản lý nội dung</a>
+                            <ul class="collapse" id="collapse1">
+                                <li><a href="./fes-mua-xuan.html">Chương trình, lễ hội chính</a></li>
+                                <li><a class="active" href="./doan-nghe-thuat.html">Đoàn nghệ thuật, nghệ sĩ</a></li>
+                                <li><a href="./hd-huong-ung.html">Các hoạt động hưởng ứng</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item">
+                            <a class="dropdown" data-toggle="collapse" href="#collapse2" role="button"><img src="../assets/images/cms/ic2.png" alt="">Quản lý Festival</a>
+                            <ul class="collapse" id="collapse2">
+                                <li><a href="#">Kỳ Festival</a></li>
+                                <li><a href="#">Loại chương trình Festival</a></li>
+                                <li><a href="#">Chương trình festival</a></li>
+                                <li><a href="#">Đoàn biểu diễn</a></li>
+                                <li><a href="#">Địa điểm biểu diễn</a></li>
+                                <li><a href="#">Lịch (sự kiện)</a></li>
+
+                            </ul>
+                        </li>
+                        <li class="menu-item">
+                            <a class="dropdown" data-toggle="collapse" href="#collapse3" role="button"><img src="../assets/images/cms/ic3.png" alt="">Quản lý nhà tài trợ</a> 
+                            <ul class="collapse" id="collapse3">
+                                <li><a href="#">Chương trình, lễ hội chính</a></li>
+                                <li><a href="#">Đoàn nghệ thuật, nghệ sĩ</a></li>
+                                <li><a href="#">Các hoạt động hưởng ứng</a></li>
+                            </ul>
+                        </li> 
+                        <li class="menu-item">
+                            <a class="dropdown" data-toggle="collapse" href="#collapse4" role="button"><img src="../assets/images/cms/ic4.png" alt="">Quản lý đoàn biểu diễn</a> 
+                            <ul class="collapse" id="collapse4">
+                                <li><a href="#">Chương trình, lễ hội chính</a></li>
+                                <li><a href="#">Đoàn nghệ thuật, nghệ sĩ</a></li>
+                                <li><a href="#">Các hoạt động hưởng ứng</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item">
+                            <a class="dropdown" data-toggle="collapse" href="#collapse5" role="button"><img src="../assets/images/cms/ic5.png" alt="">Quản lý thông tin đăng ký tham gia</a>
+                            <ul class="collapse" id="collapse5">
+                                <li><a href="#">Chương trình, lễ hội chính</a></li>
+                                <li><a href="#">Đoàn nghệ thuật, nghệ sĩ</a></li>
+                                <li><a href="#">Các hoạt động hưởng ứng</a></li>
+                            </ul>
+                        </li> 
+                        <li class="menu-item">
+                            <a class="dropdown" data-toggle="collapse" href="#collapse5" role="button"><img src="../assets/images/cms/ic6.png" alt="">Thống kê</a>
+                            <ul class="collapse" id="collapse5">
+                                <li><a href="#">Chương trình, lễ hội chính</a></li>
+                                <li><a href="#">Đoàn nghệ thuật, nghệ sĩ</a></li>
+                                <li><a href="#">Các hoạt động hưởng ứng</a></li>
+                            </ul>
+                        </li> 
+                    </ul>
+                </div>
             </div>
         </aside>
     </div>
     <div class="container">
         <div class="d-flex align-items-center">
-            <h1>CÁC KỲ FESTIVAL</h1>x
+            <h1>CÁC KỲ FESTIVAL</h1>
             <button style="height: 40px; margin-left: 25px;" class="btn btn-success" type="button" data-toggle="modal" data-target="#modalCreate">Thêm mới</button>
             <div class="search-block">
                 <input id="search" type="text" placeholder="Tìm kiếm...">

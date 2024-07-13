@@ -2504,27 +2504,27 @@ main .content-right .content .modal .modal-content .modal-body .map img{
 main .banner-fes-nghe-si{
     background-image: url('../images/festival-hue/doan-nghe-thuat/banner-bg.png');
 }
-main .fes .content-left .gioi-thieu-menu ul li a{
+.gioi-thieu-menu ul li a{
     width: 100%;
 }
-main .fes .content-left .gioi-thieu-menu ul li a{
+.gioi-thieu-menu ul li a{
     display: inline-block;
 }
-main .fes .content-left .gioi-thieu-menu ul li .dropdown{
+.gioi-thieu-menu ul li .dropdown{
     position: relative;
 }
-main .fes .content-left .gioi-thieu-menu ul li .dropdown::after{
+.gioi-thieu-menu ul li .dropdown::after{
     content:url('../images/festival-hue/down.png');
     position: absolute;
     right:0;
     transition: all 0.5s ease-in-out;
 }
-main .fes .content-left .gioi-thieu-menu ul li .dropdown[aria-expanded="true"]::after{
+.gioi-thieu-menu ul li .dropdown[aria-expanded="true"]::after{
     transform: scaleY(-1);
     top:0;
     transition: all 0.5s ease-in-out;
 }
-main .fes .content-left .gioi-thieu-menu .collapse li a{
+.gioi-thieu-menu .collapse li a{
     padding: 8px 0;
 }
 /* hoạt động hưởng ứng */
@@ -2572,11 +2572,14 @@ main .tai-tro .content-right .content .content-item .nha-tai-tro{
     font-weight: 700;
     line-height: 24px;
     text-align: center;
-    margin-top: 10px;
     margin: 10px 0 0 0;
 }
 main .fes.tai-tro{
     margin-top: 20px;
+}
+
+.sidebar-mini{
+    padding: 0;
 }
 
 @media (min-width: 1200px) {
