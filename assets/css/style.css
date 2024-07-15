@@ -2407,7 +2407,7 @@ main .fes-xuan .content-right .content .content-item .text .text-title{
     overflow: hidden;
     margin-bottom: 0;
 }
-main .fes-xuan .content-right .content .modal .modal-content{
+main .content-right .content .modal .modal-content{
     border-radius: 10px;
     border:none;
 }
@@ -2576,6 +2576,33 @@ main .tai-tro .content-right .content .content-item .nha-tai-tro{
 }
 main .fes.tai-tro{
     margin-top: 20px;
+}
+/* văn hóa - di sản */
+main .banner-lang-nghe{
+    background-image: url('../images/lang-nghe/banner.png');
+}
+main .content-gioi-thieu .content-left .tin-tuc-main .content-lhvh{
+    align-items: center;
+}
+/* Các kỳ festival */
+
+main .content-gioi-thieu .content-right .main-content .list .event{
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 26px;
+    margin-bottom: 30px;
+}
+main .content-gioi-thieu .content-right .main-content .list .event .detail{
+    color: var(--red);
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 26px;
+}
+main .content-gioi-thieu .content-right .main-content .list ::marker{
+    color: var(--body);
+}
+main .content-gioi-thieu .content-right .main-content .list{
+    margin-left: 15px;
 }
 
 .sidebar-mini{
@@ -4135,6 +4162,9 @@ main .fes.tai-tro{
     main .tai-tro .content-right .content .content-item {
         width: calc(100% / 2 - 20px / 2);
         height: 280px;
+    }
+    main .content-gioi-thieu .content-right .main-content .title {
+        font-size: 25px;
     }
 }
 @media (max-width: 376px){
