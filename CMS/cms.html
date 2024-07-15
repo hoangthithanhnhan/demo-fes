@@ -15,7 +15,17 @@
 <body class="hold-transition sidebar-mini layout-fixed">
     <div class="wrapper">
         <nav class="main-header navbar navbar-expand navbar-white navbar-light">
-            <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+                </li>
+                <li class="nav-item d-none d-sm-inline-block">
+                    <a href="index3.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item d-none d-sm-inline-block">
+                    <a href="#" class="nav-link">Contact</a>
+                </li>
+            </ul>
         </nav>
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
             <a href="index3.html" class="brand-link">
@@ -79,176 +89,182 @@
                         </li> 
                     </ul>
                 </div>
+                <!-- /.sidebar-menu -->
             </div>
+        <!-- /.sidebar -->
         </aside>
-    </div>
-    <div class="container">
-        <div class="d-flex align-items-center">
-            <h1>CÁC KỲ FESTIVAL</h1>
-            <button style="height: 40px; margin-left: 25px;" class="btn btn-success" type="button" data-toggle="modal" data-target="#modalCreate">Thêm mới</button>
-            <div class="search-block">
-                <input id="search" type="text" placeholder="Tìm kiếm...">
-                <i id="btn-search" class="fa-solid fa-magnifying-glass"></i>
-            </div>
-        </div>
-        <table class="table table-striped ">
-            <thead>
-                <tr>
-                    <th scope="col">Stt</th>
-                    <th scope="col">Tên kỳ</th>
-                    <th scope="col">Chủ đề</th>
-                    <th scope="col">Ngôn ngữ</th>
-                    <th scope="col">Năm</th>
-                    <th scope="col">Trạng thái</th>
-                    <th scope="col">Thứ tự</th>
-                    <th scope="col">Thao tác</th>
-                </tr>
-            </thead>
-            <tbody id="list">
-            </tbody>
-        </table>
-        <div class="modal fade" id="modalCreate" tabindex="-1" aria-labelledby="modalCreateLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="modalCreateLabel">Thêm mới kỳ Festival</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>   
+        <div class="content-wrapper">
+            <section class="content">
+                <div class="container">
+                    <div class="d-flex align-items-center">
+                        <h1>CÁC KỲ FESTIVAL</h1>
+                        <button style="height: 40px; margin-left: 25px;" class="btn btn-success" type="button" data-toggle="modal" data-target="#modalCreate">Thêm mới</button>
+                        <div class="search-block">
+                            <input id="search" type="text" placeholder="Tìm kiếm...">
+                            <i id="btn-search" class="fa-solid fa-magnifying-glass"></i>
+                        </div>
                     </div>
-                    <div class="modal-body">
-                        <form>
-                            <div class="form-group">
-                                <label for="tenky">Tên kỳ</label>
-                                <input type="text" class="form-control" id="tenky" required>
+                    <table class="table table-striped ">
+                        <thead>
+                            <tr>
+                                <th scope="col">Stt</th>
+                                <th scope="col">Tên kỳ</th>
+                                <th scope="col">Chủ đề</th>
+                                <th scope="col">Ngôn ngữ</th>
+                                <th scope="col">Năm</th>
+                                <th scope="col">Trạng thái</th>
+                                <th scope="col">Thứ tự</th>
+                                <th scope="col">Thao tác</th>
+                            </tr>
+                        </thead>
+                        <tbody id="list">
+                        </tbody>
+                    </table>
+                </div>
+                <div class="modal fade" id="modalCreate" tabindex="-1" aria-labelledby="modalCreateLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalCreateLabel">Thêm mới kỳ Festival</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>   
                             </div>
-                            <div class="form-group">
-                                <label for="nam">Năm</label>
-                                <select id="nam" name="nam" class="form-control" required>
-                                    
-                                    <option value="2020">2020</option>
-                                    <option value="2021">2021</option>
-                                    <option value="2022">2022</option>
-                                    <option value="2023">2023</option>
-                                    <option value="2024">2024</option>
-                                </select>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="form-group">
+                                        <label for="tenky">Tên kỳ</label>
+                                        <input type="text" class="form-control" id="tenky" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="nam">Năm</label>
+                                        <select id="nam" name="nam" class="form-control" required>
+                                            
+                                            <option value="2020">2020</option>
+                                            <option value="2021">2021</option>
+                                            <option value="2022">2022</option>
+                                            <option value="2023">2023</option>
+                                            <option value="2024">2024</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="chude">Chủ đề</label>
+                                        <input type="text" class="form-control" id="chude" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="gioithieu">Giới thiệu</label>
+                                        <input type="text" class="form-control" id="gioithieu">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="thutu">Thứ tự</label>
+                                        <input type="text" class="form-control" id="thutu">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="ngonngu">Ngôn ngữ</label>
+                                        <select id="ngonngu" name="ngonngu" class="form-control">
+                                            <option value="1">Tiếng Việt</option>
+                                            <option value="2">Tiếng Anh</option>
+                                            <option value="3">Tiếng Pháp</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <p>Trạng thái</p>
+                                        <input type="radio" id="su-dung" name="trangthai" value="1" checked>
+                                        <label for="su-dung">Sử dụng</label>
+                                        <input type="radio" id="khong-su-dung" name="trangthai" value="0">
+                                        <label for="khong-su-dung">Không sử dụng</label>
+                                    </div>
+                                </form>
                             </div>
-                            <div class="form-group">
-                                <label for="chude">Chủ đề</label>
-                                <input type="text" class="form-control" id="chude" required>
+                            <div class="modal-footer">
+                                <button id="save-create" type="button" class="btn btn-primary">Lưu</button>
+                                <button id="cancel-create" type="button" class="btn btn-secondary" data-dismiss="modal">Hủy bỏ</button>
                             </div>
-                            <div class="form-group">
-                                <label for="gioithieu">Giới thiệu</label>
-                                <input type="text" class="form-control" id="gioithieu">
-                            </div>
-                            <div class="form-group">
-                                <label for="thutu">Thứ tự</label>
-                                <input type="text" class="form-control" id="thutu">
-                            </div>
-                            <div class="form-group">
-                                <label for="ngonngu">Ngôn ngữ</label>
-                                <select id="ngonngu" name="ngonngu" class="form-control">
-                                    <option value="1">Tiếng Việt</option>
-                                    <option value="2">Tiếng Anh</option>
-                                    <option value="3">Tiếng Pháp</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <p>Trạng thái</p>
-                                <input type="radio" id="su-dung" name="trangthai" value="1" checked>
-                                <label for="su-dung">Sử dụng</label>
-                                <input type="radio" id="khong-su-dung" name="trangthai" value="0">
-                                <label for="khong-su-dung">Không sử dụng</label>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="modal-footer">
-                        <button id="save-create" type="button" class="btn btn-primary">Lưu</button>
-                        <button id="cancel-create" type="button" class="btn btn-secondary" data-dismiss="modal">Hủy bỏ</button>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="modal fade" id="modalUpdate" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Chỉnh sửa kỳ Festival</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <form>
-                            <input type="hidden" class="form-control" id="id-edit">
-                            <div class="form-group">
-                                <label for="tenky-edit">Tên kỳ</label>
-                                <input type="text" class="form-control" id="tenky-edit" required>
+                <div class="modal fade" id="modalUpdate" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Chỉnh sửa kỳ Festival</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
                             </div>
-                            <div class="form-group">
-                                <label for="nam-edit">Năm</label>
-                                <select id="nam-edit" name="nam-edit" class="form-control" required>
-                                    <option value="2020">2020</option>
-                                    <option value="2021">2021</option>
-                                    <option value="2022">2022</option>
-                                    <option value="2023">2023</option>
-                                    <option value="2024">2024</option>
-                                </select>   
+                            <div class="modal-body">
+                                <form>
+                                    <input type="hidden" class="form-control" id="id-edit">
+                                    <div class="form-group">
+                                        <label for="tenky-edit">Tên kỳ</label>
+                                        <input type="text" class="form-control" id="tenky-edit" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="nam-edit">Năm</label>
+                                        <select id="nam-edit" name="nam-edit" class="form-control" required>
+                                            <option value="2020">2020</option>
+                                            <option value="2021">2021</option>
+                                            <option value="2022">2022</option>
+                                            <option value="2023">2023</option>
+                                            <option value="2024">2024</option>
+                                        </select>   
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="chude-edit">Chủ đề</label>
+                                        <input type="text" class="form-control" id="chude-edit" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="gioithieu-edit">Giới thiệu</label>
+                                        <input type="text" class="form-control" id="gioithieu-edit" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="thutu-edit">Thứ tự</label>
+                                        <input type="text" class="form-control" id="thutu-edit" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="ngonngu-edit">Ngôn ngữ</label>
+                                        <select id="ngonngu-edit" name="ngonngu-edit" class="form-control" required>
+                                            <option value="1">Tiếng Việt</option>
+                                            <option value="2">Tiếng Anh</option>
+                                            <option value="3">Tiếng Pháp</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <p>Trạng thái</p>
+                                        <input type="radio" id="su-dung-edit" name="trangthai-edit" value="1">
+                                        <label for="su-dung-edit">Sử dụng</label>
+                                        <input type="radio" id="khong-su-dung-edit" name="trangthai-edit" value="0">
+                                        <label for="khong-su-dung-edit">Không sử dụng</label>
+                                    </div>
+                                </form>
                             </div>
-                            <div class="form-group">
-                                <label for="chude-edit">Chủ đề</label>
-                                <input type="text" class="form-control" id="chude-edit" required>
+                            <div class="modal-footer">
+                                <button id="cancel-edit" type="button" class="btn btn-secondary" data-dismiss="modal">Hủy</button>
+                                <button id="save-edit" type="button" class="btn btn-primary">Lưu</button>
                             </div>
-                            <div class="form-group">
-                                <label for="gioithieu-edit">Giới thiệu</label>
-                                <input type="text" class="form-control" id="gioithieu-edit" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="thutu-edit">Thứ tự</label>
-                                <input type="text" class="form-control" id="thutu-edit" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="ngonngu-edit">Ngôn ngữ</label>
-                                <select id="ngonngu-edit" name="ngonngu-edit" class="form-control" required>
-                                    <option value="1">Tiếng Việt</option>
-                                    <option value="2">Tiếng Anh</option>
-                                    <option value="3">Tiếng Pháp</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <p>Trạng thái</p>
-                                <input type="radio" id="su-dung-edit" name="trangthai-edit" value="1">
-                                <label for="su-dung-edit">Sử dụng</label>
-                                <input type="radio" id="khong-su-dung-edit" name="trangthai-edit" value="0">
-                                <label for="khong-su-dung-edit">Không sử dụng</label>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="modal-footer">
-                        <button id="cancel-edit" type="button" class="btn btn-secondary" data-dismiss="modal">Hủy</button>
-                        <button id="save-edit" type="button" class="btn btn-primary">Lưu</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="modal fade" id="modaldelete" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Chắc chắn xóa?</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <input type="hidden" class="form-control" id="id-delete">
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Hủy</button>
-                        <button type="button" class="btn btn-primary btn-delete">Xóa</button>
+                        </div>
                     </div>
                 </div>
-            </div>
+                <div class="modal fade" id="modaldelete" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Chắc chắn xóa?</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <input type="hidden" class="form-control" id="id-delete">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Hủy</button>
+                                <button type="button" class="btn btn-primary btn-delete">Xóa</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
     </div>
 <script src="../assets/js/jquery.min.js"></script>
