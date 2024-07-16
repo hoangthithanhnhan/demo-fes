@@ -15,17 +15,17 @@
     font-weight: 900;
     line-height: 35px;
 }
+.sidebar{
+    padding:24px 5px;
+}
 .brand-link{
-    padding: 0 0 0 16px;
     height: 60px;
     display: flex;
     align-items: center;
     background-color: #350000;
 }
-.brand-link .brand-image{
-    margin: 0 8px 0 0 ;
-    max-height: 45px;
-    width: 45px;
+.mt-2{
+    margin: 0 !important;
 }
 [class*=sidebar-dark-]{
     background-color: #4B0000;
@@ -34,17 +34,37 @@
     border-color: #963333;
     width: 100%;
 }
-.sidebar{
-    padding: 24px 5px;
+.sidebar-dark-primary .nav-sidebar>.nav-item>.nav-link.active{
+    background-color: #4B0000;
+    box-shadow: none;
+    width: 100%;
+    position: relative;
 }
-.gioi-thieu-menu ul li .dropdown{
+[class*=sidebar-dark-] .nav-treeview>.nav-item>.nav-link.active{
+    background-color:#4B0000;
+}
+.nav-sidebar .nav-link p{
+    color: #fff;
     font-size: 16px;
     font-weight: 700;
     line-height: 24px;
-    color: #fff;
-    padding: 8px 0;
-    margin-bottom: 4px;
 }
-.gioi-thieu-menu ul li .dropdown img{
-    margin: 0 8px;
+.layout-fixed .main-sidebar{
+    width: 272px;
+}
+body:not(.sidebar-mini-md):not(.sidebar-mini-xs):not(.layout-top-nav) .content-wrapper{
+    margin-left: 272px;
+}
+body:not(.sidebar-mini-md):not(.sidebar-mini-xs):not(.layout-top-nav) .main-header{
+    margin-left: 272px;
+}
+.nav-sidebar .nav-link p img{
+    position: absolute ;
+    right: 0;
+    top:0;
+}
+@media (min-width: 1200px) {
+    .container, .container-lg, .container-md, .container-sm, .container-xl {
+        max-width: 1584px;
+    }
 }
