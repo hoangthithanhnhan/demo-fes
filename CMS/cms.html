@@ -28,7 +28,7 @@
             </ul>
         </nav>
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
-            <a href="./cms.html" class="brand-link">
+            <a href="#" class="brand-link">
                 <img src="/assets/images/logofes.png" alt="AdminLTE Logo" class="brand-image" >
                 <span class="brand-text ">Festival Huế</span>
             </a>
@@ -41,7 +41,7 @@
                                 <p>
                                     Quản lý nội dung 
                                 </p>
-                                <img class="down" src="../assets/images/festival-hue/down.png" alt="">
+                                <img class="down" src="../assets/images/cms/down.png" alt="">
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
@@ -78,11 +78,11 @@
                         </li>
                         <li class="nav-item active menu-open">
                             <a href="#" class="nav-link active ">
-                                <img src="../assets/images/cms/festival.png" alt="">
+                                <img src="../assets/images/cms/festival_avtive.png" alt="">
                                 <p>
                                     Quản lý Festival 
                                 </p>
-                                <img class="down" src="../assets/images/festival-hue/down.png" alt="">
+                                <img class="down" src="../assets/images/cms/up.png" alt="">
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item active">
@@ -123,7 +123,7 @@
                                 <p>
                                     Quản lý nhà tài trợ
                                 </p>
-                                <img class="down" src="../assets/images/festival-hue/down.png" alt="">
+                                <img class="down" src="../assets/images/cms/down.png" alt="">
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
@@ -164,7 +164,7 @@
                                 <p>
                                     Quản lý đoàn biểu diễn
                                 </p>
-                                <img class="down" src="../assets/images/festival-hue/down.png" alt="">
+                                <img class="down" src="../assets/images/cms/down.png" alt="">
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
@@ -205,7 +205,7 @@
                                 <p>
                                     Quản lý thông tin đăng ký tham gia
                                 </p>
-                                <img class="down" src="../assets/images/festival-hue/down.png" alt="">
+                                <img class="down" src="../assets/images/cms/down.png" alt="">
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
@@ -246,7 +246,7 @@
                                 <p>
                                     Thống kê
                                 </p>
-                                <img class="down" src="../assets/images/festival-hue/down.png" alt="">
+                                <img class="down" src="../assets/images/cms/down.png" alt="">
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
@@ -286,26 +286,26 @@
             </div>
         <!-- /.sidebar -->
         </aside>
-        <div class="content-wrapper">
-                <div class="container content">
-                    <div class="d-flex align-items-center">
-                        <button style="height: 40px; margin-left: 25px;" class="btn btn-success" type="button" data-toggle="modal" data-target="#modalCreate">Thêm mới</button>
+        <div class="content-wrapper">   
+                <div class="content">
+                    <div class="d-flex align-items-center block-header">
                         <div class="search-block">
                             <input id="search" type="text" placeholder="Tìm kiếm...">
-                            <i id="btn-search" class="fa-solid fa-magnifying-glass"></i>
+                            <img id="btn-search" src="../assets/images/cms/search.png" alt="">
                         </div>
+                        <button  style="height: 40px; margin-left: 25px;" class="btn" type="button" data-toggle="modal" data-target="#modalCreate" id="btn-create">Thêm mới</button>
                     </div>
-                    <table class="table ">
+                    <table class="table">
                         <thead>
                             <tr>
-                                <th scope="col">Stt</th>
-                                <th scope="col">Tên kỳ</th>
-                                <th scope="col">Chủ đề</th>
-                                <th scope="col">Ngôn ngữ</th>
-                                <th scope="col">Năm</th>
-                                <th scope="col">Trạng thái</th>
-                                <th scope="col">Thứ tự</th>
-                                <th scope="col">Thao tác</th>
+                                <th scope="col" style="width: 60px;text-align: center;">Stt</th>
+                                <th scope="col" style="width: 250px;">Tên kỳ</th>
+                                <th scope="col" >Chủ đề</th>
+                                <th scope="col" style="width: 180px; text-align: center;">Ngôn ngữ</th>
+                                <th scope="col" style="width: 120px; text-align: center;">Năm</th>
+                                <th scope="col" style="width: 120px; text-align: center;">Trạng thái</th>
+                                <th scope="col" style="width: 150px; text-align: center;">Thứ tự</th>
+                                <th scope="col" style="width: 180px; text-align: center;">Thao tác</th>
                             </tr>
                         </thead>
                         <tbody id="list">
@@ -313,33 +313,26 @@
                     </table>
                 </div>
                 <div class="modal fade" id="modalCreate" tabindex="-1" aria-labelledby="modalCreateLabel" aria-hidden="true">
-                    <div class="modal-dialog">
+                    <div class="modal-dialog modal-lg">
                         <div class="modal-content">
                             <div class="modal-header">
                                 <h5 class="modal-title" id="modalCreateLabel">Thêm mới kỳ Festival</h5>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
+                                    <span aria-hidden="true"><img src="../assets/images/cms/close.png" alt=""></span>
                                 </button>   
                             </div>
                             <div class="modal-body">
                                 <form>
                                     <div class="form-group">
-                                        <label for="tenky">Tên kỳ</label>
+                                        <label for="tenky">Tên kỳ <span>*</span></label>
                                         <input type="text" class="form-control" id="tenky" required>
                                     </div>
                                     <div class="form-group">
-                                        <label for="nam">Năm</label>
-                                        <select id="nam" name="nam" class="form-control" required>
-                                            
-                                            <option value="2020">2020</option>
-                                            <option value="2021">2021</option>
-                                            <option value="2022">2022</option>
-                                            <option value="2023">2023</option>
-                                            <option value="2024">2024</option>
-                                        </select>
+                                        <label for="nam">Năm <span>*</span></label>
+                                        <input type="number" class="form-control" id="nam" required>
                                     </div>
                                     <div class="form-group">
-                                        <label for="chude">Chủ đề</label>
+                                        <label for="chude">Chủ đề <span>*</span></label>
                                         <input type="text" class="form-control" id="chude" required>
                                     </div>
                                     <div class="form-group">
@@ -375,7 +368,7 @@
                     </div>
                 </div>
                 <div class="modal fade" id="modalUpdate" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog">
+                    <div class="modal-dialog modal-lg">
                         <div class="modal-content">
                             <div class="modal-header">
                                 <h5 class="modal-title" id="exampleModalLabel">Chỉnh sửa kỳ Festival</h5>
@@ -392,13 +385,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="nam-edit">Năm</label>
-                                        <select id="nam-edit" name="nam-edit" class="form-control" required>
-                                            <option value="2020">2020</option>
-                                            <option value="2021">2021</option>
-                                            <option value="2022">2022</option>
-                                            <option value="2023">2023</option>
-                                            <option value="2024">2024</option>
-                                        </select>   
+                                        <input type="number" class="form-control" id="nam-edit" required>
                                     </div>
                                     <div class="form-group">
                                         <label for="chude-edit">Chủ đề</label>
@@ -575,16 +562,16 @@
                     $.each(data,function(index,value){
                         html+=`
                             <tr>
-                                <th scope="row" class='thu-tu'>${index+1}</th>
+                                <td scope="row" class='thu-tu text-center'>${index+1}</td>
                                 <td class="ten-ky">${value.TenKy}</td>
-                                <td class="chu-de">${value.ChuDe}</td>
-                                <td class="chu-de">${value.NgonNgu=='1'?'Tiếng Việt':value.NgonNgu=='2'?'Tiếng Anh':'Tiếng Pháp'}</td>
-                                <td class="chu-de">${value.Nam}</td>
-                                <td class="trang-thai">${value.TrangThai=='1'?'Sử dụng':'Không sử dụng'}</td>
-                                <th scope="row" class='text-center'>${value.ThuTu??''}</th>
+                                <td class="chu-de ">${value.ChuDe}</td>
+                                <td class="ngon-ngu text-center">${value.NgonNgu=='1'?'Tiếng Việt':value.NgonNgu=='2'?'Tiếng Anh':'Tiếng Pháp'}</td>
+                                <td class="nam text-center">${value.Nam}</td>
+                                <td class='text-center thu-tu' ><span>${value.ThuTu??''}</span></td>
+                                <td class="trang-thai text-center"><span>${value.TrangThai=='1'?`<span class="TrangThai SuDung">Sử dụng</span>`:`<span class="TrangThai KhongSuDung">Không sử dụng</span>`}</span></td>
                                 <td style=" text-align: center;">
-                                    <i style='cursor:pointer' data-id="${value.id}" class="edit fa-solid fa-pen-to-square"></i>
-                                    <i style='cursor:pointer' data-id="${value.id}" class="delete fa-solid fa-trash"></i>
+                                    <img style='cursor:pointer' class='edit' data-id="${value.id}" src="../assets/images/cms/edit_filled.png" alt="">
+                                    <img style='cursor:pointer' class='delete' data-id="${value.id}" src="../assets/images/cms/delete_filled.png" alt="">
                                 </td>   
                             </tr>
                         `
