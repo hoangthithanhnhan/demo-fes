@@ -57,9 +57,23 @@
     line-height: 28px;
     color:#6F0000;
 }
-.sidebar{
+nav.mt-2{
     padding:24px 5px;
 }
+.user{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0.15000000596046448px;
+    color:#fff;
+}
+.sidebar{
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 .brand-link{
     height: 60px;
     display: flex;
@@ -76,6 +90,13 @@
 [class*=sidebar-dark] .brand-link {
     border-color: #963333;
     width: 100%;
+}
+.sidebar .sidebar-footer{
+    border:none;
+    border-top: solid 1px #963333;
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 16px 16px 24px;
 }
 .sidebar-dark-primary .nav-sidebar>.nav-item>.nav-link.active{
     background-color: #4B0000;
@@ -100,6 +121,15 @@
     line-height: 24px;
     display: block;
     width: 182px;
+    margin-right: 8px;
+}
+#btn{
+    background-image: url('../images/cms/down.png');
+    width: 24px ;
+    height: 24px;
+}
+#btn.active{
+    background-image: url('../images/cms/up.png');
 }
 [class*=sidebar-dark-] .nav-treeview .nav-item .nav-link{
     width: 100%;
@@ -201,18 +231,18 @@ input:focus{
     padding: 4px 9px;
     border-radius: 4px;
 }
-.TrangThai{
+.badge{
     font-size: 13px;
     font-weight: 600;
     line-height: 16px;
     padding: 6px 10px;
     border-radius: 4px;
 }
-.TrangThai.KhongSuDung{
+.badge-warning{
     background: #FFEFEE;
     color:#E35851;
 }
-.TrangThai.SuDung{
+.badge-success{
     background: #E2FAF1;
     color:#38C793;
 }
@@ -230,9 +260,6 @@ label:not(.form-check-label):not(.custom-file-label){
     font-size: 14px;
     font-weight: 500;
     line-height: 20px;
-}
-label:not(.form-check-label):not(.custom-file-label) span{
-    color:red;
 }
 #records{
     padding: 8px 12px;
@@ -357,5 +384,13 @@ body:not(.sidebar-mini-md):not(.sidebar-mini-xs):not(.layout-top-nav) .main-head
     #modaldelete .modal-dialog {
         max-width: 600px;
         margin: 1.75rem auto;
+    }
+}
+@media (min-width: 992px){
+    .sidebar-mini.sidebar-collapse .main-sidebar:not(.sidebar-no-expand):hover{
+        width: 272px;
+    }
+    .sidebar-mini.sidebar-collapse.layout-fixed .main-sidebar:hover .brand-link{
+        width: 100%;
     }
 }

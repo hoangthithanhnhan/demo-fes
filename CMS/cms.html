@@ -8,9 +8,11 @@
     <link rel="stylesheet" href="../assets/css/icheck-bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <link rel="stylesheet" href="../assets/css/adminlte.min.css">
+    <link rel="stylesheet" href="../assets/css/select2-bootstrap4.min.css">
+    <link rel="stylesheet" href="../assets/css/select2.min.css">
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/base.css">
-    <link rel="stylesheet" href="../assets/css/cms.css">
+    <link rel="stylesheet" href="../assets/css/cms.css">    
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
     <div class="wrapper">
@@ -29,7 +31,7 @@
         </nav>
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
             <a href="#" class="brand-link">
-                <img src="/assets/images/logofes.png" alt="AdminLTE Logo" class="brand-image" >
+                <img src="../assets/images/logofes.png" alt="AdminLTE Logo" class="brand-image" >
                 <span class="brand-text ">Festival Huế</span>
             </a>
             <div class="sidebar">
@@ -41,7 +43,7 @@
                                 <p>
                                     Quản lý nội dung 
                                 </p>
-                                <img class="down" src="../assets/images/cms/down.png" alt="">
+                                <div id="btn"></div>
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
@@ -82,7 +84,7 @@
                                 <p>
                                     Quản lý Festival 
                                 </p>
-                                <img class="down" src="../assets/images/cms/up.png" alt="">
+                                <div id="btn" class="active"></div>
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item active">
@@ -123,7 +125,7 @@
                                 <p>
                                     Quản lý nhà tài trợ
                                 </p>
-                                <img class="down" src="../assets/images/cms/down.png" alt="">
+                                <div id="btn"></div>
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
@@ -164,7 +166,7 @@
                                 <p>
                                     Quản lý đoàn biểu diễn
                                 </p>
-                                <img class="down" src="../assets/images/cms/down.png" alt="">
+                                <div id="btn"></div>
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
@@ -199,13 +201,13 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="nav-item ">
+                        <li class="nav-item">
                             <a href="#" class="nav-link active">
                                 <img src="../assets/images/cms/dangky.png" alt="">
                                 <p>
                                     Quản lý thông tin đăng ký tham gia
                                 </p>
-                                <img class="down" src="../assets/images/cms/down.png" alt="">
+                                <div id="btn"></div>
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
@@ -246,7 +248,7 @@
                                 <p>
                                     Thống kê
                                 </p>
-                                <img class="down" src="../assets/images/cms/down.png" alt="">
+                                <div id="btn"></div>
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
@@ -283,10 +285,10 @@
                         </li>
                     </ul>
                 </nav>
-            </div>
-            <div class="sidebar-foote">
-                <div class="admin">Admin</div>
-                <div class="logout"><img src="../assets/images/cms/sign_out.png" alt=""></div>
+                <a href="#" class="brand-link sidebar-footer">
+                    <span class="user">Admin</span>
+                    <img src="../assets/images/cms/sign_out.png" alt="AdminLTE sign_out" class="sign_out" >
+                </a>
             </div>
         <!-- /.sidebar -->
         </aside>
@@ -307,8 +309,8 @@
                                 <th scope="col" >Chủ đề</th>
                                 <th scope="col" style="width: 180px; text-align: center;">Ngôn ngữ</th>
                                 <th scope="col" style="width: 120px; text-align: center;">Năm</th>
-                                <th scope="col" style="width: 120px; text-align: center;">Trạng thái</th>
                                 <th scope="col" style="width: 150px; text-align: center;">Thứ tự</th>
+                                <th scope="col" style="width: 120px; text-align: center;">Trạng thái</th>
                                 <th scope="col" style="width: 180px; text-align: center;">Thao tác</th>
                             </tr>
                         </thead>
@@ -361,21 +363,21 @@
                                 <form>
                                     <div class="row">
                                         <div class="form-group col-6">
-                                            <label for="tenky">Tên kỳ <span>*</span></label>
+                                            <label for="tenky">Tên kỳ <span class="text-danger">*</span></label>
                                             <input type="text" class="form-control" id="tenky" required>
                                         </div>
                                         <div class="form-group col-6">
-                                            <label for="nam">Năm <span>*</span></label>
+                                            <label for="nam">Năm <span class="text-danger">*</span></label>
                                             <input type="number" class="form-control" id="nam" required>
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label for="chude">Chủ đề <span>*</span></label>
+                                        <label for="chude">Chủ đề <span class="text-danger">*</span></label>
                                         <input type="text" class="form-control" id="chude" required>
                                     </div>
                                     <div class="form-group">
                                         <label for="gioithieu">Giới thiệu</label>
-                                        <textarea name="" id="gioithieu" class="form-control"></textarea>
+                                        <textarea name="" id="gioithieu" class="form-control" rows="3"></textarea>
                                     </div>
                                     <div class="row">
                                         <div class="form-group col-6">
@@ -392,7 +394,7 @@
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <p>Trạng thái</p>
+                                        <label>Trạng thái</label>
                                         <input type="radio" id="su-dung" name="trangthai" value="1" checked>
                                         <label for="su-dung">Sử dụng</label>
                                         <input type="radio" id="khong-su-dung" name="trangthai" value="0">
@@ -407,11 +409,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="modal fade" id="modalUpdate" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal fade" id="modalUpdate" tabindex="-1" aria-labelledby="modal-update" aria-hidden="true">
                     <div class="modal-dialog modal-lg">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Chỉnh sửa kỳ Festival</h5>
+                                <h5 class="modal-title" id="modal-update">Chỉnh sửa kỳ Festival</h5>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
@@ -420,17 +422,17 @@
                                 <form>
                                     <input type="hidden" class="form-control" id="id-edit">
                                     <div class="row">
-                                        <div class="form-group col">
-                                            <label for="tenky-edit">Tên kỳ</label>
+                                        <div class="form-group col-6">
+                                            <label for="tenky-edit">Tên kỳ <span class="text-danger">*</span></label>
                                             <input type="text" class="form-control" id="tenky-edit" required>
                                         </div>
-                                        <div class="form-group col">
-                                            <label for="nam-edit">Năm</label>
+                                        <div class="form-group col-6">
+                                            <label for="nam-edit">Năm <span class="text-danger">*</span></label>
                                             <input type="text" class="form-control" id="nam-edit" required>
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label for="chude-edit">Chủ đề</label>
+                                        <label for="chude-edit">Chủ đề <span class="text-danger">*</span></label>
                                         <input type="text" class="form-control" id="chude-edit" required>
                                     </div>
                                     <div class="form-group">
@@ -438,13 +440,13 @@
                                         <textarea name="" id="gioithieu-edit" class="form-control" rows="3"></textarea>
                                     </div>
                                     <div class="row">
-                                        <div class="form-group col">
+                                        <div class="form-group col-6">
                                             <label for="thutu-edit">Thứ tự</label>
-                                            <input type="number" class="form-control" id="thutu-edit" required>
+                                            <input type="number" class="form-control" id="thutu-edit">
                                         </div>
-                                        <div class="form-group col">
+                                        <div class="form-group col-6">
                                             <label for="ngonngu-edit">Ngôn ngữ</label>
-                                            <select id="ngonngu-edit" name="ngonngu-edit" class="form-control" required>
+                                            <select id="ngonngu-edit" name="ngonngu-edit" class="form-control">
                                                 <option value="1">Tiếng Việt</option>
                                                 <option value="2">Tiếng Anh</option>
                                                 <option value="3">Tiếng Pháp</option>
@@ -452,7 +454,7 @@
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <p>Trạng thái</p>
+                                        <label>Trạng thái</label>
                                         <input type="radio" id="su-dung-edit" name="trangthai-edit" value="1">
                                         <label for="su-dung-edit">Sử dụng</label>
                                         <input type="radio" id="khong-su-dung-edit" name="trangthai-edit" value="0">
@@ -461,8 +463,8 @@
                                 </form>
                             </div>
                             <div class="modal-footer">
-                                <button id="cancel-edit" type="button" class="btn btn-secondary" data-dismiss="modal">Hủy</button>
-                                <button id="save-edit" type="button" class="btn btn-primary btn-cancel">Lưu</button>
+                                <button id="save-edit" type="button" class="btn btn-primary">Lưu</button>
+                                <button id="cancel-edit" type="button" class="btn btn-secondary btn-cancel" data-dismiss="modal">Hủy</button>
                             </div>
                         </div>
                     </div>
@@ -494,8 +496,14 @@
 <script src="../assets/js/jquery-ui.min.js"></script>
 <script src="../assets/js/bootstrap.bundle.min.js"></script>
 <script src="../assets/js/adminlte.js"></script>
+<script src="../assets/js/vi.js"></script>
+<script src="../assets/js/select2.full.min.js"></script>
 <script>
     $(document).ready(function(){
+        $('.select2').select2();
+        $('.select2bs4').select2({
+            theme:'bootstrap4'
+        })
         //api
         renderData();
         $('#save-create').on('click',function(){
@@ -613,8 +621,8 @@
                                 <td class="chu-de ">${value.ChuDe}</td>
                                 <td class="ngon-ngu text-center">${value.NgonNgu=='1'?'Tiếng Việt':value.NgonNgu=='2'?'Tiếng Anh':'Tiếng Pháp'}</td>
                                 <td class="nam text-center">${value.Nam}</td>
-                                <td class='text-center thu-tu' ><span>${value.ThuTu??''}</span></td>
-                                <td class="trang-thai text-center"><span>${value.TrangThai=='1'?`<span class="TrangThai SuDung">Sử dụng</span>`:`<span class="TrangThai KhongSuDung">Không sử dụng</span>`}</span></td>
+                                <td class='text-center thu-tu'><span>${value.ThuTu??''}</span></td>
+                                <td class="trang-thai text-center"><span>${value.TrangThai=='1'?`<span class="badge badge-success">Sử dụng</span>`:`<span class="badge badge-warning">Không sử dụng</span>`}</span></td>
                                 <td style=" text-align: center;">
                                     <img style='cursor:pointer' class='edit' data-id="${value.id}" src="../assets/images/cms/edit_filled.png" alt="">
                                     <img style='cursor:pointer' class='delete' data-id="${value.id}" src="../assets/images/cms/delete_filled.png" alt="">
