@@ -272,6 +272,7 @@ input:focus{
     font-weight: 400;
     line-height: 24px;
     color:#0A0D14;
+    vertical-align: middle;
 }
 .table #list tr>td:nth-child(2){
     font-weight: 600;
