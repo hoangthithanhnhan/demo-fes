@@ -316,7 +316,7 @@
                     </tbody>
                 </table>
                 <div class="block-footer d-flex justify-content-end">
-                    <select name="records" id="records">
+                    <select name="records" id="records" class="form-control select2" style="width: 100px;">
                         <option value="5">5</option>
                         <option value="10">10</option>
                         <option value="15">15</option>
@@ -325,8 +325,8 @@
                         <option value="30">30</option>
                     </select>
                     <nav class="navigation-block" aria-label="Page navigation example">
-                        <ul class="pagination ">
-                            <li class="page-item">
+                        <ul class="pagination" id="pagination">
+                            <!-- <li class="page-item">
                                 <a class="page-link icon"><img src="../assets/images/cms/arrow_previous.png" alt=""></a>
                             </li>
                             <li class="page-item">
@@ -343,7 +343,7 @@
                             </li>
                             <li class="page-item">
                                 <a class="page-link icon" href="#"><img src="../assets/images/cms/arrow_next.png" alt=""></a>
-                            </li>
+                            </li> -->
                         </ul>
                     </nav>
                 </div>
@@ -497,17 +497,27 @@
 <script src="../assets/js/select2.full.min.js"></script>
 <script src="../assets/js/vi.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twbs-pagination/1.4.2/jquery.twbsPagination.min.js" integrity="sha512-frFP3ZxLshB4CErXkPVEXnd5ingvYYtYhE5qllGdZmcOlRKNEPbufyupfdSTNmoF5ICaQNO6SenXzOZvoGkiIA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script>
     $(document).ready(function(){
-        $('.select2').select2();
-        $("#ngonngu").select2({
+        $('.select2').select2({
             minimumResultsForSearch: Infinity
         });
-        $("#ngonngu-edit").select2({
-            minimumResultsForSearch: Infinity
+
+        var pageSize = 5;
+
+        renderData(1, pageSize);
+
+        $("#pagination").on("page", function(evt, page){
+            console.log(page)
+            renderData(page, pageSize);
         });
-        //api
-        renderData();
+        
+        $('#records').on('change',function(){
+            pageSize=$(this).val();
+            renderData(1, pageSize);
+        })
+        
         $('#save-create').on('click',function(){
             let buildData={ 
                 'TenKy':$('#tenky').val(),
@@ -536,6 +546,7 @@
                 showAlert('Vui lòng nhập đầy đủ thông tin!','warning');
             }
         })
+
         $("#list").on('click', '.edit',function(){
             let id = $(this).data("id");
             console.log(id)
@@ -615,7 +626,7 @@
             }
         })
     })
-    function renderData(){
+    function renderData1(){
         const search=$('#search').val().trim();
         $.ajax({
             type:'GET',
@@ -648,6 +659,50 @@
             }
         })
     }
+
+    function renderData(pageIndex, pageSize){
+        const search=$('#search').val().trim();
+        $.ajax({
+            type:'GET',
+            url:`http://localhost:3000/KyFestival?q=${search}&_sort=ThuTu&_order=asc&_page=${pageIndex}&_limit=${pageSize}`,
+            dataType:'json',
+            success:function(data, statusText, request){
+                console.log(statusText)
+                console.log(request)
+                console.log(request.getResponseHeader("x-total-count"))
+                let totalRows = request.getResponseHeader("x-total-count");
+                if(data && data.length>0){  
+                    let html=''
+                    $.each(data,function(index,value){
+                        html+=`
+                            <tr>
+                                <td scope="row" class='thu-tu text-center'>${index+1}</td>
+                                <td class="ten-ky">${value.TenKy}</td>
+                                <td class="chu-de ">${value.ChuDe}</td>
+                                <td class="ngon-ngu text-center">${value.NgonNgu=='1'?'Tiếng Việt':value.NgonNgu=='2'?'Tiếng Anh':'Tiếng Pháp'}</td>
+                                <td class="nam text-center">${value.Nam}</td>
+                                <td class='text-center thu-tu'><span>${value.ThuTu??''}</span></td>
+                                <td class="trang-thai text-center"><span>${value.TrangThai=='1'?`<span class="badge badge-success">Sử dụng</span>`:`<span class="badge badge-danger">Không sử dụng</span>`}</span></td>
+                                <td style=" text-align: center;">
+                                    <img style='cursor:pointer' class='edit' data-id="${value.id}" src="../assets/images/cms/edit_filled.png" alt="">
+                                    <img style='cursor:pointer' class='delete' data-id="${value.id}" src="../assets/images/cms/delete_filled.png" alt="">
+                                </td>   
+                            </tr>
+                        `
+                    });
+                    $('#list').html(html);
+
+                    $('#pagination').twbsPagination({
+                        totalPages: Math.ceil(totalRows/pageSize),
+                        visiblePages: 3,
+                    });
+                };
+            },
+            error:function(e){
+            }
+        })
+    }
+
     function resetModal(){
         $('#modalCreate .form-control').val('');
     }
@@ -659,6 +714,7 @@
             timer:1000
         });
     }
+    
 </script>
 </body>
 </html>
