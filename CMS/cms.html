@@ -291,203 +291,203 @@
         <!-- /.sidebar -->
         </aside>
         <div class="content-wrapper">   
-                <div class="content">
-                    <div class="d-flex align-items-center block-header">
-                        <div class="search-block">
-                            <input id="search" type="text" placeholder="Tìm kiếm...">
-                            <img id="btn-search" src="../assets/images/cms/search.png" alt="">
-                        </div>
-                        <button  style="height: 40px; margin-left: 25px;" class="btn" type="button" data-toggle="modal" data-target="#modalCreate" id="btn-create">Thêm mới</button>
+            <div class="content">
+                <div class="d-flex align-items-center block-header">
+                    <div class="search-block">
+                        <input id="search" type="text" placeholder="Tìm kiếm...">
+                        <img id="btn-search" src="../assets/images/cms/search.png" alt="">
                     </div>
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th scope="col" style="width: 60px;text-align: center;">Stt</th>
-                                <th scope="col">Tên kỳ</th>
-                                <th scope="col" >Chủ đề</th>
-                                <th scope="col" style="width: 180px; text-align: center;">Ngôn ngữ</th>
-                                <th scope="col" style="width: 120px; text-align: center;">Năm</th>
-                                <th scope="col" style="width: 150px; text-align: center;">Thứ tự</th>
-                                <th scope="col" style="width: 120px; text-align: center;">Trạng thái</th>
-                                <th scope="col" style="width: 180px; text-align: center;">Thao tác</th>
-                            </tr>
-                        </thead>
-                        <tbody id="list">
-                        </tbody>
-                    </table>
-                    <div class="block-footer d-flex justify-content-end">
-                        <select name="records" id="records">
-                            <option value="5">5</option>
-                            <option value="10">10</option>
-                            <option value="15">15</option>
-                            <option value="20">20</option>
-                            <option value="25">25</option>
-                            <option value="30">30</option>
-                        </select>
-                        <nav class="navigation-block" aria-label="Page navigation example">
-                            <ul class="pagination ">
-                                <li class="page-item">
-                                    <a class="page-link icon"><img src="../assets/images/cms/arrow_previous.png" alt=""></a>
-                                </li>
-                                <li class="page-item">
-                                    <a class="page-link icon    "><img src="../assets/images/cms/chevron_left.png" alt=""></a>
-                                </li>
-                                <li class="page-item"><a class="page-link current" href="#">1</a></li>
-                                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                <li class="page-item"><a class="page-link" href="#">4</a></li>
-                                <li class="page-item"><a class="page-link" href="#">5</a></li>
-                                
-                                <li class="page-item">
-                                    <a class="page-link icon" href="#"><img src="../assets/images/cms/chevron_right.png" alt=""></a>
-                                </li>
-                                <li class="page-item">
-                                    <a class="page-link icon" href="#"><img src="../assets/images/cms/arrow_next.png" alt=""></a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
+                    <button  style="height: 40px; margin-left: 25px;" class="btn" type="button" data-toggle="modal" data-target="#modalCreate" id="btn-create">Thêm mới</button>
                 </div>
-                <div class="modal fade" id="modalCreate" tabindex="-1" aria-labelledby="modalCreateLabel" aria-hidden="true" data-backdrop="static">
-                    <div class="modal-dialog modal-lg">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="modalCreateLabel">Thêm mới kỳ Festival</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true"><img src="../assets/images/cms/close.png" alt=""></span>
-                                </button>   
-                            </div>
-                            <div class="modal-body">
-                                <form>
-                                    <div class="row">
-                                        <div class="form-group col-6">
-                                            <label for="tenky">Tên kỳ <span class="text-danger">*</span></label>
-                                            <input type="text" class="form-control" id="tenky" required>
-                                        </div>
-                                        <div class="form-group col-6">
-                                            <label for="nam">Năm <span class="text-danger">*</span></label>
-                                            <input type="number" class="form-control" id="nam" required>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="chude">Chủ đề <span class="text-danger">*</span></label>
-                                        <input type="text" class="form-control" id="chude" required>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="gioithieu">Giới thiệu</label>
-                                        <textarea name="" id="gioithieu" class="form-control" rows="3"></textarea>
-                                    </div>
-                                    <div class="row">
-                                        <div class="form-group col-6">
-                                            <label for="thutu">Thứ tự</label>
-                                            <input type="number" class="form-control" id="thutu">
-                                        </div>
-                                        <div class="form-group col-6">
-                                            <label for="ngonngu">Ngôn ngữ</label>
-                                            <select id="ngonngu" name="ngonngu" class="form-control select2">
-                                                <option value="1">Tiếng Việt</option>
-                                                <option value="2">Tiếng Anh</option>
-                                                <option value="3">Tiếng Pháp</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Trạng thái</label>
-                                        <input type="radio" id="su-dung" name="trangthai" value="1" checked>
-                                        <label for="su-dung">Sử dụng</label>
-                                        <input type="radio" id="khong-su-dung" name="trangthai" value="0">
-                                        <label for="khong-su-dung">Không sử dụng</label>
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="modal-footer">
-                                <button id="save-create" type="button" class="btn btn-primary">Lưu</button>
-                                <button id="cancel-create" type="button" class="btn btn-secondary btn-cancel" data-dismiss="modal">Hủy bỏ</button>
-                            </div>
-                        </div>
-                    </div>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col" style="width: 60px;text-align: center;">Stt</th>
+                            <th scope="col">Tên kỳ</th>
+                            <th scope="col" >Chủ đề</th>
+                            <th scope="col" style="width: 180px; text-align: center;">Ngôn ngữ</th>
+                            <th scope="col" style="width: 120px; text-align: center;">Năm</th>
+                            <th scope="col" style="width: 150px; text-align: center;">Thứ tự</th>
+                            <th scope="col" style="width: 120px; text-align: center;">Trạng thái</th>
+                            <th scope="col" style="width: 180px; text-align: center;">Thao tác</th>
+                        </tr>
+                    </thead>
+                    <tbody id="list">
+                    </tbody>
+                </table>
+                <div class="block-footer d-flex justify-content-end">
+                    <select name="records" id="records">
+                        <option value="5">5</option>
+                        <option value="10">10</option>
+                        <option value="15">15</option>
+                        <option value="20">20</option>
+                        <option value="25">25</option>
+                        <option value="30">30</option>
+                    </select>
+                    <nav class="navigation-block" aria-label="Page navigation example">
+                        <ul class="pagination ">
+                            <li class="page-item">
+                                <a class="page-link icon"><img src="../assets/images/cms/arrow_previous.png" alt=""></a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link icon    "><img src="../assets/images/cms/chevron_left.png" alt=""></a>
+                            </li>
+                            <li class="page-item"><a class="page-link current" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item"><a class="page-link" href="#">4</a></li>
+                            <li class="page-item"><a class="page-link" href="#">5</a></li>
+                            
+                            <li class="page-item">
+                                <a class="page-link icon" href="#"><img src="../assets/images/cms/chevron_right.png" alt=""></a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link icon" href="#"><img src="../assets/images/cms/arrow_next.png" alt=""></a>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
-                <div class="modal fade" id="modalUpdate" tabindex="-1" aria-labelledby="modal-update" aria-hidden="true">
-                    <div class="modal-dialog modal-lg">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="modal-update">Chỉnh sửa kỳ Festival</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                <form>
-                                    <input type="hidden" class="form-control" id="id-edit">
-                                    <div class="row">
-                                        <div class="form-group col-6">
-                                            <label for="tenky-edit">Tên kỳ <span class="text-danger">*</span></label>
-                                            <input type="text" class="form-control" id="tenky-edit" required>
-                                        </div>
-                                        <div class="form-group col-6">
-                                            <label for="nam-edit">Năm <span class="text-danger">*</span></label>
-                                            <input type="text" class="form-control" id="nam-edit" required>
-                                        </div>
+            </div>
+            <div class="modal fade" id="modalCreate" aria-labelledby="modalCreateLabel" aria-hidden="true" data-backdrop="static">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modalCreateLabel">Thêm mới kỳ Festival</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true"><img src="../assets/images/cms/close.png" alt=""></span>
+                            </button>   
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="row">
+                                    <div class="form-group col-6">
+                                        <label for="tenky">Tên kỳ <span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" id="tenky" required>
                                     </div>
-                                    <div class="form-group">
-                                        <label for="chude-edit">Chủ đề <span class="text-danger">*</span></label>
-                                        <input type="text" class="form-control" id="chude-edit" required>
+                                    <div class="form-group col-6">
+                                        <label for="nam">Năm <span class="text-danger">*</span></label>
+                                        <input type="number" class="form-control" id="nam" required>
                                     </div>
-                                    <div class="form-group">
-                                        <label for="gioithieu-edit">Giới thiệu</label>
-                                        <textarea name="" id="gioithieu-edit" class="form-control" rows="3"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="chude">Chủ đề <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" id="chude" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="gioithieu">Giới thiệu</label>
+                                    <textarea name="" id="gioithieu" class="form-control" rows="3"></textarea>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group col-6">
+                                        <label for="thutu">Thứ tự</label>
+                                        <input type="number" class="form-control" id="thutu">
                                     </div>
-                                    <div class="row">
-                                        <div class="form-group col-6">
-                                            <label for="thutu-edit">Thứ tự</label>
-                                            <input type="number" class="form-control" id="thutu-edit">
-                                        </div>
-                                        <div class="form-group col-6">
-                                            <label for="ngonngu-edit">Ngôn ngữ</label>
-                                            <select id="ngonngu-edit" name="ngonngu-edit" class="form-control select2" >
-                                                <option value="1">Tiếng Việt</option>
-                                                <option value="2">Tiếng Anh</option>
-                                                <option value="3">Tiếng Pháp</option>
-                                            </select>
-                                        </div>
+                                    <div class="form-group col-6">
+                                        <label for="ngonngu">Ngôn ngữ</label>
+                                        <select id="ngonngu" name="ngonngu" class="form-control select2">
+                                            <option value="1">Tiếng Việt</option>
+                                            <option value="2">Tiếng Anh</option>
+                                            <option value="3">Tiếng Pháp</option>
+                                        </select>
                                     </div>
-                                    <div class="form-group">
-                                        <label>Trạng thái</label>
-                                        <input type="radio" id="su-dung-edit" name="trangthai-edit" value="1">
-                                        <label for="su-dung-edit">Sử dụng</label>
-                                        <input type="radio" id="khong-su-dung-edit" name="trangthai-edit" value="0">
-                                        <label for="khong-su-dung-edit">Không sử dụng</label>
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="modal-footer">
-                                <button id="save-edit" type="button" class="btn btn-primary">Lưu</button>
-                                <button id="cancel-edit" type="button" class="btn btn-secondary btn-cancel" data-dismiss="modal">Hủy</button>
-                            </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>Trạng thái</label>
+                                    <input type="radio" id="su-dung" name="trangthai" value="1" checked>
+                                    <label for="su-dung">Sử dụng</label>
+                                    <input type="radio" id="khong-su-dung" name="trangthai" value="0">
+                                    <label for="khong-su-dung">Không sử dụng</label>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button id="save-create" type="button" class="btn btn-primary">Lưu</button>
+                            <button id="cancel-create" type="button" class="btn btn-secondary btn-cancel" data-dismiss="modal">Hủy bỏ</button>
                         </div>
                     </div>
                 </div>
-                <div class="modal fade" id="modaldelete" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Xóa kỳ Festival?</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                <input type="hidden" class="form-control" id="id-delete">
-                                <img src="../assets/images/cms/delete.png" alt="">
-                                <p>Bạn có chắc chắn muốn xóa kỳ Festival này?</p>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-primary btn-delete">Đồng ý</button>
-                                <button type="button" class="btn btn-secondary btn-cancel" data-dismiss="modal">Hủy bỏ</button>
-                            </div>
+            </div>
+            <div class="modal fade" id="modalUpdate" aria-labelledby="modal-update" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modal-update">Chỉnh sửa kỳ Festival</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <input type="hidden" class="form-control" id="id-edit">
+                                <div class="row">
+                                    <div class="form-group col-6">
+                                        <label for="tenky-edit">Tên kỳ <span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" id="tenky-edit" required>
+                                    </div>
+                                    <div class="form-group col-6">
+                                        <label for="nam-edit">Năm <span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" id="nam-edit" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="chude-edit">Chủ đề <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" id="chude-edit" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="gioithieu-edit">Giới thiệu</label>
+                                    <textarea name="" id="gioithieu-edit" class="form-control" rows="3"></textarea>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group col-6">
+                                        <label for="thutu-edit">Thứ tự</label>
+                                        <input type="number" class="form-control" id="thutu-edit">
+                                    </div>
+                                    <div class="form-group col-6">
+                                        <label for="ngonngu-edit">Ngôn ngữ</label>
+                                        <select id="ngonngu-edit" name="ngonngu-edit" class="form-control select2" >
+                                            <option value="1">Tiếng Việt</option>
+                                            <option value="2">Tiếng Anh</option>
+                                            <option value="3">Tiếng Pháp</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>Trạng thái</label>
+                                    <input type="radio" id="su-dung-edit" name="trangthai-edit" value="1">
+                                    <label for="su-dung-edit">Sử dụng</label>
+                                    <input type="radio" id="khong-su-dung-edit" name="trangthai-edit" value="0">
+                                    <label for="khong-su-dung-edit">Không sử dụng</label>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button id="save-edit" type="button" class="btn btn-primary">Lưu</button>
+                            <button id="cancel-edit" type="button" class="btn btn-secondary btn-cancel" data-dismiss="modal">Hủy</button>
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="modal fade" id="modaldelete" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Xóa kỳ Festival?</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <input type="hidden" class="form-control" id="id-delete">
+                            <img src="../assets/images/cms/delete.png" alt="">
+                            <p>Bạn có chắc chắn muốn xóa kỳ Festival này?</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary btn-delete">Đồng ý</button>
+                            <button type="button" class="btn btn-secondary btn-cancel" data-dismiss="modal">Hủy bỏ</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 <script src="../assets/js/jquery.min.js"></script>
@@ -496,9 +496,16 @@
 <script src="../assets/js/adminlte.js"></script>
 <script src="../assets/js/select2.full.min.js"></script>
 <script src="../assets/js/vi.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script>
     $(document).ready(function(){
         $('.select2').select2();
+        $("#ngonngu").select2({
+            minimumResultsForSearch: Infinity
+        });
+        $("#ngonngu-edit").select2({
+            minimumResultsForSearch: Infinity
+        });
         //api
         renderData();
         $('#save-create').on('click',function(){
@@ -511,18 +518,23 @@
                 'NgonNgu':parseInt($('#ngonngu').val()),
                 'TrangThai':$('input[name="trangthai"]:checked').val(),
             };
-            $.ajax({
-                type:'POST',
-                contentType:'application/json',
-                url:'http://localhost:3000/KyFestival',
-                data:JSON.stringify(buildData),
-                success:function(data){
-                    $('#modalCreate').modal('hide');
-                    resetModal();
-                    renderData();
-                },
-                error:function(e){}
-            })
+            if($('#tenky').val()!=='' && $('#nam').val()!=='' && $('#chude').val()!==''){
+                $.ajax({
+                    type:'POST',
+                    contentType:'application/json',
+                    url:'http://localhost:3000/KyFestival',
+                    data:JSON.stringify(buildData),
+                    success:function(data){
+                        $('#modalCreate').modal('hide');
+                        showAlert('Lưu thành công!','success');
+                        resetModal();
+                        renderData();
+                    },
+                    error:function(e){}
+                })
+            }else{
+                showAlert('Vui lòng nhập đầy đủ thông tin!','warning');
+            }
         })
         $("#list").on('click', '.edit',function(){
             let id = $(this).data("id");
@@ -557,19 +569,23 @@
                 'TrangThai':$('input[name="trangthai-edit"]:checked').val()
             };
             let idedit=$('#id-edit').val();
-            console.log(idedit)
-            $.ajax({
-                type:'PUT',
-                contentType:'application/json',
-                url:`http://localhost:3000/KyFestival/${idedit}`,
-                data:JSON.stringify(buildData),
-                success:function(data){
-                    $('#modalUpdate').modal('hide');
-                    renderData();
-                },
-                error:function(e){
-                }
-            })
+            if($('#tenky-edit').val()!=='' && $('#nam-edit').val()!=='' && $('#chude-edit').val()!==''){
+                $.ajax({
+                    type:'PUT',
+                    contentType:'application/json',
+                    url:`http://localhost:3000/KyFestival/${idedit}`,
+                    data:JSON.stringify(buildData),
+                    success:function(data){
+                        $('#modalUpdate').modal('hide');
+                        showAlert('Lưu thành công!','success');
+                        renderData();
+                    },
+                    error:function(e){
+                    }
+                })
+            }else{
+                showAlert('Vui lòng nhập đầy đủ thông tin!','warning');
+            }
         })
         $('#list').on('click', '.delete',function(){
             let id = $(this).data("id");
@@ -633,14 +649,15 @@
         })
     }
     function resetModal(){
-        $('#exampleModal .form-control').val('');
+        $('#modalCreate .form-control').val('');
     }
-    function outputID(){
-        $('#list').on('click','.delete',function(){
-            $('#modaldelete').modal('show');
-            let id = $(this).data("id");
-            console.log(id)
-        })
+    function showAlert(message, type) {
+        Swal.fire({
+            text: message,
+            icon: type,
+            confirmButtonText: 'OK',
+            timer:1000
+        });
     }
 </script>
 </body>
