@@ -35,14 +35,14 @@
                 <span class="brand-text ">Festival Huế</span>
             </a>
             <div class="sidebar">
-                <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                <ul class="nav nav-pills nav-sidebar flex-column nav-collapse-hide-child" data-widget="treeview" role="menu" data-accordion="false">
                     <li class="nav-item">
                         <a href="#" class="nav-link">
-                            <span class="nav-icon noi-dung"></span>
+                            <i class="nav-icon noi-dung"></i>
                             <p>
                                 Quản lý nội dung 
                             </p>
-                            <span id="btn"></span>
+                            <i class="icon-expand"></i>
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
@@ -79,11 +79,11 @@
                     </li>
                     <li class="nav-item active menu-open">
                         <a href="#" class="nav-link">
-                            <span class="nav-icon festival"></span>
+                            <i class="nav-icon festival"></i>
                             <p>
                                 Quản lý Festival 
                             </p>
-                            <span id="btn"></span>
+                            <i class="icon-expand"></i>
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
@@ -120,11 +120,11 @@
                     </li>
                     <li class="nav-item">
                         <a href="#" class="nav-link ">
-                            <span class="nav-icon tai-tro"></span>
+                            <i class="nav-icon tai-tro"></i>
                             <p>
                                 Quản lý nhà tài trợ
                             </p>
-                            <span id="btn"></span>
+                            <i class="icon-expand"></i>
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
@@ -161,11 +161,11 @@
                     </li>
                     <li class="nav-item">
                         <a href="#" class="nav-link">
-                            <span class="nav-icon doan-bieu-dien"></span>
+                            <i class="nav-icon doan-bieu-dien"></i>
                             <p>
                                 Quản lý đoàn biểu diễn
                             </p>
-                            <span id="btn"></span>
+                            <i class="icon-expand"></i>
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
@@ -202,11 +202,11 @@
                     </li>
                     <li class="nav-item">
                         <a href="#" class="nav-link">
-                            <span class="nav-icon dang-ky"></span>
+                            <i class="nav-icon dang-ky"></i>
                             <p>
                                 Quản lý thông tin đăng ký tham gia
                             </p>
-                            <span id="btn"></span>
+                            <i class="icon-expand"></i>
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
@@ -243,11 +243,11 @@
                     </li>
                     <li class="nav-item">
                         <a href="#" class="nav-link">
-                            <span class="nav-icon thong-ke"></span>
+                            <i class="nav-icon thong-ke"></i>
                             <p>
                                 Thống kê
                             </p>
-                            <span id="btn"></span>
+                            <i class="icon-expand"></i>
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
@@ -318,7 +318,7 @@
                 <div class="block-footer d-flex justify-content-end">
                     <select name="records" id="records" class="form-control select2" style="width: 100px;">
                         <option value="5">5</option>
-                        <option value="10">10</option>
+                        <option value="10" selected>10</option>
                         <option value="15">15</option>
                         <option value="20">20</option>
                         <option value="25">25</option>
@@ -450,7 +450,7 @@
                 </div>
             </div>
             <div class="modal fade" id="modaldelete" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
+                <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
                         <div class="modal-header">
                             <h5 class="modal-title" id="exampleModalLabel">Xóa kỳ Festival?</h5>
@@ -486,18 +486,21 @@
             minimumResultsForSearch: Infinity
         });
 
-        var pageSize = 3;
+        var pageSize = 10;
 
         renderData(1, pageSize);
 
-        $("#pagination").on("page", function(evt, page){
-            // console.log(page)
-            renderData(page, pageSize);
-        });
         $('#records').on('change',function(){
             pageSize=$(this).val();
-            renderData(1, pageSize);
+            renderData(1, pageSize); 
+            // console.log(pageSize)
         })
+        //console.log(pageSize)
+        $(document).on("page",'#pagination', function(evt, page){
+            console.log(pageSize)
+            console.log(page)
+            renderData(page, pageSize);
+        });
         
         $('#save-create').on('click',function(){
             let buildData={ 
@@ -519,7 +522,7 @@
                         $('#modalCreate').modal('hide');
                         showAlert('Lưu thành công!','success');
                         resetModal();
-                        renderData();
+                        renderData(1,pageSize);
                     },
                     error:function(e){}
                 })
@@ -543,7 +546,7 @@
                         $('#chude-edit').val(data.ChuDe);
                         $('#gioithieu-edit').val(data.GioiThieu);
                         $('#thutu-edit').val(data.ThuTu);
-                        $('#ngonngu-edit').val(data.NgonNgu);
+                        $('#ngonngu-edit').val(data.NgonNgu).trigger('change');
                         $(`input[name="trangthai-edit"][value="${data.TrangThai}"]`).prop("checked", true);
                         $('#modalUpdate').modal('show');
                     }
@@ -570,7 +573,7 @@
                     success:function(data){
                         $('#modalUpdate').modal('hide');
                         showAlert('Lưu thành công!','success');
-                        renderData();
+                        renderData(1,pageSize);
                     },
                     error:function(e){
                     }
@@ -593,53 +596,53 @@
                 url:`http://localhost:3000/KyFestival/${id_delete}`,
                 success:function(data){
                     $('#modaldelete').modal('hide');
-                    renderData();
+                    renderData(1,pageSize);
                 },
                 error:function(e){}
             })
         })
         $('#btn-search').on('click',function(){
-            renderData();
+            renderData(1,pageSize);
         })
         $('#search').on('keyup',function(){
             if (event.keyCode === 13) {
-                renderData();
+                renderData(1,pageSize);
             }
         })
     })
-    function renderData1(){
-        const search=$('#search').val().trim();
-        $.ajax({
-            type:'GET',
-            url:`http://localhost:3000/KyFestival?q=${search}&_sort=ThuTu&_order=asc`,
-            dataType:'json',
-            success:function(data){
-                if(data && data.length>0){  
-                    let html=''
-                    $.each(data,function(index,value){
-                        html+=`
-                            <tr>
-                                <td scope="row" class='thu-tu text-center'>${index+1}</td>
-                                <td class="ten-ky">${value.TenKy}</td>
-                                <td class="chu-de ">${value.ChuDe}</td>
-                                <td class="ngon-ngu text-center">${value.NgonNgu=='1'?'Tiếng Việt':value.NgonNgu=='2'?'Tiếng Anh':'Tiếng Pháp'}</td>
-                                <td class="nam text-center">${value.Nam}</td>
-                                <td class='text-center thu-tu'><span>${value.ThuTu??''}</span></td>
-                                <td class="trang-thai text-center"><span>${value.TrangThai=='1'?`<span class="badge badge-success">Sử dụng</span>`:`<span class="badge badge-danger">Không sử dụng</span>`}</span></td>
-                                <td style=" text-align: center;">
-                                    <img style='cursor:pointer' class='edit' data-id="${value.id}" src="../assets/images/cms/edit_filled.png" alt="">
-                                    <img style='cursor:pointer' class='delete' data-id="${value.id}" src="../assets/images/cms/delete_filled.png" alt="">
-                                </td>   
-                            </tr>
-                        `
-                    });
-                    $('#list').html(html);
-                };
-            },
-            error:function(e){
-            }
-        })
-    }
+    // function renderData1(){
+    //     const search=$('#search').val().trim();
+    //     $.ajax({
+    //         type:'GET',
+    //         url:`http://localhost:3000/KyFestival?q=${search}&_sort=ThuTu&_order=asc`,
+    //         dataType:'json',
+    //         success:function(data){
+    //             if(data && data.length>0){  
+    //                 let html=''
+    //                 $.each(data,function(index,value){
+    //                     html+=`
+    //                         <tr>
+    //                             <td scope="row" class='thu-tu text-center'>${index+1}</td>
+    //                             <td class="ten-ky">${value.TenKy}</td>
+    //                             <td class="chu-de ">${value.ChuDe}</td>
+    //                             <td class="ngon-ngu text-center">${value.NgonNgu=='1'?'Tiếng Việt':value.NgonNgu=='2'?'Tiếng Anh':'Tiếng Pháp'}</td>
+    //                             <td class="nam text-center">${value.Nam}</td>
+    //                             <td class='text-center thu-tu'><span>${value.ThuTu??''}</span></td>
+    //                             <td class="trang-thai text-center"><span>${value.TrangThai=='1'?`<span class="badge badge-success">Sử dụng</span>`:`<span class="badge badge-danger">Không sử dụng</span>`}</span></td>
+    //                             <td style=" text-align: center;">
+    //                                 <img style='cursor:pointer' class='edit' data-id="${value.id}" src="../assets/images/cms/edit_filled.png" alt="">
+    //                                 <img style='cursor:pointer' class='delete' data-id="${value.id}" src="../assets/images/cms/delete_filled.png" alt="">
+    //                             </td>   
+    //                         </tr>
+    //                     `
+    //                 });
+    //                 $('#list').html(html);
+    //             };
+    //         },
+    //         error:function(e){
+    //         }
+    //     })
+    // }
 
     function renderData(pageIndex, pageSize){
         const search=$('#search').val().trim();
@@ -653,15 +656,17 @@
                 // console.log(request)
                 // console.log(request.getResponseHeader("x-total-count"))
                 let totalRows = request.getResponseHeader("x-total-count");
-                let indexRows = pageIndex * pageSize - 3;
+                let indexRows = (pageIndex - 1)*pageSize + 1;
+                //console.log(pageIndex)
+                //console.log(typeof pageSize)   
                 if(data && data.length>0){  
                     let html=''
                     $.each(data,function(index,value){
-                        console.log(indexRows)
+                        // console.log(indexRows)
                         // console.log(value)
                         html+=`
                             <tr>
-                                <td scope="row" class='thu-tu text-center'>${indexRows+=1}</td>
+                                <td scope="row" class='thu-tu text-center'>${indexRows+index}</td>
                                 <td class="ten-ky">${value.TenKy}</td>
                                 <td class="chu-de ">${value.ChuDe}</td>
                                 <td class="ngon-ngu text-center">${value.NgonNgu=='1'?'Tiếng Việt':value.NgonNgu=='2'?'Tiếng Anh':'Tiếng Pháp'}</td>
@@ -676,10 +681,14 @@
                         `
                     });
                     $('#list').html(html);
-
+                    
+                    $('#pagination').twbsPagination('destroy');
                     $('#pagination').twbsPagination({
                         totalPages: Math.ceil(totalRows/pageSize),
-                        visiblePages: 3,
+                        visiblePages:3,
+                        initiateStartPageClick: false,
+                        startPage:pageIndex,
+                        hideOnlyOnePage:true,
                         first:  '<img src="../assets/images/cms/arrow_previous.png" alt="">',
                         prev:   '<img src="../assets/images/cms/chevron_left.png" alt="">',
                         next:   '<img src="../assets/images/cms/chevron_right.png" alt="">',
@@ -690,8 +699,8 @@
             error:function(e){
             }
         })
+        
     }
-
     function resetModal(){
         $('#modalCreate .form-control').val('');
     }
@@ -703,7 +712,7 @@
             timer:1000
         });
     }
-    
+
 </script>
 </body>
 </html>
