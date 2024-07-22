@@ -326,24 +326,6 @@
                     </select>
                     <nav class="navigation-block" aria-label="Page navigation example">
                         <ul class="pagination" id="pagination">
-                            <!-- <li class="page-item">
-                                <a class="page-link icon"><img src="../assets/images/cms/arrow_previous.png" alt=""></a>
-                            </li>
-                            <li class="page-item">
-                                <a class="page-link icon    "><img src="../assets/images/cms/chevron_left.png" alt=""></a>
-                            </li>
-                            <li class="page-item"><a class="page-link current" href="#">1</a></li>
-                            <li class="page-item"><a class="page-link" href="#">2</a></li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item"><a class="page-link" href="#">4</a></li>
-                            <li class="page-item"><a class="page-link" href="#">5</a></li>
-                            
-                            <li class="page-item">
-                                <a class="page-link icon" href="#"><img src="../assets/images/cms/chevron_right.png" alt=""></a>
-                            </li>
-                            <li class="page-item">
-                                <a class="page-link icon" href="#"><img src="../assets/images/cms/arrow_next.png" alt=""></a>
-                            </li> -->
                         </ul>
                     </nav>
                 </div>
@@ -504,15 +486,14 @@
             minimumResultsForSearch: Infinity
         });
 
-        var pageSize = 5;
+        var pageSize = 3;
 
         renderData(1, pageSize);
 
         $("#pagination").on("page", function(evt, page){
-            console.log(page)
+            // console.log(page)
             renderData(page, pageSize);
         });
-        
         $('#records').on('change',function(){
             pageSize=$(this).val();
             renderData(1, pageSize);
@@ -549,12 +530,12 @@
 
         $("#list").on('click', '.edit',function(){
             let id = $(this).data("id");
-            console.log(id)
+            // console.log(id)
             $.ajax({
                 type:'GET',
                 url:`http://localhost:3000/KyFestival/${id}`,
                 success:function(data){
-                    console.log(data)
+                    // console.log(data)
                     if(data){
                         $('#id-edit').val(data.id);
                         $('#tenky-edit').val(data.TenKy);
@@ -600,13 +581,13 @@
         })
         $('#list').on('click', '.delete',function(){
             let id = $(this).data("id");
-            console.log(id);
+            // console.log(id);
             $('#id-delete').val(id);
             $('#modaldelete').modal('show');
         })
         $('.btn-delete').on('click',function(){
             let id_delete = $('#id-delete').val(); 
-            console.log(id_delete)
+            // console.log(id_delete)
             $.ajax({
                 type:'DELETE',
                 url:`http://localhost:3000/KyFestival/${id_delete}`,
@@ -667,16 +648,20 @@
             url:`http://localhost:3000/KyFestival?q=${search}&_sort=ThuTu&_order=asc&_page=${pageIndex}&_limit=${pageSize}`,
             dataType:'json',
             success:function(data, statusText, request){
-                console.log(statusText)
-                console.log(request)
-                console.log(request.getResponseHeader("x-total-count"))
+                // console.log(data)
+                // console.log(statusText)
+                // console.log(request)
+                // console.log(request.getResponseHeader("x-total-count"))
                 let totalRows = request.getResponseHeader("x-total-count");
+                let indexRows = pageIndex * pageSize - 3;
                 if(data && data.length>0){  
                     let html=''
                     $.each(data,function(index,value){
+                        console.log(indexRows)
+                        // console.log(value)
                         html+=`
                             <tr>
-                                <td scope="row" class='thu-tu text-center'>${index+1}</td>
+                                <td scope="row" class='thu-tu text-center'>${indexRows+=1}</td>
                                 <td class="ten-ky">${value.TenKy}</td>
                                 <td class="chu-de ">${value.ChuDe}</td>
                                 <td class="ngon-ngu text-center">${value.NgonNgu=='1'?'Tiếng Việt':value.NgonNgu=='2'?'Tiếng Anh':'Tiếng Pháp'}</td>
@@ -695,6 +680,10 @@
                     $('#pagination').twbsPagination({
                         totalPages: Math.ceil(totalRows/pageSize),
                         visiblePages: 3,
+                        first:  '<img src="../assets/images/cms/arrow_previous.png" alt="">',
+                        prev:   '<img src="../assets/images/cms/chevron_left.png" alt="">',
+                        next:   '<img src="../assets/images/cms/chevron_right.png" alt="">',
+                        last:   '<img src="../assets/images/cms/arrow_next.png" alt="">'
                     });
                 };
             },

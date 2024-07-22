@@ -453,6 +453,11 @@ div:where(.swal2-container) button:where(.swal2-styled):where(.swal2-confirm){
 .select2-container--default .select2-selection--single .select2-selection__arrow{
         margin-top: 5px;
 }
+.page-item.active .page-link{
+    background-color: #6F0000;
+    border-radius: 8px;
+    
+}
 @media (min-width: 1200px) {
     .container, .container-lg, .container-md, .container-sm, .container-xl {
         max-width: 1584px;
