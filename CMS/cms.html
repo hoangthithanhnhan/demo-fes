@@ -367,7 +367,7 @@
                                     <div class="form-group col-6">
                                         <label for="ngonngu">Ngôn ngữ</label>
                                         <select id="ngonngu" name="ngonngu" class="form-control select2">
-                                            <option value="1">Tiếng Việt</option>
+                                            <option value="1" selected>Tiếng Việt</option>
                                             <option value="2">Tiếng Anh</option>
                                             <option value="3">Tiếng Pháp</option>
                                         </select>
@@ -512,7 +512,7 @@
                 'NgonNgu':parseInt($('#ngonngu').val()),
                 'TrangThai':$('input[name="trangthai"]:checked').val(),
             };
-            if($('#tenky').val()!=='' && $('#nam').val()!=='' && $('#chude').val()!==''){
+            if($('#tenky').val()!='' && $('#nam').val()!='' && $('#chude').val()!=''){
                 $.ajax({
                     type:'POST',
                     contentType:'application/json',
@@ -524,13 +524,14 @@
                         resetModal();
                         renderData(1,pageSize);
                     },
-                    error:function(e){}
+                    error:function(e){
+                        showAlert('Đã xảy ra lỗi trong quá trình xử lý yêu cầu!','warning')
+                    }
                 })
             }else{
                 showAlert('Vui lòng nhập đầy đủ thông tin!','warning');
             }
         })
-
         $("#list").on('click', '.edit',function(){
             let id = $(this).data("id");
             // console.log(id)
@@ -550,6 +551,9 @@
                         $(`input[name="trangthai-edit"][value="${data.TrangThai}"]`).prop("checked", true);
                         $('#modalUpdate').modal('show');
                     }
+                },
+                error:function(e){
+                    showAlert('Đã xảy ra lỗi trong quá trình xử lý yêu cầu!','warning')
                 }
             })
         })
@@ -576,6 +580,7 @@
                         renderData(1,pageSize);
                     },
                     error:function(e){
+                        showAlert('Đã xảy ra lỗi trong quá trình xử lý yêu cầu!','warning')
                     }
                 })
             }else{
@@ -598,7 +603,9 @@
                     $('#modaldelete').modal('hide');
                     renderData(1,pageSize);
                 },
-                error:function(e){}
+                error:function(e){
+                    showAlert('Đã xảy ra lỗi trong quá trình xử lý yêu cầu!','warning')
+                }
             })
         })
         $('#btn-search').on('click',function(){
@@ -697,9 +704,10 @@
                 };
             },
             error:function(e){
+                showAlert('Đã xảy ra lỗi trong quá trình xử lý yêu cầu!','warning')
             }
         })
-        
+
     }
     function resetModal(){
         $('#modalCreate .form-control').val('');
@@ -712,7 +720,6 @@
             timer:1000
         });
     }
-
 </script>
 </body>
 </html>

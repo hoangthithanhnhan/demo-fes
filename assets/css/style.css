@@ -2247,6 +2247,10 @@ main .content-gioi-thieu .content-right .main-content nav ul li .page-link{
     min-width: 32px;
     height: 100%;
 }
+main #pagination .page-item.active  .page-link{
+    color: #fff;
+    background-color: #00B24A;
+}
 main .content-gioi-thieu .content-right .main-content nav ul li .active{
     background-color: #00B24A;
     color: #fff;
@@ -2587,16 +2591,16 @@ main .content-gioi-thieu .content-left .tin-tuc-main .content-lhvh{
 /* Các kỳ festival */
 
 main .content-gioi-thieu .content-right .main-content .list .event{
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 26px;
     margin-bottom: 30px;
+    font-weight: 700;
+}
+main .content-gioi-thieu .content-right .main-content .list span{
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 700;
 }
 main .content-gioi-thieu .content-right .main-content .list .event .detail{
     color: var(--red);
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 26px;
 }
 main .content-gioi-thieu .content-right .main-content .list ::marker{
     color: var(--body);
