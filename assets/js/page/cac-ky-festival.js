@@ -55,7 +55,7 @@ function renderTinNoiBat(){
                 $.each(data, function(index,value){
                     html+=`
                         <div class="content">
-                            <a href="#"><img class="img" src='${value.Thumbnail ? value.Thumbnail : (value.Image ? value.Image : value.nullImage)}' alt=""></a>
+                            <a href="#"><img class="img" src='${value.Thumbnail ? value.Thumbnail : (value.Image ? value.Image : "../assets/images/ve-festival/trong.png")}' alt=""></a>
                             <div class="text">
                                 <a href="#" class="text-title">${value.Title}</a>
                                 <a href="#" class="text-date"><img class="icon-date" src="../assets/images/ve-festival/calendar.png" alt="">${formatDate(value.Date)}</a>
