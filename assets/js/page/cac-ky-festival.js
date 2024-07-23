@@ -37,7 +37,7 @@ function renderData(pageIndex, pageSize) {
             }
         },
         error:function(e){
-            showAlert('Đã xảy ra lỗi trong quá trình xử lý yêu cầu!','warning')
+            showAlert('Đã xảy ra lỗi trong quá trình xử lý yêu cầu!','danger')
         }
     });
 }

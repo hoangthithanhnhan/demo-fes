@@ -2607,6 +2607,7 @@ main .content-gioi-thieu .content-right .main-content .list ::marker{
 }
 main .content-gioi-thieu .content-right .main-content .list{
     margin-left: 15px;
+    height: 550px;
 }
 
 .sidebar-mini{

@@ -525,13 +525,14 @@
                         renderData(1,pageSize);
                     },
                     error:function(e){
-                        showAlert('Đã xảy ra lỗi trong quá trình xử lý yêu cầu!','warning')
+                        showAlert('Đã xảy ra lỗi trong quá trình xử lý yêu cầu!','danger')
                     }
                 })
             }else{
                 showAlert('Vui lòng nhập đầy đủ thông tin!','warning');
             }
         })
+
         $("#list").on('click', '.edit',function(){
             let id = $(this).data("id");
             // console.log(id)
@@ -553,7 +554,7 @@
                     }
                 },
                 error:function(e){
-                    showAlert('Đã xảy ra lỗi trong quá trình xử lý yêu cầu!','warning')
+                    showAlert('Đã xảy ra lỗi trong quá trình xử lý yêu cầu!','danger')
                 }
             })
         })
@@ -580,7 +581,7 @@
                         renderData(1,pageSize);
                     },
                     error:function(e){
-                        showAlert('Đã xảy ra lỗi trong quá trình xử lý yêu cầu!','warning')
+                        showAlert('Đã xảy ra lỗi trong quá trình xử lý yêu cầu!','danger')
                     }
                 })
             }else{
@@ -604,7 +605,7 @@
                     renderData(1,pageSize);
                 },
                 error:function(e){
-                    showAlert('Đã xảy ra lỗi trong quá trình xử lý yêu cầu!','warning')
+                    showAlert('Đã xảy ra lỗi trong quá trình xử lý yêu cầu!','danger')
                 }
             })
         })
