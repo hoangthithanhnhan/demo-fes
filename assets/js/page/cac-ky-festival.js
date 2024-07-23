@@ -6,6 +6,7 @@ $(document).ready(function () {
         console.log(page)
         renderData(page, pageSize);
     });
+    renderTinNoiBat();
 });
 function renderData(pageIndex, pageSize) {
     $.ajax({
@@ -24,16 +25,45 @@ function renderData(pageIndex, pageSize) {
                     `
                 })
                 $('.list').html(html);
+                $('#pagination').twbsPagination('destroy');
                 $('#pagination').twbsPagination({
                     totalPages: Math.ceil(totalRows/pageSize),
                     visiblePages:3,
                     initiateStartPageClick: false,
                     startPage:pageIndex,
+                    hideOnlyOnePage:true,
                     first:  '<img src="../assets/images/tin-tuc-su-kien/First.png" alt="">',
                     prev:   '<img src="../assets/images/tin-tuc-su-kien/Prev.png" alt="">',
                     next:   '<img src="../assets/images/tin-tuc-su-kien/Next.png" alt="">',
                     last:   '<img src="../assets/images/tin-tuc-su-kien/Last.png" alt="">'
                 });
+            }
+        },
+        error:function(e){
+            showAlert('Đã xảy ra lỗi trong quá trình xử lý yêu cầu!','danger')
+        }
+    });
+}
+function renderTinNoiBat(){
+    $.ajax({
+        type:'GET',
+        url:`http://localhost:3000/TinTucNoiBat`,
+        dataType:'json',
+        success:function(data){
+            if(data && data.length>0){
+                let html='';
+                $.each(data, function(index,value){
+                    html+=`
+                        <div class="content">
+                            <a href="#"><img class="img" src="${value.UrlImage}" alt=""></a>
+                            <div class="text">
+                                <a href="#" class="text-title">${value.Title}</a>
+                                <a href="#" class="text-date"><img class="icon-date" src="../assets/images/ve-festival/calendar.png" alt="">${value.Date}</a>
+                            </div>
+                        </div>
+                    `
+                })
+                $('#tin-tuc-noi-bat').html(html);
             }
         },
         error:function(e){
