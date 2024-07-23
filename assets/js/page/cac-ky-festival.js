@@ -2,8 +2,8 @@ $(document).ready(function () {
     var pageSize = 10;
     renderData(1, pageSize);
     $(document).on("page",'#pagination', function(evt, page){
-        console.log(pageSize)
-        console.log(page)
+        // console.log(pageSize)
+        // console.log(page)
         renderData(page, pageSize);
     });
     renderTinNoiBat();
@@ -55,10 +55,10 @@ function renderTinNoiBat(){
                 $.each(data, function(index,value){
                     html+=`
                         <div class="content">
-                            <a href="#"><img class="img" src="${value.UrlImage}" alt=""></a>
+                            <a href="#"><img class="img" src='${value.Thumbnail ? value.Thumbnail : (value.Image ? value.Image : value.nullImage)}' alt=""></a>
                             <div class="text">
                                 <a href="#" class="text-title">${value.Title}</a>
-                                <a href="#" class="text-date"><img class="icon-date" src="../assets/images/ve-festival/calendar.png" alt="">${value.Date}</a>
+                                <a href="#" class="text-date"><img class="icon-date" src="../assets/images/ve-festival/calendar.png" alt="">${formatDate(value.Date)}</a>
                             </div>
                         </div>
                     `
@@ -71,3 +71,17 @@ function renderTinNoiBat(){
         }
     });
 }
+function formatDate(date){
+    if (date != null && date != "") {
+        var d = new Date(date),
+            month = (d.getMonth() + 1),
+            day = d.getDate(),
+            year = d.getFullYear()
+
+        if (month<10) month = '0' + month
+        if (day<10) day = '0' + day
+        return `${day}/${month}/${year}`;
+        
+    }
+    return "";
+    };
