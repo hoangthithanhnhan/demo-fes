@@ -44,17 +44,3 @@ function renderData(pageIndex, pageSize) {
         }
     });
 }
-function formatDate(date){
-    if (date != null && date != "") {
-        var d = new Date(date),
-            month = (d.getMonth() + 1),
-            day = d.getDate(),
-            year = d.getFullYear()
-
-        if (month<10) month = '0' + month
-        if (day<10) day = '0' + day
-        return `${day}/${month}/${year}`;
-        
-    }
-    return "";
-};

@@ -667,6 +667,7 @@
     // }
 
     function renderData(pageIndex, pageSize){
+        console.log({pageIndex, pageSize})
         const search=$('#search').val().trim();
         $.ajax({
             type:'GET',
@@ -711,6 +712,9 @@
                         initiateStartPageClick: false,
                         startPage:pageIndex,
                         hideOnlyOnePage:true,
+                        // onPageClick: function (evt, page) {
+                        //     renderData(page, pageSize); 
+                        // },
                         first:  '<img src="../assets/images/cms/arrow_previous.png" alt="">',
                         prev:   '<img src="../assets/images/cms/chevron_left.png" alt="">',
                         next:   '<img src="../assets/images/cms/chevron_right.png" alt="">',

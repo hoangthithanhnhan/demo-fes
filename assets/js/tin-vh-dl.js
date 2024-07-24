@@ -6,7 +6,7 @@ $(document).ready(function () {
         // console.log(page)
         renderData(page, pageSize);
     });
-    renderNewSideBar('tin-tuc-noi-bat');
+    renderTinNoiBat();
 });
 function renderData(pageIndex, pageSize) {
     $.ajax({
@@ -44,6 +44,33 @@ function renderData(pageIndex, pageSize) {
         }
     });
 }
+function renderTinNoiBat(){
+    $.ajax({
+        type:'GET',
+        url:`http://localhost:3000/TinTucNoiBat`,
+        dataType:'json',
+        success:function(data){
+            if(data && data.length>0){
+                let html='';
+                $.each(data, function(index,value){
+                    html+=`
+                        <div class="content">
+                            <a href="#"><img class="img" src='${value.Thumbnail ? value.Thumbnail : (value.Image ? value.Image : "../assets/images/ve-festival/trong.png")}' alt=""></a>
+                            <div class="text">
+                                <a href="#" class="text-title">${value.Title}</a>
+                                <a href="#" class="text-date"><img class="icon-date" src="../assets/images/ve-festival/calendar.png" alt="">${formatDate(value.Date)}</a>
+                            </div>
+                        </div>
+                    `
+                })
+                $('#tin-tuc-noi-bat').html(html);
+            }
+        },
+        error:function(e){
+            showAlert('Đã xảy ra lỗi trong quá trình xử lý yêu cầu!','danger')
+        }
+    });
+}
 function formatDate(date){
     if (date != null && date != "") {
         var d = new Date(date),
@@ -57,4 +84,4 @@ function formatDate(date){
         
     }
     return "";
-};
+    };

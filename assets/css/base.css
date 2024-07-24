@@ -63,24 +63,4 @@
 @font-face {
   font-family: 'UTM Alberta Heavy';
   src: url(../fonts/UTM_Alberta_Heavy/UTM-Alberta-Heavy.ttf) format('truetype');
-} 
-/* SVN A Love Of Thunder */
-@font-face {
-  font-family: 'SVN-A Love Of Thunder';
-  src: url(../fonts/SVN-A-Love-Of-Thunder/SVN-A-Love-Of-Thunder.ttf) format('truetype');
-} 
-/* SVN Bistro Script */
-@font-face {
-  font-family: 'SVN-Bistro Script';
-  src: url(../fonts/SVN-Bistro_Script/SVN-Bistro_Script.otf) format('truetype');
-} 
-/* SVN-Bladekill */
-@font-face {
-  font-family: 'SVN-Bladekill';
-  src: url(../fonts/SVN-Bladekill/SVN-Bladekill.otf) format('truetype');
-} 
-/* SVN-Nexa Rust Slab Black Shadow */
-@font-face {
-  font-family: 'SVN-Nexa Rust Slab Black Shadow';
-  src: url(../fonts/SVN-Nexa_Rust_Slab_Black_Shadow/SVN-Nexa_Rust_Slab_Black_Shadow.ttf) format('truetype');
-} 
+}
