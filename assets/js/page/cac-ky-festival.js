@@ -6,7 +6,7 @@ $(document).ready(function () {
         // console.log(page)
         renderData(page, pageSize);
     });
-    renderNewSideBar('tin-tuc-noi-bat');
+    renderNewSideBar('tin-tuc-noi-bat',1);
 });
 function renderData(pageIndex, pageSize) {
     $.ajax({
@@ -32,10 +32,10 @@ function renderData(pageIndex, pageSize) {
                     initiateStartPageClick: false,
                     startPage:pageIndex,
                     hideOnlyOnePage:true,
-                    first:  '<img src="../assets/images/tin-tuc-su-kien/First.png" alt="">',
-                    prev:   '<img src="../assets/images/tin-tuc-su-kien/Prev.png" alt="">',
-                    next:   '<img src="../assets/images/tin-tuc-su-kien/Next.png" alt="">',
-                    last:   '<img src="../assets/images/tin-tuc-su-kien/Last.png" alt="">'
+                    first:  '<img src="../../assets/images/tin-tuc-su-kien/First.png" alt="">',
+                    prev:   '<img src="../../assets/images/tin-tuc-su-kien/Prev.png" alt="">',
+                    next:   '<img src="../../assets/images/tin-tuc-su-kien/Next.png" alt="">',
+                    last:   '<img src="../../assets/images/tin-tuc-su-kien/Last.png" alt="">'
                 });
             }
         },
@@ -44,17 +44,3 @@ function renderData(pageIndex, pageSize) {
         }
     });
 }
-function formatDate(date){
-    if (date != null && date != "") {
-        var d = new Date(date),
-            month = (d.getMonth() + 1),
-            day = d.getDate(),
-            year = d.getFullYear()
-
-        if (month<10) month = '0' + month
-        if (day<10) day = '0' + day
-        return `${day}/${month}/${year}`;
-        
-    }
-    return "";
-};
