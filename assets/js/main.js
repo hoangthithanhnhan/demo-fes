@@ -90,6 +90,33 @@ function renderNewSideBar(element,focus,sort){
         }
     });
 }
+function renderNewSideBarDSVH(element,focus,sort){
+    $.ajax({
+        type:'GET',
+        url:`https://huefestival.com/api/APITinBai/v1/News/getListNewsbyCateIDPaging?categoryId=6F533950-0750-4D79-991C-B07A0097FA26&index=0&size=5&focus=${focus}&sort=${sort}`,
+        dataType:'json',
+        success:function(data){
+            //console.log(data)
+            if(data && data.ResultObj && data.ResultObj.length>0){
+                let html='';
+                $.each(data.ResultObj, function(index,value){
+                    html+=`
+                        <div class="content content-lhvh">
+                            <a href="#"><img class="img" src='https://huefestival.com/${value.UrlThumbAnhDaiDien ? value.UrlThumbAnhDaiDien : (value.UrlAnhDaiDien ? value.UrlAnhDaiDien : "../../assets/images/ve-festival/trong.png")}' alt=""></a>
+                            <div class="text">
+                                <a href="#" class="text-title">${value.TieuDe}</a>
+                            </div>
+                        </div>
+                    `
+                })
+                $(`#${element}`).html(html)
+            }
+        },
+        error:function(e){
+            showAlert('Đã xảy ra lỗi trong quá trình xử lý yêu cầu!','danger')
+        }
+    });
+}
 //render dữ liệu bài viết bên phải
 function renderMainContent(element,id){
     $.ajax({
@@ -119,6 +146,67 @@ function renderMainContent(element,id){
         }
     })
 }
+
+function renderMainContentDetail(element,elementTime,id){
+    $.ajax({
+        type: 'GET',
+        url: `https://huefestival.com/api/APITinBai/v1/News/getNews?newsId=${id}`,
+        dataType:'json',
+        success: function (data) {
+            // console.log(data)
+            if(data){
+                let html="";
+                let time="";
+                time+=`${data.publishTime}`
+                html+=`
+                <h5 class="heading" id="heading-text">${data.summary}</h5>
+                <div class="text-content" id="text">${data.content}</div>
+                `
+                $(`${element}`).html(html);
+                $(`${elementTime}`).html(time);
+                let img=$('#text-content img')
+                
+                // $.each(img, function(index, value){ 
+                //     console.log(value.src)
+                //     let valueImg = value.src.replace("http://127.0.0.1:5500", "https://huefestival.com")
+                //     img[index].setAttribute('src',valueImg)
+                // })
+                img.map((index, value) => {
+                    let valueImg = value.src.replace("http://127.0.0.1:5500", "https://huefestival.com")
+                    img[index].setAttribute('src',valueImg)
+                })
+            }
+        },
+        error:function(e){
+            showAlert('Đã xảy ra lỗi trong quá trình xử lý yêu cầu!','danger')
+        }
+    })
+}
+function renderInternalLink(element,categoryId,idCurrent){
+    $.ajax({
+        type: 'GET',
+        url: `https://huefestival.com/api/APITinBai/v1/News/getListNewsOtherPaging?categoryId=${categoryId}&newsId=${idCurrent}&index=0&size=5`,
+        dataType:'json',
+        success: function (data) {
+            console.log(data)
+            if(data && data.ResultObj && data.ResultObj.length>0){
+                let html="";
+                $.each(data.ResultObj, function(index,value){
+                html+=`
+                    <li>
+                        <a href="#" class="link">${value.TomTat} <span class="date">(${formatDate(value.ThoiGianCongBo)})</span></a>
+                    </li>
+                `
+                $(`${element}`).html(html);
+                })
+            }
+        },
+        error:function(e){
+            showAlert('Đã xảy ra lỗi trong quá trình xử lý yêu cầu!','danger')
+        }
+    })
+}
+
 //render dữ liệu tin bài có pagination
 function renderContent(id, element, pageIndex, pageSize){
     // console.log(pageIndex,pageSize)  
