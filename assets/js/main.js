@@ -51,6 +51,19 @@ $(document).ready(function() {
         $('#button-clear').hide();
     })
     renderNavBar()
+
+    var TieuDe = $('.main-content .title').text().toLowerCase();
+    console.log(TieuDe)
+    let dropdown=$('.dropdown-item');
+    // console.log(dropdown);
+    $.each(dropdown, function(index, value){ 
+        // console.log(value.text)
+        let navbarTitle=value.text.toLowerCase();
+        console.log(navbarTitle, TieuDe)
+        if(TieuDe==navbarTitle){
+            $(this).parents('.nav-item.dropdown').addClass('active')
+        }
+    })
 })
 function renderNavBar(){
     let nav='';
@@ -73,7 +86,7 @@ function renderNavBar(){
                 <li><a class="dropdown-item" href="#">Lịch sử các kỳ Festival</a></li>
             </ul>
         </li>
-        <li class="nav-item dropdown active">
+        <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="./tin-tuc-hd.html" role="button" data-toggle="dropdown" aria-expanded="false">
                 Tin tức - Sự kiện
             </a>
@@ -115,7 +128,7 @@ function renderNavBar(){
             <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="#">Bản đồ địa điểm tham quan di tích - di sản</a></li>
                 <li><a class="dropdown-item" href="#">Bản đồ địa điểm dịch vụ du lịch</a></li>
-                <li><a class="dropdown-item" href="./lang-nghe.html">Làng nghề - Nghề thủ công, mỹ nghệ</a></li>
+                <li><a class="dropdown-item" href="./lang-nghe.html">Làng nghề - Nghề thủ công mỹ nghệ</a></li>
                 <li><a class="dropdown-item" href="#">Mô hình 3D về di sản, cổ vật</a></li>
                 <li><a class="dropdown-item" href="./le-hoi.html">Lễ hội văn hóa</a></li>
             </ul>
@@ -271,7 +284,7 @@ function renderInternalLink(element,categoryId,idCurrent){
         url: `https://huefestival.com/api/APITinBai/v1/News/getListNewsOtherPaging?categoryId=${categoryId}&newsId=${idCurrent}&index=0&size=5`,
         dataType:'json',
         success: function (data) {
-            console.log(data)
+            // console.log(data)
             if(data && data.ResultObj && data.ResultObj.length>0){
                 let html="";
                 $.each(data.ResultObj, function(index,value){
