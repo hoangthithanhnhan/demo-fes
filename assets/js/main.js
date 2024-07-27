@@ -53,13 +53,9 @@ $(document).ready(function() {
     renderNavBar()
 
     var TieuDe = $('.main-content .title').text().toLowerCase();
-    console.log(TieuDe)
     let dropdown=$('.dropdown-item');
-    // console.log(dropdown);
     $.each(dropdown, function(index, value){ 
-        // console.log(value.text)
         let navbarTitle=value.text.toLowerCase();
-        console.log(navbarTitle, TieuDe)
         if(TieuDe==navbarTitle){
             $(this).parents('.nav-item.dropdown').addClass('active')
         }
@@ -92,6 +88,7 @@ function renderNavBar(){
             </a>
             <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="./tin-tuc-hd.html">Tin tức hoạt động</a></li>
+                <li><a class="dropdown-item" href="./hoat-dong-huong-ung.html">Hoạt động hưởng ứng</a></li>
                 <li><a class="dropdown-item" href="#">Tin văn hóa - Du lịch</a></li>
                 <li><a class="dropdown-item" href="#">Tin lễ hội Văn hóa Việt Nam</a></li>
                 <li><a class="dropdown-item" href="#">Sự kiện Văn hóa - Du lịch</a></li>
@@ -315,13 +312,13 @@ function renderContent(id, element, pageIndex, pageSize){
                 let html='';
                 $.each(data.ResultObj, function(index,value){
                     html+=`
-                            <div class="content-item">
-                                <a href="#"><img class="img-cover" src='https://huefestival.com/${value.UrlThumbAnhDaiDien ? value.UrlThumbAnhDaiDien : (value.UrlAnhDaiDien ? value.UrlAnhDaiDien : "../assets/images/ve-festival/trong.png")}' alt=""></a>
-                                <div class="text">
-                                    <a href="#" class="text-title">${value.TieuDe}</a>
-                                    <a href="#" class="text-detail">${value.TomTat}</a>
-                                </div>
+                        <div class="content-item">
+                            <a href="#"><img class="img-cover" src='https://huefestival.com/${value.UrlThumbAnhDaiDien ? value.UrlThumbAnhDaiDien : (value.UrlAnhDaiDien ? value.UrlAnhDaiDien : "../assets/images/ve-festival/trong.png")}' alt=""></a>
+                            <div class="text">
+                                <a href="#" class="text-title">${value.TieuDe}</a>
+                                <a href="#" class="text-detail">${value.TomTat}</a>
                             </div>
+                        </div>
                     `
                 })
                 $(`${element}`).html(html);

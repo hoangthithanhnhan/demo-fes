@@ -1637,6 +1637,7 @@ main .le-hoi-vh .le-hoi-vh-content .content-item:hover .card-img-overlay .card-t
 main .le-hoi-vh .le-hoi-vh-content .content-item:hover .item-hover  {
     /* display: block; */
     transform: translateY(0);
+    width: 100%;
 }
 main .le-hoi-vh{
     margin-top: 50px;
@@ -2347,12 +2348,18 @@ main .fes .collapse>li{
 main .fes .collapsing> li{
     padding: 0px 17px;
 }
-main .content-right .main-content .title .title-breadcrumb{
+main .content-right .main-content .title-block {
+    display: flex; 
+    align-items: center;
+}
+main .content-right .main-content .title-block .title-breadcrumb{
     font-size: 20px;
     font-weight: 700;
     line-height: 26px;
 }
-main .content-right .main-content .title img{
+main .content-right .main-content .title-block img{
+    width: 14px; 
+    height: 14px; 
     margin: 0 15px;
 }
 main .fes-xuan .content-right .content .content-item{
@@ -4137,7 +4144,10 @@ main .content-gioi-thieu .content-right .main-content .list{
     main .content-right .main-content .title img{
         display: none;
     }
-    main .content-right .main-content .title .title-breadcrumb{
+    main .content-right .main-content .title-breadcrumb{
+        display: none;
+    }
+    main .content-right .main-content .title-block img{
         display: none;
     }
     main .banner-main .breadcrumb-item a{

@@ -134,32 +134,6 @@ $(document).ready(function() {
         }
     });
 
-    $("#slide-le-hoi-vh").owlCarousel({
-        loop: true,
-        dots:false,
-        responsive:{
-            0:{
-                items:1
-            },
-            640:{
-                items: 2
-            },
-            768:{
-                items: 3
-            },
-            1024: {
-                items: 3,
-            },
-            1280:{
-                items:4,
-                autoplay: true,
-                autoplayTimeout: 3000
-            },
-            1920:{
-                items: 5
-            }
-        }
-    });
     // if(document.getElementById('dynamic1')!=null){
         document.getElementById('dynamic1').addEventListener('click', function() {
             lightGallery(document.getElementById('dynamic1'), {
@@ -266,24 +240,192 @@ $(document).ready(function() {
     });
 
     // setTimeout(setMaxHeight,2000)
+    renderBaiViet('#hoat-dong-huong-ung','712A6841-081D-459E-91E7-B15C0095E53A','4', 0)
+    renderBaiViet('#tin-vh-dl','D306DBF2-7DA8-420F-9439-B08500FA7861','4', 1)
+    renderLeHoiVanHoa('#slide-le-hoi-vh','D99C80DE-B22E-45C5-8CB4-B15C00AB49BF','5')
+    // renderTinTaiTro('#slide-tin-tai-tro','FC71DC62-AEFB-4D26-987D-B15C00AA3D8E','2')
 })
-function resizeimage(){
+function renderLeHoiVanHoa(element,id,size){
+    $(`${element}`).empty();
+    $.ajax({
+        type: 'GET',
+        url: `https://huefestival.com/api/APITinBai/v1/News/getListNewsbyCateIDPaging?categoryId=${id}&index=0&size=${size}`,
+        dataType: 'json',
+        success:function(data){
+            console.log(data)
+            if(data && data.ResultObj && data.ResultObj.length>0){
+                //let html='';
+                $.each(data.ResultObj, function(index,value){
+                    let html=`
+                        <div class="content-item item">
+                            <div class="card bg-dark text-white">
+                                <img src="https://huefestival.com/${value.UrlThumbAnhDaiDien?value.UrlThumbAnhDaiDien:(value.UrlAnhDaiDien?value.UrlAnhDaiDien:"../assets/images/ve-festival/trong.png")}" class="card-img" alt="...">
+                                <div class="card-img-overlay">
+                                    <p class="card-text">${value.TieuDe}</p>
+                                </div>
+                                <div class="card text-center item-hover">
+                                    <div class="card-body">
+                                        <h5 class="card-title">${value.TieuDe}</h5>
+                                        <p class="card-text">${value.TomTat}</p>
+                                        <a href="#" class="btn btn-primary">Xem chi tiết</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    `
+
+                    $(`${element}`).append(html);
+                })
+
+                //$(`${element}`).html(html);
+                $(`${element}`).owlCarousel({
+                    loop: false,
+                    dots:false,
+                    margin: 30,
+                    responsive:{
+                        0:{
+                            items:1
+                        },
+                        640:{
+                            items: 2
+                        },
+                        768:{
+                            items: 3
+                        },
+                        1024: {
+                            items: 3,
+                        },
+                        1280:{
+                            items:4,
+                            autoplay: true,
+                            autoplayTimeout: 3000
+                        },
+                        1920:{
+                            items: 5
+                        }
+                    }
+                });
+                resizeimageLHVH();
+            }
+        },
+        error:function(e){
+            showAlert('Đã xảy ra lỗi trong quá trình xử lý yêu cầu!','danger')
+        }
+    })
+}
+// function renderTinTaiTro(element, id, size){
+//     $.ajax({
+//         type: 'GET',
+//         url: `https://huefestival.com/api/APITinBai/v1/News/getListNewsbyCateIDPaging?categoryId=${id}&index=0&size=${size}`,
+//         dataType: 'json',
+//         success:function(data){
+//             if(data && data.ResultObj && data.ResultObj.length>0){
+//                 let html='';
+//                 $.each(data.ResultObj, function(index,value){
+//                     html+=`
+//                     <div class="card bg-dark text-white item">
+//                         <img src="https://huefestival.com/${value.UrlThumbAnhDaiDien?value.UrlThumbAnhDaiDien:(value.UrlAnhDaiDien?value.UrlAnhDaiDien:"../assets/images/ve-festival/trong.png")}" class="card-img" alt="...">
+//                         <div class="card-img-overlay">
+//                             <div class="overlay"></div>
+//                             <a href="#" class="card-title">${value.TieuDe}</a>
+//                         </div>  
+//                     </div>
+//                     `
+//                     $(`${element}`).html(html);
+//                 })
+//             }
+//         },
+//         error:function(e){
+//             showAlert('Đã xảy ra lỗi trong quá trình xử lý yêu cầu!','danger')
+//         }
+//     })
+// }
+function renderBaiViet(element,id,size, isSummary){
+    $.ajax({
+        type: 'GET',
+        url: `https://huefestival.com/api/APITinBai/v1/News/getListNewsbyCateIDPaging?categoryId=${id}&index=0&size=${size}`,
+        dataType: 'json',
+        success:function(data){
+            if(data && data.ResultObj && data.ResultObj.length>0){
+                let html='';
+                $.each(data.ResultObj, function(index,value){
+                    html+=`
+                    <div class="col-xl-3 col-lg-6 col-md-6 tin-vl-dl-item hoat-dong-huong-ung-item">
+                        <div class="card">
+                            <img src="https://huefestival.com/${value.UrlThumbAnhDaiDien?value.UrlThumbAnhDaiDien:(value.UrlAnhDaiDien?value.UrlAnhDaiDien:"../assets/images/ve-festival/trong.png")}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <a href="#" class="card-text">${value.TieuDe}</a>
+                                ${isSummary == 1 ? `<a href="#" class="card-text"><p>${value.TomTat}</p></a>` : ""}
+                            </div>
+                        </div>
+                    </div>
+                    `
+                })
+                $(`${element}`).html(html);
+            }
+        },
+        error:function(e){
+            showAlert('Đã xảy ra lỗi trong quá trình xử lý yêu cầu!','danger')
+        }
+    })
+}
+// function renderTinVanHoaDuLich(element,id,size){
+//     $.ajax({
+//         type: 'GET',
+//         url: `https://huefestival.com/api/APITinBai/v1/News/getListNewsbyCateIDPaging?categoryId=${id}&index=0&size=${size}`,
+//         dataType: 'json',
+//         success:function(data){
+//             if(data && data.ResultObj && data.ResultObj.length>0){
+//                 let html='';
+//                 $.each(data.ResultObj, function(index,value){
+//                     html+=`
+//                     <div class=" tin-vl-dl-item col-xl-3 col-lg-6 col-sm-6 col-12">
+//                         <div class="card">
+//                             <img src="Https://huefestival.com/${value.UrlThumbAnhDaiDien?value.UrlThumbAnhDaiDien:(value.UrlAnhDaiDien?value.UrlAnhDaiDien:"../assets/images/ve-festival/trong.png")}" class="card-img-top" alt="...">
+//                             <div class="card-body">
+//                                 <a href="#" class="card-title"><h5>${value.TieuDe}</h5></a>
+//                                 <a href="#" class="card-text"><p>${value.TomTat}</p></a>
+//                             </div>
+//                         </div>
+//                     </div>
+//                     `
+//                     $(`${element}`).html(html);
+//                 })
+//             }
+//         },
+//         error:function(e){
+//             showAlert('Đã xảy ra lỗi trong quá trình xử lý yêu cầu!','danger')
+//         }
+//     })
+// }
+function resizeimageSKK(){
     let width=$('main .su-kien-khac .su-kien-khac-right .card').width();
     $('main .su-kien-khac .su-kien-khac-right .card').height(width/0.75);
 
+}
+function resizeimageLHVH(){
+
     let widthLH=$('main .le-hoi-vh .le-hoi-vh-content .content-item .card').width();
     $('main .le-hoi-vh .le-hoi-vh-content .content-item .card').height(widthLH/0.68);
+
+}
+function resizeimageVHDL(){
 
     let widthIMG=$('main .tin-vh-dl .tin-vh-dl-content .card img').width();
     $('main .tin-vh-dl .tin-vh-dl-content .card img').height(widthIMG/1.56);
 
 }
+
 $(function(){
-    window.addEventListener("resize",resizeimage);
+    window.addEventListener("resize",resizeimageSKK);
+    window.addEventListener("resize",resizeimageVHDL);
+    window.addEventListener("resize",resizeimageLHVH);
     window.onresize=function(){
-        resizeimage()
+        resizeimageSKK()
+        resizeimageVHDL()
+        resizeimageLHVH()
     }
-    resizeimage()
+    resizeimageSKK()
 });
 
 
