@@ -196,11 +196,56 @@ $(document).ready(function() {
     renderBaiViet('tin-vh-dl','D306DBF2-7DA8-420F-9439-B08500FA7861',4, 1)
     renderLeHoiVanHoa('slide-le-hoi-vh','D99C80DE-B22E-45C5-8CB4-B15C00AB49BF',10)
     renderTinTaiTro('slide-tin-tai-tro','FC71DC62-AEFB-4D26-987D-B15C00AA3D8E',5)
+    renderTinTucSuKien('tin-tuc-su-kien','6F533950-0750-4D79-991C-B07A0097FA26',6)
     renderTinTuc('slide-tin-tuc-1','BBAF3396-6924-465B-B2A8-B15C00AC3763',5)
     renderTinTuc('slide-tin-tuc-2','BBAF3396-6924-465B-B2A8-B15C00AC3763',5)
     renderTinTuc('slide-tin-tuc-3','BBAF3396-6924-465B-B2A8-B15C00AC3763',5)
-    renderTinTucSuKien('tin-tuc-left','tin-tuc-right','6F533950-0750-4D79-991C-B07A0097FA26',6)
 })
+function renderTinTucSuKien(element,id,size){
+    $.ajax({
+        type: 'GET',
+        url: `https://huefestival.com/api/APITinBai/v1/News/getListNewsbyCateIDPaging?categoryId=${id}&index=0&size=${size}`,
+        dataType: 'json',
+        success:function(data){
+            if(data && data.ResultObj && data.ResultObj.length>0){
+                let left='';
+                let right='';
+                let html='';
+                $.each(data.ResultObj, function(index,value){
+                    console.log(data)
+                    if(index==0){
+                        left+=`
+                        <div class="col-xl-5 col-12 tin-tuc-left" id="tin-tuc-left">
+                            <a href="#"><img class="img-left" src="https://huefestival.com/${value.UrlThumbAnhDaiDien?value.UrlThumbAnhDaiDien:(value.UrlAnhDaiDien?value.UrlAnhDaiDien:"../assets/images/ve-festival/trong.png")}" alt=""></a>
+                            <a href="#" class="item-title title-left">${value.TieuDe}</a>
+                            <div class="item-date date-left d-flex align-items-center"> <img class="icon-date" src="./assets/images/tin-tuc/lich.png" alt="">${formatDate(value.ThoiGianCongBo)}</div>
+                            <a href="#" class="item-content content-left">${value.TomTat}</a>
+                        </div>`
+                        }else{
+                            right+=`
+                            <div class="tin-tuc-center-item d-flex">
+                                <a href="#"><img class="img-center" src="https://huefestival.com/${value.UrlThumbAnhDaiDien?value.UrlThumbAnhDaiDien:(value.UrlAnhDaiDien?value.UrlAnhDaiDien:"../assets/images/ve-festival/trong.png")}" alt=""></a>
+                                <div class="tin-tuc-content-item">
+                                <a href="#" class="item-title title-center">${value.TieuDe}</a>
+                                <div class="item-date date-center d-flex align-items-center"> 
+                                    <img class="icon-date" src="./assets/images/tin-tuc/lich.png" alt="">${formatDate(value.ThoiGianCongBo)}</div>
+                                </div>
+                            </div>`
+                    }
+                })
+                html+=`${left}
+                        <div class="col-xl-3 col-12 tin-tuc-center" id="tin-tuc-right">
+                            ${right}
+                        </div>`
+                console.log(html)
+                $(`#${element}`).prepend(html)
+            }
+        },
+        error:function(e){
+            showAlert('Đã xảy ra lỗi trong quá trình xử lý yêu cầu!','danger')
+        }
+    })
+}
 function renderTinTuc(element,id,size){
     $.ajax({
         type: 'GET',
@@ -231,45 +276,6 @@ function renderTinTuc(element,id,size){
                     autoplayTimeout:2000,
                     autoplayHoverPause:true
                 });
-            }
-        },
-        error:function(e){
-            showAlert('Đã xảy ra lỗi trong quá trình xử lý yêu cầu!','danger')
-        }
-    })
-}
-function renderTinTucSuKien(elementleft,elementright,id,size){
-    $.ajax({
-        type: 'GET',
-        url: `https://huefestival.com/api/APITinBai/v1/News/getListNewsbyCateIDPaging?categoryId=${id}&index=0&size=${size}`,
-        dataType: 'json',
-        success:function(data){
-            if(data && data.ResultObj && data.ResultObj.length>0){
-                let left='';
-                let right='';
-                $.each(data.ResultObj, function(index,value){
-                    if(index==0){
-                        left+=`
-                        <a href="#"><img class="img-left" src="https://huefestival.com/${value.UrlThumbAnhDaiDien?value.UrlThumbAnhDaiDien:(value.UrlAnhDaiDien?value.UrlAnhDaiDien:"../assets/images/ve-festival/trong.png")}" alt=""></a>
-                        <a href="#" class="item-title title-left">${value.TieuDe}</a>
-                        <div class="item-date date-left d-flex align-items-center"> <img class="icon-date" src="./assets/images/tin-tuc/lich.png" alt="">${formatDate(value.ThoiGianCongBo)}</div>
-                        <a href="#" class="item-content content-left">${value.TomTat}</a>
-                    `
-                    }else{
-                        right+=`
-                        <div class="tin-tuc-center-item d-flex">
-                            <a href="#"><img class="img-center" src="https://huefestival.com/${value.UrlThumbAnhDaiDien?value.UrlThumbAnhDaiDien:(value.UrlAnhDaiDien?value.UrlAnhDaiDien:"../assets/images/ve-festival/trong.png")}" alt=""></a>
-                            <div class="tin-tuc-content-item">
-                                <a href="#" class="item-title title-center">${value.TieuDe}</a>
-                                <div class="item-date date-center d-flex align-items-center"> <img class="icon-date" src="./assets/images/tin-tuc/lich.png" alt="">${formatDate(value.ThoiGianCongBo)}</div>
-                            </div>
-                        </div>
-                        `
-                    }
-                })
-                console.log(left)
-                $(`#${elementleft}`).html(left);
-                $(`#${elementright}`).html(right);
             }
         },
         error:function(e){

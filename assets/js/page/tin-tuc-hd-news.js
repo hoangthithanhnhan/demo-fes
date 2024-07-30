@@ -13,6 +13,18 @@ $(document).ready(function(){
     $('#print').click(function() {
         window.print();
     });
-    renderMainContentDetail('#content-tin-tuc-hd-news','#publishTime','22548E5D-FE70-4E84-AA4F-B08500FA2098')
-    renderInternalLink('#internalLink','6F533950-0750-4D79-991C-B07A0097FA26','22548E5D-FE70-4E84-AA4F-B08500FA2098')
+    const queryString = window.location.search;
+    console.log(queryString);
+    const urlParams = new URLSearchParams(queryString);
+    const id = urlParams.get('id')
+    console.log(id);
+    // shirt
+
+    const cid = urlParams.get('cid')
+    console.log(cid);
+    // blue
+    if(id!="" && id!=null && cid!="" && cid!=null){
+        renderMainContent(id,1)
+        renderNewsOther(cid,id)
+    }
 })
