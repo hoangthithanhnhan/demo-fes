@@ -1444,6 +1444,7 @@ main .tai-tro .tai-tro-content .tin-tai-tro .card{
     border: none;
     border-radius: 10px;
     position: relative;
+    aspect-ratio:1.56;
 }
 main .tai-tro .tai-tro-content .tin-tai-tro .card img{
     border-radius: 10px;
@@ -1475,9 +1476,6 @@ main .tai-tro .tai-tro-content .tin-tai-tro .card .overlay{
 }
 main .tai-tro .tai-tro-content .tin-tai-tro .card .card-img-overlay{
     padding: 0;
-}
-main .tai-tro .tai-tro-content .tin-tai-tro .tin-tai-tro-left{
-    /* width: 50%; */
 }
 main .tai-tro .tai-tro-content .nha-tai-tro{
     margin-top: 30px;
