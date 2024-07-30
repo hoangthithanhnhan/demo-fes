@@ -87,22 +87,6 @@ $(document).ready(function() {
         autoplayHoverPause:true
     });
 
-    $('#slide-tin-tai-tro').owlCarousel({
-        loop:true,
-        autoplay:true,
-        margin:30,
-        autoplayTimeout:3000,
-        autoplayHoverPause:true,
-        responsive:{
-            0:{
-                items:1,
-                dots:false
-            },
-            640:{
-                items:2
-            }
-        }
-    });
 
     $('#slide-nha-tai-tro').owlCarousel({
         loop:true,
@@ -240,10 +224,10 @@ $(document).ready(function() {
     });
 
     // setTimeout(setMaxHeight,2000)
-    renderBaiViet('#hoat-dong-huong-ung','712A6841-081D-459E-91E7-B15C0095E53A','4', 0)
-    renderBaiViet('#tin-vh-dl','D306DBF2-7DA8-420F-9439-B08500FA7861','4', 1)
-    renderLeHoiVanHoa('#slide-le-hoi-vh','D99C80DE-B22E-45C5-8CB4-B15C00AB49BF','5')
-    // renderTinTaiTro('#slide-tin-tai-tro','FC71DC62-AEFB-4D26-987D-B15C00AA3D8E','2')
+    renderBaiViet('hoat-dong-huong-ung','712A6841-081D-459E-91E7-B15C0095E53A',4, 0)
+    renderBaiViet('tin-vh-dl','D306DBF2-7DA8-420F-9439-B08500FA7861',4, 1)
+    renderLeHoiVanHoa('slide-le-hoi-vh','D99C80DE-B22E-45C5-8CB4-B15C00AB49BF',5)
+    renderTinTaiTro('slide-tin-tai-tro','FC71DC62-AEFB-4D26-987D-B15C00AA3D8E',5)
 })
 function renderLeHoiVanHoa(element,id,size){
     $(`${element}`).empty();
@@ -252,7 +236,7 @@ function renderLeHoiVanHoa(element,id,size){
         url: `https://huefestival.com/api/APITinBai/v1/News/getListNewsbyCateIDPaging?categoryId=${id}&index=0&size=${size}`,
         dataType: 'json',
         success:function(data){
-            console.log(data)
+            // console.log(data)
             if(data && data.ResultObj && data.ResultObj.length>0){
                 //let html='';
                 $.each(data.ResultObj, function(index,value){
@@ -273,11 +257,8 @@ function renderLeHoiVanHoa(element,id,size){
                             </div>
                         </div>
                     `
-
-                    $(`${element}`).append(html);
+                    $(`#${element}`).append(html);
                 })
-
-                //$(`${element}`).html(html);
                 $(`${element}`).owlCarousel({
                     loop: false,
                     dots:false,
@@ -313,33 +294,50 @@ function renderLeHoiVanHoa(element,id,size){
         }
     })
 }
-// function renderTinTaiTro(element, id, size){
-//     $.ajax({
-//         type: 'GET',
-//         url: `https://huefestival.com/api/APITinBai/v1/News/getListNewsbyCateIDPaging?categoryId=${id}&index=0&size=${size}`,
-//         dataType: 'json',
-//         success:function(data){
-//             if(data && data.ResultObj && data.ResultObj.length>0){
-//                 let html='';
-//                 $.each(data.ResultObj, function(index,value){
-//                     html+=`
-//                     <div class="card bg-dark text-white item">
-//                         <img src="https://huefestival.com/${value.UrlThumbAnhDaiDien?value.UrlThumbAnhDaiDien:(value.UrlAnhDaiDien?value.UrlAnhDaiDien:"../assets/images/ve-festival/trong.png")}" class="card-img" alt="...">
-//                         <div class="card-img-overlay">
-//                             <div class="overlay"></div>
-//                             <a href="#" class="card-title">${value.TieuDe}</a>
-//                         </div>  
-//                     </div>
-//                     `
-//                     $(`${element}`).html(html);
-//                 })
-//             }
-//         },
-//         error:function(e){
-//             showAlert('Đã xảy ra lỗi trong quá trình xử lý yêu cầu!','danger')
-//         }
-//     })
-// }
+function renderTinTaiTro(element, id, size){
+    $.ajax({
+        type: 'GET',
+        url: `https://huefestival.com/api/APITinBai/v1/News/getListNewsbyCateIDPaging?categoryId=${id}&index=0&size=${size}`,
+        dataType: 'json',
+        success:function(data){
+            if(data && data.ResultObj && data.ResultObj.length>0){
+                let html='';
+                $.each(data.ResultObj, function(index,value){
+                    html+=`
+                    <div class="card bg-dark text-white item">
+                        <img src="https://huefestival.com/${value.UrlThumbAnhDaiDien?value.UrlThumbAnhDaiDien:(value.UrlAnhDaiDien?value.UrlAnhDaiDien:"../assets/images/ve-festival/trong.png")}" class="card-img" alt="...">
+                        <div class="card-img-overlay">
+                            <div class="overlay"></div>
+                            <a href="#" class="card-title">${value.TieuDe}</a>
+                        </div>  
+                    </div>
+                    `
+                })
+                $(`#${element}`).html(html);
+                $('#slide-tin-tai-tro').owlCarousel({
+                    loop:true,
+                    autoplay:true,
+                    margin:30,
+                    autoplayTimeout:3000,
+                    autoplayHoverPause:true,
+                    dots:false,
+                    responsive:{
+                        0:{
+                            items:1,
+                        },
+                        640:{
+                            items:2
+                        }
+                    }
+                });
+
+            }
+        },
+        error:function(e){
+            showAlert('Đã xảy ra lỗi trong quá trình xử lý yêu cầu!','danger')
+        }
+    })
+}
 function renderBaiViet(element,id,size, isSummary){
     $.ajax({
         type: 'GET',
@@ -350,18 +348,18 @@ function renderBaiViet(element,id,size, isSummary){
                 let html='';
                 $.each(data.ResultObj, function(index,value){
                     html+=`
-                    <div class="col-xl-3 col-lg-6 col-md-6 tin-vl-dl-item hoat-dong-huong-ung-item">
+                    <div class="col-xl-3 col-lg-6 col-md-6 tin-vl-dl-item">
                         <div class="card">
                             <img src="https://huefestival.com/${value.UrlThumbAnhDaiDien?value.UrlThumbAnhDaiDien:(value.UrlAnhDaiDien?value.UrlAnhDaiDien:"../assets/images/ve-festival/trong.png")}" class="card-img-top" alt="...">
                             <div class="card-body">
-                                <a href="#" class="card-text">${value.TieuDe}</a>
+                                <a href="#" class="card-title">${value.TieuDe}</a>
                                 ${isSummary == 1 ? `<a href="#" class="card-text"><p>${value.TomTat}</p></a>` : ""}
                             </div>
                         </div>
                     </div>
                     `
                 })
-                $(`${element}`).html(html);
+                $(`#${element}`).html(html);
             }
         },
         error:function(e){
@@ -369,6 +367,8 @@ function renderBaiViet(element,id,size, isSummary){
         }
     })
 }
+
+
 // function renderTinVanHoaDuLich(element,id,size){
 //     $.ajax({
 //         type: 'GET',

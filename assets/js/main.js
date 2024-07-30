@@ -221,7 +221,7 @@ function renderMainContent(element,id){
             if(data){
                 let html="";
                 html+=`${data.content}`
-                $(`${element}`).html(html);
+                $(`#${element}`).html(html);
                 let img=$('#text-content img')
                 // $.each(img, function(index, value){ 
                 //     console.log(value.src)
@@ -255,8 +255,8 @@ function renderMainContentDetail(element,elementTime,id){
                 <h5 class="heading" id="heading-text">${data.summary}</h5>
                 <div class="text-content" id="text">${data.content}</div>
                 `
-                $(`${element}`).html(html);
-                $(`${elementTime}`).html(time);
+                $(`#${element}`).html(html);
+                $(`#${elementTime}`).html(time);
                 let img=$('#text-content img')
                 
                 // $.each(img, function(index, value){ 
@@ -290,7 +290,7 @@ function renderInternalLink(element,categoryId,idCurrent){
                         <a href="#" class="link">${value.TomTat} <span class="date">(${formatDate(value.ThoiGianCongBo)})</span></a>
                     </li>
                 `
-                $(`${element}`).html(html);
+                $(`#${element}`).html(html);
                 })
             }
         },
@@ -321,7 +321,7 @@ function renderContent(id, element, pageIndex, pageSize){
                         </div>
                     `
                 })
-                $(`${element}`).html(html);
+                $(`#${element}`).html(html);
                 
                 if($('#pagination').data("twbsPagination") != null) {
                     $('#pagination').twbsPagination('destroy');
