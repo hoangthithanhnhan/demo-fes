@@ -224,7 +224,7 @@ function renderMainContent(id,isPublishTime){
                     ${isPublishTime==1 ? `<h5 class="heading" id="heading-text">${data.title}</h5>`:""}
                     ${data.summary!="" && data.summary!=null?`<p class="tomTat"><i>${data.summary}</i></p>`:""}
                     ${data.imgNews.url!="" && data.imgNews.url!=null?`<img class="img" src="${data.imgNews.url}" alt="${data.imgNews.moTa}">`:""}
-                    ${data.imgNews.moTa!="" && data.imgNews.moTa!=null ?`<p class="text-center moTaAnhDaiDien">${data.imgNews.moTa}</p>`:""}
+                    ${data.imgNews.moTa!="" && data.imgNews.moTa!=null ?`<p class="text-center moTaAnhDaiDien">${data.imgNews.moTa!=""&&data.imgNews.moTa!=null? data.imgNews.moTa :""}</p>`:""}
                     ${data.content}
                     ${data.source!="" && data.source!=null?`<p class="cre-item text-right"><b>${data.source}</b</p>`:""}
                     ${data.author!="" && data.author!=null?`<p class="cre-item text-right"><b>${data.author}</b></p>`:""}
@@ -282,7 +282,7 @@ function renderContent(id, element, pageIndex, pageSize){
     $.ajax({
         type:'GET',
         url:`https://huefestival.com/api/APITinBai/v1/News/getListNewsbyCateIDPaging?categoryId=${id}&index=${pageIndex - 1}&size=${pageSize}`,
-        dataType:'json',
+        dataType:'json', //có hoặc không cũng ok(không bắt buộc), lấy mặc định server trả về, client tự convert theo kiểu dl server
         success:function(data){
             // console.log(data)
             if(data && data.ResultObj && data.ResultObj.length>0){
