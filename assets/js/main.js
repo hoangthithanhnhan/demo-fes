@@ -218,12 +218,18 @@ function renderMainContent(id,isPublishTime){
         url: `https://huefestival.com/api/APITinBai/v1/News/getNews?newsId=${id}`,
         dataType:'json',
         success: function (data) {
-            // console.log(data)
+            console.log(data)
             if(data){
                 let html="";
                 html+=`
-                ${isPublishTime==1 ? `<h5 class="heading" id="heading-text">${data.summary}</h5>` :""}
-                ${data.content}`
+                ${isPublishTime==1 ? `<h5 class="heading" id="heading-text">${data.title}</h5>`:""}
+                ${data.summary!=""?`<p class="tomTat"><i>${data.summary}</i></p>`:""}
+                <img class="img" src='${data.imgNews.url}' alt=""> 
+                ${data.imgNews.moTa!="" ?`<p class="text-center moTaAnhDaiDien">${data.imgNews.moTa}</p>`:""}
+                ${data.content}
+                ${data.source!=""?`<p class="cre-item text-right"><b>${data.source}</b</p>`:""}
+                ${data.author!=""?`<p class="cre-item text-right"><b>${data.author}</b></p>`:""}
+                `
                 $(`#text-content`).html(html);
                 let img=$('#text-content img')
                 // $.each(img, function(index, value){ 
@@ -237,9 +243,6 @@ function renderMainContent(id,isPublishTime){
                 })  
                 if(isPublishTime==1){
                     $('#publishTime').text(data.publishTime)
-                }
-                else{
-                    $('#publishTime').html('')
                 }
             }
         },
@@ -283,19 +286,23 @@ function renderContent(id, element, pageIndex, pageSize){
         url:`https://huefestival.com/api/APITinBai/v1/News/getListNewsbyCateIDPaging?categoryId=${id}&index=${pageIndex - 1}&size=${pageSize}`,
         dataType:'json',
         success:function(data){
-            console.log(data)
+            // console.log(data)
             if(data && data.ResultObj && data.ResultObj.length>0){
+                // console.log(data.ResultObj)
                 let html='';
                 $.each(data.ResultObj, function(index,value){
                     html+=`
                         <div class="content-item">
-                            <a href="/pages/public/tin-tuc-hd-news.html?id=${value.ID}&cid=${value.PkidChuyenMuc}"><img class="img-cover" src='https://huefestival.com/${value.UrlThumbAnhDaiDien ? value.UrlThumbAnhDaiDien : (value.UrlAnhDaiDien ? value.UrlAnhDaiDien : "../assets/images/ve-festival/trong.png")}' alt=""></a>
+                            <a href="/pages/public/tin-tuc-hd-news.html?id=${value.ID}&cid=${id}"><img class="img-cover" src='https://huefestival.com/${value.UrlThumbAnhDaiDien ? value.UrlThumbAnhDaiDien : (value.UrlAnhDaiDien ? value.UrlAnhDaiDien : "../assets/images/ve-festival/trong.png")}' alt=""></a>
                             <div class="text">
-                                <a href="/pages/public/tin-tuc-hd-news.html?id=${value.ID}&cid=${value.PkidChuyenMuc}" class="text-title">${value.TieuDe}</a>
-                                <a href="/pages/public/tin-tuc-hd-news.html?id=${value.ID}&cid=${value.PkidChuyenMuc}" class="text-detail">${value.TomTat}</a>
+                                <a href="/pages/public/tin-tuc-hd-news.html?id=${value.ID}&cid=${id}" class="text-title">${value.TieuDe}</a>
+                                <a href="/pages/public/tin-tuc-hd-news.html?id=${value.ID}&cid=${id}" class="text-detail">${value.TomTat}</a>
                             </div>
                         </div>
                     `
+                    // console.log(value)
+                    // console.log(value.ID,value.PkidChuyenMuc)
+                    // console.log(value.TenChuyenMuc)
                 })
                 $(`#${element}`).html(html);
                 

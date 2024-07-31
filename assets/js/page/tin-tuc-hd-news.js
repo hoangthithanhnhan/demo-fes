@@ -14,15 +14,17 @@ $(document).ready(function(){
         window.print();
     });
     const queryString = window.location.search;
-    console.log(queryString);
+    // console.log(queryString);
+
     const urlParams = new URLSearchParams(queryString);
+    // console.log(urlParams)
+
     const id = urlParams.get('id')
-    console.log(id);
-    // shirt
+    // console.log(id);
 
     const cid = urlParams.get('cid')
-    console.log(cid);
-    // blue
+    // console.log(cid);
+
     if(id!="" && id!=null && cid!="" && cid!=null){
         renderMainContent(id,1)
         renderNewsOther(cid,id)
