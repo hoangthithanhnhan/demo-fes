@@ -218,17 +218,16 @@ function renderMainContent(id,isPublishTime){
         url: `https://huefestival.com/api/APITinBai/v1/News/getNews?newsId=${id}`,
         dataType:'json',
         success: function (data) {
-            console.log(data)
             if(data){
                 let html="";
                 html+=`
-                ${isPublishTime==1 ? `<h5 class="heading" id="heading-text">${data.title}</h5>`:""}
-                ${data.summary!="" && data.summary!=null?`<p class="tomTat"><i>${data.summary}</i></p>`:""}
-                <img class="img" src='${data.imgNews.url}' alt=""> 
-                ${data.imgNews.moTa!="" && data.imgNews.moTa!=null ?`<p class="text-center moTaAnhDaiDien">${data.imgNews.moTa}</p>`:""}
-                ${data.content}
-                ${data.source!="" && data.source!=null?`<p class="cre-item text-right"><b>${data.source}</b</p>`:""}
-                ${data.author!="" && data.author!=null?`<p class="cre-item text-right"><b>${data.author}</b></p>`:""}
+                    ${isPublishTime==1 ? `<h5 class="heading" id="heading-text">${data.title}</h5>`:""}
+                    ${data.summary!="" && data.summary!=null?`<p class="tomTat"><i>${data.summary}</i></p>`:""}
+                    ${data.imgNews.url!="" && data.imgNews.url!=null?`<img class="img" src="${data.imgNews.url}" alt="${data.imgNews.moTa}">`:""}
+                    ${data.imgNews.moTa!="" && data.imgNews.moTa!=null ?`<p class="text-center moTaAnhDaiDien">${data.imgNews.moTa}</p>`:""}
+                    ${data.content}
+                    ${data.source!="" && data.source!=null?`<p class="cre-item text-right"><b>${data.source}</b</p>`:""}
+                    ${data.author!="" && data.author!=null?`<p class="cre-item text-right"><b>${data.author}</b></p>`:""}
                 `
                 $(`#text-content`).html(html);
                 let img=$('#text-content img')
@@ -267,9 +266,8 @@ function renderNewsOther(categoryId,idCurrent){
                         <a href="#" class="link">${value.TomTat} <span class="date">(${formatDate(value.ThoiGianCongBo)})</span></a>
                     </li>
                 `
-
-                $(`#internalLink`).html(html);
                 })
+                $(`#internalLink`).html(html);
             }
         },
         error:function(e){
