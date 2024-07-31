@@ -225,24 +225,57 @@ function renderMainContent(id,isPublishTime){
                     ${data.summary!="" && data.summary!=null?`<p class="tomTat"><i>${data.summary}</i></p>`:""}
                     ${data.imgNews.url!="" && data.imgNews.url!=null?`<img class="img" src="${data.imgNews.url}" alt="${data.imgNews.moTa}">`:""}
                     ${data.imgNews.moTa!="" && data.imgNews.moTa!=null ?`<p class="text-center moTaAnhDaiDien">${data.imgNews.moTa!=""&&data.imgNews.moTa!=null? data.imgNews.moTa :""}</p>`:""}
-                    ${data.content}
+                    <div class="main-content">${data.content}</div>
                     ${data.source!="" && data.source!=null?`<p class="cre-item text-right"><b>${data.source}</b</p>`:""}
                     ${data.author!="" && data.author!=null?`<p class="cre-item text-right"><b>${data.author}</b></p>`:""}
                 `
                 $(`#text-content`).html(html);
-                let img=$('#text-content img')
+                let img=$('#text-content .main-content img')
+
+                // $.each(img,function(index,value){
+                    //lấy link ảnh
+                    //tạo thành đối tượng URL để phân tích cú pháp 
+                    // const urlb = new URL(value.src);
+                    //lấy protocol hostname port
+                    // const baseUrl = urlb.origin
+                    // console.log(value.attr('src'))
+                    //thay thế bằng https://huefestival.com
+                    // let valueImg = value.src.replace(baseUrl, "https://huefestival.com")
+                    // value.setAttribute('src',valueImg)
+                // })
+                $.each(img,function(index,value){
+                    console.log(value)
+                    let urlImg=$(value).attr('src');
+                    $(value).attr('src','https://huefestival.com'+urlImg)
+                })
+                if(isPublishTime==1){
+                    $('#publishTime').text(data.publishTime)
+                }
+                // img.map((index, value) => {
+                //     // console.log(value)
+                //     let urlImg=value.getAttribute('src');
+                //     console.log(urlImg)
+                //     value.setAttribute('src','https://huefestival.com'+urlImg)
+                // })  
+
                 // $.each(img, function(index, value){ 
                 //     console.log(value.src)
                 //     let valueImg = value.src.replace("http://127.0.0.1:5500", "https://huefestival.com")
                 //     img[index].setAttribute('src',valueImg)
                 // })
-                img.map((index, value) => {
-                    let valueImg = value.src.replace("http://127.0.0.1:5500", "https://huefestival.com")
-                    img[index].setAttribute('src',valueImg)
-                })  
-                if(isPublishTime==1){
-                    $('#publishTime').text(data.publishTime)
-                }
+
+                // img.map((index, value) => {
+                //     let valueImg = value.src.replace("http://127.0.0.1:5500", "https://huefestival.com")
+                //     img[index].setAttribute('src',valueImg)
+                // })  
+                
+                // img.map((index, value) => {
+                //     let valueImg = value.src.replace("http://127.0.0.1:5500", "https://huefestival.com")
+                //     img[index].setAttribute('src',valueImg)
+                // })  
+                // if(isPublishTime==1){
+                //     $('#publishTime').text(data.publishTime)
+                // }
             }
         },
         error:function(e){
