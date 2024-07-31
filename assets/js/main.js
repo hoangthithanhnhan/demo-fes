@@ -223,12 +223,12 @@ function renderMainContent(id,isPublishTime){
                 let html="";
                 html+=`
                 ${isPublishTime==1 ? `<h5 class="heading" id="heading-text">${data.title}</h5>`:""}
-                ${data.summary!=""?`<p class="tomTat"><i>${data.summary}</i></p>`:""}
+                ${data.summary!="" && data.summary!=null?`<p class="tomTat"><i>${data.summary}</i></p>`:""}
                 <img class="img" src='${data.imgNews.url}' alt=""> 
-                ${data.imgNews.moTa!="" ?`<p class="text-center moTaAnhDaiDien">${data.imgNews.moTa}</p>`:""}
+                ${data.imgNews.moTa!="" && data.imgNews.moTa!=null ?`<p class="text-center moTaAnhDaiDien">${data.imgNews.moTa}</p>`:""}
                 ${data.content}
-                ${data.source!=""?`<p class="cre-item text-right"><b>${data.source}</b</p>`:""}
-                ${data.author!=""?`<p class="cre-item text-right"><b>${data.author}</b></p>`:""}
+                ${data.source!="" && data.source!=null?`<p class="cre-item text-right"><b>${data.source}</b</p>`:""}
+                ${data.author!="" && data.author!=null?`<p class="cre-item text-right"><b>${data.author}</b></p>`:""}
                 `
                 $(`#text-content`).html(html);
                 let img=$('#text-content img')
