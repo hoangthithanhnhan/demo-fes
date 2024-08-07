@@ -16,9 +16,9 @@ $(document).ready(function() {
 
     var splash=document.getElementById('splash-screen');
     $(window).on('load',function(){
-        
+        splash.style.display='none'; 
     })
-    splash.style.display='none'; 
+    
 
     $('#exampleModal').on('shown.bs.modal',function(){
         $('#form-search').trigger('focus');
